@@ -11,10 +11,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The tentative project title:
 
-The motivation for this project
-The intended final products
-The anticipated data sources
+The motivation for this project: We are curious about the implications of self-identified race and personality type to game show survival, as entertainment culture is deeply tied to societal biases.
 
-The planned analyses / visualizations / coding challenges
-The planned timeline
+The intended final products:
+
+Our anticipated data sources are the `castaway_details` and `castaways` datasets from the `survivor` R package. 
+
+The planned analyses / visualizations / coding challenges: We will have to combine several datasets (including `castaway_details` and `castaways`) and tidy those. We plan to perform EDA to show distributions of our variables of interest, including POC, race, ethnicity, gender, personality type, and age. 
+
+The planned timeline:
 
