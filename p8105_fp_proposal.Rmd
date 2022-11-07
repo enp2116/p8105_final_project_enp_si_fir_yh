@@ -1,0 +1,20 @@
+---
+title: "p8105_fp_proposal"
+author: "Emily Potts (enp2116), Yi Huang (yh3554), Shodai Inose (si2426), Farizah Rob (fir2103)"
+date: "2022-11-12"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The tentative project title:
+
+The motivation for this project
+The intended final products
+The anticipated data sources
+
+The planned analyses / visualizations / coding challenges
+The planned timeline
+
