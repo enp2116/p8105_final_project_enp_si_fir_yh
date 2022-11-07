@@ -19,5 +19,9 @@ Our anticipated data sources are the `castaway_details` and `castaways` datasets
 
 The planned analyses / visualizations / coding challenges: We will have to combine several datasets (including `castaway_details` and `castaways`) and tidy those. We plan to perform EDA to show distributions of our variables of interest, including POC, race, ethnicity, gender, personality type, and age. 
 
-The planned timeline:
+The planned timeline: 
+- Week of November 13: Merge datasets, clean and tidy the data, create any new variables that might be needed for analysis. Start EDA - create visualizations for the distributions and frequencies of variables of interest. 
+- Week of November 21: Continue working on EDA, improve visualizations, create interactive plots and possibly a flex dashboard. Start working on survival analysis code. 
+- Week of November 28: Start drafting tables and graphs for the report - work on writing up the report together. 
+- Week of December 4: Finalize the report, conduct any additional analyses as needed.
 
