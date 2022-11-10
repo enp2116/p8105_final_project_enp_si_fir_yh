@@ -16,9 +16,7 @@ personality type to game show survival, as entertainment culture is
 deeply intertwined with societal biases. We are specifically looking at
 the show Survivor. We were inspired by a similar project of a smaller
 scale studying the effects of race and gender in Masterchef Junior
-survival rates
-(<https://www.causeweb.org/usproc/sites/default/files/usresp/2018-2/Whip%20It%20Like%20a%20WoMan%20Survival%20Analysis%20of%20Minority%20Contestants%20on%20MasterChef%20Junior.pdf>
-).
+survival rates.[^1]
 
 ### The intended final products:
 
@@ -30,9 +28,8 @@ survival rates
 ### Data sources:
 
 Our anticipated data sources are the `castaway_details` and `castaways`
-datasets from the `survivoR` package, which has data from all seasons of
-the U.S. T.V. show Survivor. (<https://github.com/doehm/survivoR>)
-(<https://cran.r-project.org/web//packages/survivoR/survivoR.pdf>)
+datasets[^2] from the `survivoR` package,[^3] which has data from all
+seasons of the U.S. T.V. show Survivor.
 
 ### The planned analyses / visualizations / coding challenges:
 
@@ -63,3 +60,9 @@ of stay of the contestants on the show as our outcome of interest.
     create the website
 -   Week of December 4: Finalize the report, create a screencast, and
     include any additional analyses.
+
+[^1]: <https://www.causeweb.org/usproc/sites/default/files/usresp/2018-2/Whip%20It%20Like%20a%20WoMan%20Survival%20Analysis%20of%20Minority%20Contestants%20on%20MasterChef%20Junior.pdf>
+
+[^2]: <https://github.com/doehm/survivoR>
+
+[^3]: <https://cran.r-project.org/web//packages/survivoR/survivoR.pdf>
