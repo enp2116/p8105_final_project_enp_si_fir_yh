@@ -41,11 +41,13 @@ variables of interest differently, such as extracting whether a person
 is an introvert or extrovert from their personality type, or using a POC
 indicator variable instead of individual races. We will also need to
 figure out how to standardize between seasons as the seasons have
-varying numbers of contestants. We plan to perform EDA to visualize the
-distributions of our variables of interest, including POC, race,
-ethnicity, gender, personality type, and age. As our main analysis, we
-plan on doing survival analysis by demographic groups, using the length
-of stay of the contestants on the show as our outcome of interest.
+varying numbers of contestants. Additionally, deciding how to deal with
+NAs for particular variables in earlier seasons may pose a coding
+challenge. We plan to perform EDA to visualize the distributions of our
+variables of interest, including POC, race, ethnicity, gender,
+personality type, and age. As our main analysis, we plan on doing
+survival analysis by demographic groups, using the length of stay of the
+contestants on the show as our outcome of interest.
 
 ### The planned timeline:
 
