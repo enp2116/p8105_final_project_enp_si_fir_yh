@@ -1,8 +1,14 @@
 Final Project Proposal
 ================
-Emily Potts (enp2116), Yi Huang (yh3554), Shodai Inose (si2426), Farizah
-Rob (fir2103), John Cheng (jc5635)
 2022-11-12
+
+### Participants
+
+-   Emily Potts (enp2116)
+-   Yi Huang (yh3554)
+-   Shodai Inose (si2426)
+-   Farizah Rob (fir2103)
+-   John Cheng (jc5635)
 
 ### The tentative project title:
 
@@ -29,7 +35,12 @@ survival rates.[^1]
 
 Our anticipated data sources are the `castaway_details` and `castaways`
 datasets[^2] from the `survivoR` package,[^3] which has data from all
-seasons of the U.S. T.V. show Survivor.
+seasons of the U.S. T.V. show Survivor.  
+- Unique information for each castaway includes gender, date of birth,
+occupation, race, ethnicity, and personality data from
+`castaway_details`.  
+- Season and demographic information about each castaway from
+`castaways`.
 
 ### The planned analyses / visualizations / coding challenges:
 

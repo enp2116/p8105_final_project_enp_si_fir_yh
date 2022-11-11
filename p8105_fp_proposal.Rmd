@@ -1,6 +1,5 @@
 ---
 title: "Final Project Proposal"
-author: "Emily Potts (enp2116), Yi Huang (yh3554), Shodai Inose (si2426), Farizah Rob (fir2103), John Cheng (jc5635)"
 date: "2022-11-12"
 output: github_document
 ---
@@ -8,6 +7,13 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+### Participants
+* Emily Potts (enp2116)
+* Yi Huang (yh3554)
+* Shodai Inose (si2426)
+* Farizah Rob (fir2103)
+* John Cheng (jc5635)
 
 ### The tentative project title:
 Survivor(al) Analysis: Impacts of Demographics on Game Show Contestant Survival
@@ -23,7 +29,9 @@ We were inspired by a similar project of a smaller scale studying the effects of
 
 
 ### Data sources:
-Our anticipated data sources are the `castaway_details` and `castaways` datasets^[https://github.com/doehm/survivoR] from the `survivoR` package,^[https://cran.r-project.org/web//packages/survivoR/survivoR.pdf] which has data from all seasons of the U.S. T.V. show Survivor. 
+Our anticipated data sources are the `castaway_details` and `castaways` datasets^[https://github.com/doehm/survivoR] from the `survivoR` package,^[https://cran.r-project.org/web//packages/survivoR/survivoR.pdf] which has data from all seasons of the U.S. T.V. show Survivor. \
+- Unique information for each castaway includes gender, date of birth, occupation, race, ethnicity, and personality data from `castaway_details`.\
+- Season and demographic information about each castaway from `castaways`.
 
 ### The planned analyses / visualizations / coding challenges: 
 In order to gather sufficient data, we plan to combine several data sets (including `castaway_details` and `castaways`) and tidy them if necessary. Some of our variables of interest have many categories, which could lead to loss of generality. To combat this, we may categorize our variables of interest differently, such as extracting whether a person is an introvert or extrovert from their personality type, or using a POC indicator variable instead of individual races. We will also need to figure out how to standardize between seasons as the seasons have varying numbers of contestants. Additionally, deciding how to deal with NAs for particular variables in earlier seasons may pose a coding challenge. We plan to perform EDA to visualize the distributions of our variables of interest, including POC, race, ethnicity, gender, personality type, and age. As our main analysis, we plan on doing survival analysis by demographic groups, using the length of stay of the contestants on the show as our outcome of interest.
