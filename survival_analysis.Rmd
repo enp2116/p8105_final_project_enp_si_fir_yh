@@ -1,0 +1,168 @@
+---
+title: "Survival Analysis"
+output: github_document
+date: "2022-11-26"
+---
+
+```{r, include = FALSE}
+library(survivoR)
+library(tidyverse)
+library(stringr)
+library(dplyr)
+library(survival)
+library(survminer)
+```
+
+```{r, echo = FALSE}
+## Data Wrangling by Shodai
+## filtering-out non-US seasons, cleaning data
+
+castaway_details_US = castaway_details %>% 
+  filter(str_detect(castaway_id, '^US')) %>%
+  mutate(
+    personality_type_binary = ifelse(
+      str_detect(personality_type, '^E'), "Extrovert", "Introvert")) %>%
+  select(-c(castaway_id, castaway, personality_type, ethnicity))
+
+castaways_US = castaways %>% filter(version == "US") %>%
+  select(-c(version, season_name, season, castaway_id, castaway, jury_status, original_tribe)) %>%
+  rename(age_during_show = age, days_survived = day)
+
+## joining datasets
+survivor_data_final = full_join(castaway_details_US, castaways_US, by = "full_name")
+
+## summarizing the number of contestants per season
+contestant_count_df = survivor_data_final %>% group_by(version_season) %>% summarize(contestant_count = n())
+
+survivor_data_final = full_join(survivor_data_final, contestant_count_df, by = "version_season")
+
+## reordering variables, dividing elimination order by # of contestants to find percent of season survived (double check this)
+survivor_data_final = survivor_data_final[
+  , c("version_season", "full_name", "age_during_show", "race", "poc", "date_of_birth", "date_of_death", "occupation", "personality_type_binary", "episode", "days_survived", "order", "contestant_count", "result")] %>% 
+  arrange(version_season) %>%
+  mutate(percent_survived = order/contestant_count)
+```
+
+
+## Survival Analysis
+
+#### Create new variable ethnicity
+```{r}
+survivor_data_final <- survivor_data_final %>%
+  mutate(ethnicity = ifelse(
+      str_detect(poc, 'White'), survivor_data_final$poc, survivor_data_final$race))
+```
+
+#### Create time and status variable
+```{r}
+## drop missing values of days_survived where all US43 seasons participants
+survivor_final <- drop_na(survivor_data_final, days_survived)
+
+## time to event: in this data, the event is voted out
+## time is 39 days
+## censors are participant who survived for 39 days and participant who quit the game
+
+check_length_time <- survivor_data_final %>% 
+  filter(result %in% c("Sole Survivor","Co-runner-up","Runner-up"))
+
+## season 41 and 42, the longest survival time is 26 days, exclude these seasons
+## season 2, the longest survival time is 42 days, exclude this season
+survivor_final <- survivor_final %>% 
+  filter(version_season != "US02") %>%
+  filter(version_season != "US41") %>%
+  filter(version_season != "US42") %>%
+  mutate(personality_type_binary = as.factor(personality_type_binary))
+
+status <- c()
+time <- c()
+for (i in 1:nrow(survivor_final))
+  {
+  if(survivor_final[i,14] == "Quit"){
+    status[i] <- 0
+    time[i] <- survivor_final$days_survived[i]
+  }
+  if(survivor_final[i,14] == "Sole Survivor"){
+    status[i] <- 0
+    time[i] <- survivor_final$days_survived[i]
+  } 
+  else {
+    status[i] <- 1
+    time[i] <- survivor_final$days_survived[i]
+  }
+}
+survivor_final[,17] <- status
+survivor_final[,18] <- time
+
+colnames(survivor_final)[17] <- "status"
+colnames(survivor_final)[18] <- "time"
+```
+
+## Survival Unadjected Model
+```{r}
+surv_model_unadj <- survfit(Surv(time, status) ~ 1)
+
+plot(surv_model_unadj, xlab = "Days",
+     ylab = "Estimated Probability of Survival")
+```
+
+## Cox-proposional hazard model 1
+```{r}
+surv_model_cox1 <- coxph(data = survivor_final,
+  Surv(time, status) ~  poc + age_during_show + personality_type_binary)
+
+summary(surv_model_cox1)
+```
+
+## Cox-proposional hazard model 2
+```{r}
+surv_model_cox2 <- coxph(data = survivor_final,
+  Surv(time, status) ~  ethnicity + age_during_show + personality_type_binary)
+
+summary(surv_model_cox2)
+```
+
+## Kaplan-Meier plotter-personality
+```{r}
+surv_model_per <- survfit(Surv(time, status)~ survivor_final$personality_type_binary)
+
+ggsurvplot(
+  surv_model_per,
+  data = survivor_final,
+  size = 1,                 # change line size
+  palette =
+    c("#E7B800", "#2E9FDF"),# custom color palettes
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Extrovert", "Introvert"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+
+#basic graph
+# plot(surv_model_per, xlab = "Days",
+#      ylab = "Estimated Probability of Survival", col = c(2,4))
+```
+
+## Kaplan-Meier plotter-White vs Non-White
+```{r}
+surv_model_poc <- survfit(Surv(time, status)~ survivor_final$poc)
+
+ggsurvplot(
+  surv_model_poc,
+  data = survivor_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("POC", "White"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+## log-rank
