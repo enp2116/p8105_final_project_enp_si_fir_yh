@@ -35,8 +35,22 @@ survivor_data_final = full_join(survivor_data_final, contestant_count_df, by = "
 
 ## reordering variables, dividing elimination order by # of contestants to find percent of season survived (double check this)
 survivor_data_final = survivor_data_final[
-  , c("version_season", "full_name", "age_during_show", "race", "poc", "date_of_birth", "date_of_death", "occupation", "personality_type_binary", "episode", "days_survived", "order", "contestant_count", "result")] %>% 
+  , c("version_season", "full_name", "age_during_show", "race", "poc", "date_of_birth", "occupation", "personality_type_binary", "episode", "days_survived", "order", "contestant_count")] %>% 
   arrange(version_season) %>%
   mutate(percent_survived = order/contestant_count)
 ```
+
+```{r}
+## calculating percent NAs for all variables
+survivor_data_final %>% summarise_all(list(name = ~sum(is.na(.))/length(.)))
+```
+
+
+```{r}
+
+```
+
+
+
+
 
