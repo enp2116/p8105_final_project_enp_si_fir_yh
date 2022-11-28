@@ -2,73 +2,6 @@ Survival Analysis
 ================
 2022-11-26
 
-``` r
-## calculating percent NAs for all variables
-survivor_data_final %>% summarise_all(list(name = ~sum(is.na(.))/length(.)))
-```
-
-    ## # A tibble: 1 × 17
-    ##   version_seas…¹ full_…² age_d…³ race_…⁴ poc_n…⁵ date_…⁶ date_…⁷ occup…⁸ gende…⁹
-    ##            <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-    ## 1              0       0       0   0.724 0.00627 0.00877   0.985 0.00627 0.00627
-    ## # … with 8 more variables: ethnicity_name <dbl>,
-    ## #   personality_type_binary_name <dbl>, episode_name <dbl>,
-    ## #   days_survived_name <dbl>, order_name <dbl>, contestant_count_name <dbl>,
-    ## #   result_name <dbl>, percent_survived_name <dbl>, and abbreviated variable
-    ## #   names ¹​version_season_name, ²​full_name_name, ³​age_during_show_name,
-    ## #   ⁴​race_name, ⁵​poc_name, ⁶​date_of_birth_name, ⁷​date_of_death_name,
-    ## #   ⁸​occupation_name, ⁹​gender_name
-
-## EDA (tables)
-
-``` r
-## personality type
-## done with days survived (can replace with standardized percents if we change survival analysis)
-  
-survivor_data_final %>% 
-  group_by(personality_type_binary) %>% 
-  summarize(n_personality_type = n(),
-            mean_days_survived = mean(days_survived)) %>% 
-    na.omit()  %>%
-  knitr::kable(digits = 3, col.names = c("Personality Type", "n", "Mean Days Survived"))
-```
-
-| Personality Type |   n | Mean Days Survived |
-|:-----------------|----:|-------------------:|
-| Extrovert        | 433 |             23.647 |
-| Introvert        | 339 |             23.257 |
-
-``` r
-## POC
-survivor_data_final %>% 
-  group_by(poc) %>% 
-  summarize(n_poc = n(),
-            mean_days_survived = mean(days_survived, na.rm = TRUE)) %>% 
-    na.omit()  %>%
-  knitr::kable(digits = 3, col.names = c("POC", "n", "Mean Days Survived"))
-```
-
-| POC   |   n | Mean Days Survived |
-|:------|----:|-------------------:|
-| POC   | 233 |             22.067 |
-| White | 560 |             23.969 |
-
-``` r
-## gender
-survivor_data_final %>% 
-  group_by(gender) %>% 
-  summarize(n_gender= n(),
-            mean_days_survived = mean(days_survived, na.rm = TRUE)) %>%
-    na.omit()  %>%
-  knitr::kable(digits = 3, col.names = c("Gender", "n", "Mean Days Survived"))
-```
-
-| Gender     |   n | Mean Days Survived |
-|:-----------|----:|-------------------:|
-| Female     | 389 |             22.682 |
-| Male       | 403 |             24.155 |
-| Non-binary |   1 |             17.000 |
-
 ## Survival Analysis
 
 #### Create new variable ethnicity
@@ -140,7 +73,7 @@ plot(surv_model_unadj, xlab = "Days",
      ylab = "Estimated Probability of Survival")
 ```
 
-![](survival_analysis_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](survival_analysis_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ## Cox-proposional hazard model 1
 
@@ -269,7 +202,7 @@ ggsurvplot(
 )
 ```
 
-![](survival_analysis_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](survival_analysis_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ``` r
 #basic graph
@@ -297,7 +230,7 @@ ggsurvplot(
 )
 ```
 
-![](survival_analysis_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](survival_analysis_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ## Kaplan-Meier plotter-gender
 
@@ -319,6 +252,6 @@ ggsurvplot(
 )
 ```
 
-![](survival_analysis_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](survival_analysis_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ## log-rank
