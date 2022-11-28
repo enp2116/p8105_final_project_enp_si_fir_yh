@@ -1,0 +1,46 @@
+---
+title: "Flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    navbar:
+      - {title: "Home", https://yhuan196.github.io/survivor_analysis/index.html, align: left}
+      - {icon: fa-github, href: https://github.com/enp2116/p8105_final_project_enp_si_fir_yh_jc, align: right }
+
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(flexdashboard)
+library(plotly)
+library(ggplot2)
+```
+
+```{r import}
+
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Plot A
+
+```{r plot_a}
+
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Plot B
+
+```{r plot_b}
+
+```
+
+### Plot C
+
+```{r plot_c}
+
+```
