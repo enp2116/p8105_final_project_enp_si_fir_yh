@@ -40,6 +40,10 @@ survivor_data_final = survivor_data_final %>%
   arrange(version_season) %>%
   mutate(personality_type_binary = as.factor(personality_type_binary))
 
+survivor_data_final_including_2_41_42_43 = survivor_data_final
+
+write.csv(survivor_data_final_including_2_41_42_43, file = "./data/survivor_data_final_including_2_41_42_43.csv")
+
 # preparing data for survival analysis
 
 ## season 41 and 42, the longest survival time is 26 days, exclude these seasons
