@@ -11,6 +11,7 @@ library(stringr)
 library(dplyr)
 library(survival)
 library(survminer)
+library(gtsummary)
 ```
 
 ```{r, echo = FALSE}
@@ -48,8 +49,14 @@ survivor_data_final = survivor_data_final[
 survivor_data_final %>% summarise_all(list(name = ~sum(is.na(.))/length(.)))
 ```
 
-## EDA (tables)
+## EDA (rough draft of tables)
 ```{r}
+## overall summary table
+survivor_data_final %>% 
+  select(gender, poc, personality_type_binary, age_during_show, days_survived) %>% 
+  tbl_summary(type = list(gender~ "categorical", poc~ "categorical", personality_type_binary~ "categorical", age_during_show ~ "continuous", days_survived ~ "continuous"), statistic = list(all_continuous() ~ "{mean} ({sd})"))
+
+## days survived by variables of interest
 ## personality type
 ## done with days survived (can replace with standardized percents if we change survival analysis)
   
