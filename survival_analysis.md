@@ -4,64 +4,82 @@ Survival Analysis
 
 ## Survival Analysis
 
-#### Create new variable ethnicity
+#### reading in data
 
 ``` r
-survivor_data_final <- survivor_data_final %>%
-  mutate(ethnicity = ifelse(
-      str_detect(poc, 'White'), survivor_data_final$poc, survivor_data_final$race))
+survivor_data_final = 
+  read.csv("survivor_data_final")
+```
+
+``` r
+# filtering of seasons moved to data wrangling file
+# replaced all survivor_final with survivor_data_final since filtering was moved to use for EDA
+
+status <- c()
+time <- c()
+for (i in 1:nrow(survivor_data_final))
+  {
+  if(survivor_data_final[i,16] == "Quit"){
+    status[i] <- 0
+    time[i] <- survivor_data_final$days_survived[i]
+  }
+  else if(survivor_data_final[i,16] == "Sole Survivor"){
+    status[i] <- 0
+    time[i] <- survivor_data_final$days_survived[i]
+  } 
+  else if(survivor_data_final[i,16] == "Runner-up"){
+    status[i] <- 0
+    time[i] <- survivor_data_final$days_survived[i]
+  } else if(survivor_data_final[i,16] == "Co-runner-up"){
+    status[i] <- 0
+    time[i] <- survivor_data_final$days_survived[i]
+  }
+  else {
+    status[i] <- 1
+    time[i] <- survivor_data_final$days_survived[i]
+  }
+}
+survivor_data_final[,18] <- status
+survivor_data_final[,19] <- time
+
+colnames(survivor_data_final)[18] <- "status"
+colnames(survivor_data_final)[19] <- "time"
 ```
 
 #### Create time and status variable
 
 ``` r
-## drop missing values of days_survived where all US43 seasons participants
-survivor_final <- drop_na(survivor_data_final, days_survived)
-
-## time to event: in this data, the event is voted out
-## time is 39 days
-## censors are participant who survived for 39 days and participant who quit the game
-
-check_length_time <- survivor_data_final %>% 
-  filter(result %in% c("Sole Survivor","Co-runner-up","Runner-up"))
-
-## season 41 and 42, the longest survival time is 26 days, exclude these seasons
-## season 2, the longest survival time is 42 days, exclude this season
-survivor_final <- survivor_final %>% 
-  filter(version_season != "US02") %>%
-  filter(version_season != "US41") %>%
-  filter(version_season != "US42") %>%
-  mutate(personality_type_binary = as.factor(personality_type_binary))
+# filtering of seasons moved to data wrangling file
 
 status <- c()
 time <- c()
-for (i in 1:nrow(survivor_final))
+for (i in 1:nrow(survivor_data_final))
   {
-  if(survivor_final[i,16] == "Quit"){
+  if(survivor_data_final[i,16] == "Quit"){
     status[i] <- 0
-    time[i] <- survivor_final$days_survived[i]
+    time[i] <- survivor_data_final$days_survived[i]
   }
-  else if(survivor_final[i,16] == "Sole Survivor"){
+  else if(survivor_data_final[i,16] == "Sole Survivor"){
     status[i] <- 0
-    time[i] <- survivor_final$days_survived[i]
+    time[i] <- survivor_data_final$days_survived[i]
   } 
-  else if(survivor_final[i,16] == "Runner-up"){
+  else if(survivor_data_final[i,16] == "Runner-up"){
     status[i] <- 0
-    time[i] <- survivor_final$days_survived[i]
-  } else if(survivor_final[i,16] == "Co-runner-up"){
+    time[i] <- survivor_data_final$days_survived[i]
+  } else if(survivor_data_final[i,16] == "Co-runner-up"){
     status[i] <- 0
-    time[i] <- survivor_final$days_survived[i]
+    time[i] <- survivor_data_final$days_survived[i]
   }
   else {
     status[i] <- 1
-    time[i] <- survivor_final$days_survived[i]
+    time[i] <- survivor_data_final$days_survived[i]
   }
 }
-survivor_final[,18] <- status
-survivor_final[,19] <- time
+survivor_data_final[,18] <- status
+survivor_data_final[,19] <- time
 
-colnames(survivor_final)[18] <- "status"
-colnames(survivor_final)[19] <- "time"
+colnames(survivor_data_final)[18] <- "status"
+colnames(survivor_data_final)[19] <- "time"
 ```
 
 ## Survival Unadjected Model
@@ -78,7 +96,7 @@ plot(surv_model_unadj, xlab = "Days",
 ## Cox-proposional hazard model 1
 
 ``` r
-surv_model_cox1 <- coxph(data = survivor_final,
+surv_model_cox1 <- coxph(data = survivor_data_final,
   Surv(time, status) ~  poc + age_during_show + personality_type_binary)
 
 summary(surv_model_cox1)
@@ -86,34 +104,34 @@ summary(surv_model_cox1)
 
     ## Call:
     ## coxph(formula = Surv(time, status) ~ poc + age_during_show + 
-    ##     personality_type_binary, data = survivor_final)
+    ##     personality_type_binary, data = survivor_data_final)
     ## 
-    ##   n= 721, number of events= 626 
-    ##    (8 observations deleted due to missingness)
+    ##   n= 721, number of events= 721 
+    ##    (25 observations deleted due to missingness)
     ## 
     ##                                        coef  exp(coef)   se(coef)      z
-    ## pocWhite                         -1.186e-01  8.881e-01  8.923e-02 -1.330
-    ## age_during_show                  -8.572e-06  1.000e+00  3.976e-03 -0.002
-    ## personality_type_binaryIntrovert  6.114e-02  1.063e+00  8.065e-02  0.758
+    ## pocWhite                         -0.0850812  0.9184377  0.0835671 -1.018
+    ## age_during_show                  -0.0001841  0.9998159  0.0037273 -0.049
+    ## personality_type_binaryIntrovert  0.0593713  1.0611692  0.0752142  0.789
     ##                                  Pr(>|z|)
-    ## pocWhite                            0.184
-    ## age_during_show                     0.998
-    ## personality_type_binaryIntrovert    0.448
+    ## pocWhite                            0.309
+    ## age_during_show                     0.961
+    ## personality_type_binaryIntrovert    0.430
     ## 
     ##                                  exp(coef) exp(-coef) lower .95 upper .95
-    ## pocWhite                            0.8881     1.1260    0.7456     1.058
-    ## age_during_show                     1.0000     1.0000    0.9922     1.008
-    ## personality_type_binaryIntrovert    1.0631     0.9407    0.9076     1.245
+    ## pocWhite                            0.9184     1.0888    0.7797     1.082
+    ## age_during_show                     0.9998     1.0002    0.9925     1.007
+    ## personality_type_binaryIntrovert    1.0612     0.9424    0.9157     1.230
     ## 
     ## Concordance= 0.517  (se = 0.014 )
-    ## Likelihood ratio test= 2.47  on 3 df,   p=0.5
-    ## Wald test            = 2.5  on 3 df,   p=0.5
-    ## Score (logrank) test = 2.51  on 3 df,   p=0.5
+    ## Likelihood ratio test= 1.77  on 3 df,   p=0.6
+    ## Wald test            = 1.78  on 3 df,   p=0.6
+    ## Score (logrank) test = 1.79  on 3 df,   p=0.6
 
 ## Cox-proposional hazard model 2
 
 ``` r
-surv_model_cox2 <- coxph(data = survivor_final,
+surv_model_cox2 <- coxph(data = survivor_data_final,
   Surv(time, status) ~  ethnicity + age_during_show + personality_type_binary)
 
 summary(surv_model_cox2)
@@ -121,73 +139,73 @@ summary(surv_model_cox2)
 
     ## Call:
     ## coxph(formula = Surv(time, status) ~ ethnicity + age_during_show + 
-    ##     personality_type_binary, data = survivor_final)
+    ##     personality_type_binary, data = survivor_data_final)
     ## 
-    ##   n= 687, number of events= 596 
-    ##    (42 observations deleted due to missingness)
+    ##   n= 687, number of events= 687 
+    ##    (59 observations deleted due to missingness)
     ## 
     ##                                        coef  exp(coef)   se(coef)      z
-    ## ethnicityAsian, Black             3.2903748 26.8529253  1.0259043  3.207
-    ## ethnicityBlack                   -0.0013271  0.9986737  0.1847155 -0.007
-    ## ethnicityBrazilian               -0.2720196  0.7618393  0.7249443 -0.375
-    ## ethnicityChilean American         1.7268978  5.6231827  1.0168787  1.698
-    ## ethnicityColombian American      -0.1342845  0.8743413  1.0129903 -0.133
-    ## ethnicityCuban American          -0.3704447  0.6904272  1.0113371 -0.366
-    ## ethnicityMexican American        -0.1970779  0.8211267  0.4350155 -0.453
-    ## ethnicityPanamanian American      3.3588111 28.7549837  1.0278275  3.268
-    ## ethnicityPeruvian American        1.8464144  6.3370565  1.0154234  1.818
-    ## ethnicityPuerto Rican American   -0.2202243  0.8023388  0.7223740 -0.305
-    ## ethnicityVenezuelan American      1.1023898  3.0113541  1.0129948  1.088
-    ## ethnicityWhite                   -0.1095644  0.8962244  0.1552187 -0.706
-    ## age_during_show                   0.0002771  1.0002771  0.0040463  0.068
-    ## personality_type_binaryIntrovert  0.0656655  1.0678694  0.0845104  0.777
-    ##                                  Pr(>|z|)   
-    ## ethnicityAsian, Black             0.00134 **
-    ## ethnicityBlack                    0.99427   
-    ## ethnicityBrazilian                0.70749   
-    ## ethnicityChilean American         0.08946 . 
-    ## ethnicityColombian American       0.89454   
-    ## ethnicityCuban American           0.71415   
-    ## ethnicityMexican American         0.65052   
-    ## ethnicityPanamanian American      0.00108 **
-    ## ethnicityPeruvian American        0.06901 . 
-    ## ethnicityPuerto Rican American    0.76047   
-    ## ethnicityVenezuelan American      0.27649   
-    ## ethnicityWhite                    0.48027   
-    ## age_during_show                   0.94540   
-    ## personality_type_binaryIntrovert  0.43715   
+    ## ethnicityAsian, Black             3.339e+00  2.818e+01  1.025e+00  3.257
+    ## ethnicityBlack                    1.969e-02  1.020e+00  1.743e-01  0.113
+    ## ethnicityBrazilian               -2.521e-01  7.772e-01  7.232e-01 -0.349
+    ## ethnicityChilean American         1.753e+00  5.771e+00  1.016e+00  1.726
+    ## ethnicityColombian American      -1.193e-01  8.875e-01  1.012e+00 -0.118
+    ## ethnicityCuban American           3.754e-01  1.456e+00  7.218e-01  0.520
+    ## ethnicityMexican American        -1.327e-01  8.757e-01  4.041e-01 -0.328
+    ## ethnicityPanamanian American      3.400e+00  2.997e+01  1.027e+00  3.312
+    ## ethnicityPeruvian American        1.881e+00  6.560e+00  1.014e+00  1.854
+    ## ethnicityPuerto Rican American   -1.949e-01  8.229e-01  7.211e-01 -0.270
+    ## ethnicityVenezuelan American      1.119e+00  3.062e+00  1.012e+00  1.106
+    ## ethnicityWhite                   -5.675e-02  9.448e-01  1.470e-01 -0.386
+    ## age_during_show                  -5.681e-05  9.999e-01  3.800e-03 -0.015
+    ## personality_type_binaryIntrovert  6.203e-02  1.064e+00  7.861e-02  0.789
+    ##                                  Pr(>|z|)    
+    ## ethnicityAsian, Black            0.001125 ** 
+    ## ethnicityBlack                   0.910018    
+    ## ethnicityBrazilian               0.727461    
+    ## ethnicityChilean American        0.084348 .  
+    ## ethnicityColombian American      0.906116    
+    ## ethnicityCuban American          0.602975    
+    ## ethnicityMexican American        0.742668    
+    ## ethnicityPanamanian American     0.000927 ***
+    ## ethnicityPeruvian American       0.063704 .  
+    ## ethnicityPuerto Rican American   0.786935    
+    ## ethnicityVenezuelan American     0.268768    
+    ## ethnicityWhite                   0.699538    
+    ## age_during_show                  0.988074    
+    ## personality_type_binaryIntrovert 0.430060    
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ##                                  exp(coef) exp(-coef) lower .95 upper .95
-    ## ethnicityAsian, Black              26.8529    0.03724   3.59534   200.559
-    ## ethnicityBlack                      0.9987    1.00133   0.69533     1.434
-    ## ethnicityBrazilian                  0.7618    1.31261   0.18399     3.155
-    ## ethnicityChilean American           5.6232    0.17784   0.76633    41.262
-    ## ethnicityColombian American         0.8743    1.14372   0.12007     6.367
-    ## ethnicityCuban American             0.6904    1.44838   0.09512     5.012
-    ## ethnicityMexican American           0.8211    1.21784   0.35005     1.926
-    ## ethnicityPanamanian American       28.7550    0.03478   3.83552   215.577
-    ## ethnicityPeruvian American          6.3371    0.15780   0.86608    46.368
-    ## ethnicityPuerto Rican American      0.8023    1.24636   0.19475     3.306
-    ## ethnicityVenezuelan American        3.0114    0.33208   0.41352    21.929
-    ## ethnicityWhite                      0.8962    1.11579   0.66114     1.215
-    ## age_during_show                     1.0003    0.99972   0.99238     1.008
-    ## personality_type_binaryIntrovert    1.0679    0.93644   0.90486     1.260
+    ## ethnicityAsian, Black              28.1822    0.03548    3.7799   210.120
+    ## ethnicityBlack                      1.0199    0.98050    0.7248     1.435
+    ## ethnicityBrazilian                  0.7772    1.28667    0.1883     3.207
+    ## ethnicityChilean American           5.7711    0.17328    0.7885    42.239
+    ## ethnicityColombian American         0.8875    1.12674    0.1222     6.447
+    ## ethnicityCuban American             1.4556    0.68701    0.3537     5.990
+    ## ethnicityMexican American           0.8757    1.14189    0.3966     1.934
+    ## ethnicityPanamanian American       29.9687    0.03337    4.0068   224.151
+    ## ethnicityPeruvian American          6.5603    0.15243    0.8983    47.910
+    ## ethnicityPuerto Rican American      0.8229    1.21519    0.2003     3.382
+    ## ethnicityVenezuelan American        3.0623    0.32655    0.4213    22.256
+    ## ethnicityWhite                      0.9448    1.05839    0.7083     1.260
+    ## age_during_show                     0.9999    1.00006    0.9925     1.007
+    ## personality_type_binaryIntrovert    1.0640    0.93986    0.9121     1.241
     ## 
-    ## Concordance= 0.532  (se = 0.013 )
-    ## Likelihood ratio test= 16.88  on 14 df,   p=0.3
-    ## Wald test            = 31.88  on 14 df,   p=0.004
-    ## Score (logrank) test = 65.12  on 14 df,   p=1e-08
+    ## Concordance= 0.519  (se = 0.014 )
+    ## Likelihood ratio test= 16.39  on 14 df,   p=0.3
+    ## Wald test            = 31.35  on 14 df,   p=0.005
+    ## Score (logrank) test = 64.51  on 14 df,   p=2e-08
 
 ## Kaplan-Meier plotter-personality
 
 ``` r
-surv_model_per <- survfit(Surv(time, status)~ survivor_final$personality_type_binary)
+surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
 
 ggsurvplot(
   surv_model_per,
-  data = survivor_final,
+  data = survivor_data_final,
   size = 1,                 # change line size
   palette =
     c("#E7B800", "#2E9FDF"),# custom color palettes
@@ -213,11 +231,11 @@ ggsurvplot(
 ## Kaplan-Meier plotter-White vs Non-White
 
 ``` r
-surv_model_poc <- survfit(Surv(time, status)~ survivor_final$poc)
+surv_model_poc <- survfit(Surv(time, status)~ survivor_data_final$poc)
 
 ggsurvplot(
   surv_model_poc,
-  data = survivor_final,
+  data = survivor_data_final,
   size = 1,                 # change line size
   conf.int = FALSE,          # Add confidence interval
   pval = TRUE,              # Add p-value
@@ -235,11 +253,11 @@ ggsurvplot(
 ## Kaplan-Meier plotter-gender
 
 ``` r
-surv_model_sex <- survfit(Surv(time, status)~ survivor_final$gender)
+surv_model_sex <- survfit(Surv(time, status)~ survivor_data_final$gender)
 
 ggsurvplot(
   surv_model_sex,
-  data = survivor_final,
+  data = survivor_data_final,
   size = 1,                 # change line size
   conf.int = FALSE,          # Add confidence interval
   pval = TRUE,              # Add p-value

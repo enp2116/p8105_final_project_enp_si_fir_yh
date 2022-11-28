@@ -2,7 +2,7 @@
 title: "EDA"
 author: "Emily Potts"
 date: "2022-11-28"
-output: html_document
+output: github_document
 ---
 
 ```{r, include = FALSE}
@@ -15,8 +15,17 @@ library(survminer)
 library(gtsummary)
 ```
 
+```{r}
+## reading in data
+survivor_data_final = 
+  read.csv("survivor_data_final")
+```
+
+
+
 ## EDA (rough draft of tables)
 ```{r}
+
 ## overall summary table
 survivor_data_final %>% 
   select(gender, poc, personality_type_binary, age_during_show, days_survived) %>% 

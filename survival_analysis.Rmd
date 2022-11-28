@@ -14,94 +14,84 @@ library(survminer)
 library(gtsummary)
 ```
 
-```{r, echo = FALSE}
-## Data Wrangling by Shodai
-## filtering-out non-US seasons, cleaning data
-
-castaway_details_US = castaway_details %>% 
-  filter(str_detect(castaway_id, '^US')) %>%
-  mutate(
-    personality_type_binary = ifelse(
-      str_detect(personality_type, '^E'), "Extrovert", "Introvert")) %>%
-  select(-c(castaway_id, castaway, personality_type))
-
-castaways_US = castaways %>% filter(version == "US") %>%
-  select(-c(version, season_name, season, castaway_id, castaway, jury_status, original_tribe)) %>%
-  rename(age_during_show = age, days_survived = day)
-
-## joining datasets
-survivor_data_final = full_join(castaway_details_US, castaways_US, by = "full_name")
-
-## summarizing the number of contestants per season
-contestant_count_df = survivor_data_final %>% group_by(version_season) %>% summarize(contestant_count = n())
-
-survivor_data_final = full_join(survivor_data_final, contestant_count_df, by = "version_season")
-
-## reordering variables, dividing elimination order by # of contestants to find percent of season survived (double check this)
-survivor_data_final = survivor_data_final[
-  , c("version_season", "full_name", "age_during_show", "race", "poc", "date_of_birth", "date_of_death", "occupation", "gender", "ethnicity", "personality_type_binary", "episode", "days_survived", "order", "contestant_count", "result")] %>% 
-  arrange(version_season) %>%
-  mutate(percent_survived = order/contestant_count)
-```
 
 ## Survival Analysis
 
-#### Create new variable ethnicity
+
 ```{r}
-survivor_data_final <- survivor_data_final %>%
-  mutate(ethnicity = ifelse(
-      str_detect(poc, 'White'), survivor_data_final$poc, survivor_data_final$race))
+## reading in data
+survivor_data_final = 
+  read.csv("survivor_data_final")
+```
+
+```{r}
+# filtering of seasons moved to data wrangling file
+# replaced all survivor_final with survivor_data_final since filtering was moved to use for EDA
+
+status <- c()
+time <- c()
+for (i in 1:nrow(survivor_data_final))
+  {
+  if(survivor_data_final[i,16] == "Quit"){
+    status[i] <- 0
+    time[i] <- survivor_data_final$days_survived[i]
+  }
+  else if(survivor_data_final[i,16] == "Sole Survivor"){
+    status[i] <- 0
+    time[i] <- survivor_data_final$days_survived[i]
+  } 
+  else if(survivor_data_final[i,16] == "Runner-up"){
+    status[i] <- 0
+    time[i] <- survivor_data_final$days_survived[i]
+  } else if(survivor_data_final[i,16] == "Co-runner-up"){
+    status[i] <- 0
+    time[i] <- survivor_data_final$days_survived[i]
+  }
+  else {
+    status[i] <- 1
+    time[i] <- survivor_data_final$days_survived[i]
+  }
+}
+survivor_data_final[,18] <- status
+survivor_data_final[,19] <- time
+
+colnames(survivor_data_final)[18] <- "status"
+colnames(survivor_data_final)[19] <- "time"
 ```
 
 #### Create time and status variable
 ```{r}
-## drop missing values of days_survived where all US43 seasons participants
-survivor_final <- drop_na(survivor_data_final, days_survived)
-
-## time to event: in this data, the event is voted out
-## time is 39 days
-## censors are participant who survived for 39 days and participant who quit the game
-
-check_length_time <- survivor_data_final %>% 
-  filter(result %in% c("Sole Survivor","Co-runner-up","Runner-up"))
-
-## season 41 and 42, the longest survival time is 26 days, exclude these seasons
-## season 2, the longest survival time is 42 days, exclude this season
-survivor_final <- survivor_final %>% 
-  filter(version_season != "US02") %>%
-  filter(version_season != "US41") %>%
-  filter(version_season != "US42") %>%
-  mutate(personality_type_binary = as.factor(personality_type_binary))
+# filtering of seasons moved to data wrangling file
 
 status <- c()
 time <- c()
-for (i in 1:nrow(survivor_final))
+for (i in 1:nrow(survivor_data_final))
   {
-  if(survivor_final[i,16] == "Quit"){
+  if(survivor_data_final[i,16] == "Quit"){
     status[i] <- 0
-    time[i] <- survivor_final$days_survived[i]
+    time[i] <- survivor_data_final$days_survived[i]
   }
-  else if(survivor_final[i,16] == "Sole Survivor"){
+  else if(survivor_data_final[i,16] == "Sole Survivor"){
     status[i] <- 0
-    time[i] <- survivor_final$days_survived[i]
+    time[i] <- survivor_data_final$days_survived[i]
   } 
-  else if(survivor_final[i,16] == "Runner-up"){
+  else if(survivor_data_final[i,16] == "Runner-up"){
     status[i] <- 0
-    time[i] <- survivor_final$days_survived[i]
-  } else if(survivor_final[i,16] == "Co-runner-up"){
+    time[i] <- survivor_data_final$days_survived[i]
+  } else if(survivor_data_final[i,16] == "Co-runner-up"){
     status[i] <- 0
-    time[i] <- survivor_final$days_survived[i]
+    time[i] <- survivor_data_final$days_survived[i]
   }
   else {
     status[i] <- 1
-    time[i] <- survivor_final$days_survived[i]
+    time[i] <- survivor_data_final$days_survived[i]
   }
 }
-survivor_final[,18] <- status
-survivor_final[,19] <- time
+survivor_data_final[,18] <- status
+survivor_data_final[,19] <- time
 
-colnames(survivor_final)[18] <- "status"
-colnames(survivor_final)[19] <- "time"
+colnames(survivor_data_final)[18] <- "status"
+colnames(survivor_data_final)[19] <- "time"
 ```
 
 ## Survival Unadjected Model
@@ -114,7 +104,7 @@ plot(surv_model_unadj, xlab = "Days",
 
 ## Cox-proposional hazard model 1
 ```{r}
-surv_model_cox1 <- coxph(data = survivor_final,
+surv_model_cox1 <- coxph(data = survivor_data_final,
   Surv(time, status) ~  poc + age_during_show + personality_type_binary)
 
 summary(surv_model_cox1)
@@ -122,7 +112,7 @@ summary(surv_model_cox1)
 
 ## Cox-proposional hazard model 2
 ```{r}
-surv_model_cox2 <- coxph(data = survivor_final,
+surv_model_cox2 <- coxph(data = survivor_data_final,
   Surv(time, status) ~  ethnicity + age_during_show + personality_type_binary)
 
 summary(surv_model_cox2)
@@ -130,11 +120,11 @@ summary(surv_model_cox2)
 
 ## Kaplan-Meier plotter-personality
 ```{r}
-surv_model_per <- survfit(Surv(time, status)~ survivor_final$personality_type_binary)
+surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
 
 ggsurvplot(
   surv_model_per,
-  data = survivor_final,
+  data = survivor_data_final,
   size = 1,                 # change line size
   palette =
     c("#E7B800", "#2E9FDF"),# custom color palettes
@@ -155,11 +145,11 @@ ggsurvplot(
 
 ## Kaplan-Meier plotter-White vs Non-White
 ```{r}
-surv_model_poc <- survfit(Surv(time, status)~ survivor_final$poc)
+surv_model_poc <- survfit(Surv(time, status)~ survivor_data_final$poc)
 
 ggsurvplot(
   surv_model_poc,
-  data = survivor_final,
+  data = survivor_data_final,
   size = 1,                 # change line size
   conf.int = FALSE,          # Add confidence interval
   pval = TRUE,              # Add p-value
@@ -174,11 +164,11 @@ ggsurvplot(
 
 ## Kaplan-Meier plotter-gender
 ```{r}
-surv_model_sex <- survfit(Surv(time, status)~ survivor_final$gender)
+surv_model_sex <- survfit(Surv(time, status)~ survivor_data_final$gender)
 
 ggsurvplot(
   surv_model_sex,
-  data = survivor_final,
+  data = survivor_data_final,
   size = 1,                 # change line size
   conf.int = FALSE,          # Add confidence interval
   pval = TRUE,              # Add p-value
