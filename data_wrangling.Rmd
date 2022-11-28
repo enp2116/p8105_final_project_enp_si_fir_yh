@@ -44,16 +44,18 @@ survivor_data_final = survivor_data_final %>%
 
 ## season 41 and 42, the longest survival time is 26 days, exclude these seasons
 ## season 2, the longest survival time is 42 days, exclude this season
+## season 43 is incomplete, exclude this season
 survivor_data_final <- survivor_data_final %>% 
   filter(version_season != "US02") %>%
   filter(version_season != "US41") %>%
-  filter(version_season != "US42") 
+  filter(version_season != "US42") %>%
+  filter(version_season != "US43")
 
 ## calculating percent NAs for all variables
 survivor_data_final %>% summarise_all(list(name = ~sum(is.na(.))/length(.)))
 
 ## Saving final dataset as csv file
-write.csv(survivor_data_final, file = "survivor_data_final")
+write.csv(survivor_data_final, file = "./data/survivor_data_final.csv")
 ```
 
 
