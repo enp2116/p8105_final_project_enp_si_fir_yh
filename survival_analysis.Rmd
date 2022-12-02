@@ -21,9 +21,10 @@ library(gtsummary)
 ```{r}
 ## reading in data
 survivor_data_final = 
-  read.csv("survivor_data_final")
+  read.csv("data/survivor_data_final.csv")
 ```
 
+## Create status and time variable
 ```{r}
 # filtering of seasons moved to data wrangling file
 # replaced all survivor_final with survivor_data_final since filtering was moved to use for EDA
@@ -32,18 +33,18 @@ status <- c()
 time <- c()
 for (i in 1:nrow(survivor_data_final))
   {
-  if(survivor_data_final[i,16] == "Quit"){
+  if (survivor_data_final[i,17] == "Quit") {
     status[i] <- 0
     time[i] <- survivor_data_final$days_survived[i]
   }
-  else if(survivor_data_final[i,16] == "Sole Survivor"){
+  else if (survivor_data_final[i,17] == "Sole Survivor") {
     status[i] <- 0
     time[i] <- survivor_data_final$days_survived[i]
   } 
-  else if(survivor_data_final[i,16] == "Runner-up"){
+  else if (survivor_data_final[i,17] == "Runner-up") {
     status[i] <- 0
     time[i] <- survivor_data_final$days_survived[i]
-  } else if(survivor_data_final[i,16] == "Co-runner-up"){
+  } else if (survivor_data_final[i,17] == "Co-runner-up") {
     status[i] <- 0
     time[i] <- survivor_data_final$days_survived[i]
   }
@@ -52,46 +53,11 @@ for (i in 1:nrow(survivor_data_final))
     time[i] <- survivor_data_final$days_survived[i]
   }
 }
-survivor_data_final[,18] <- status
-survivor_data_final[,19] <- time
+survivor_data_final[,20] <- status
+survivor_data_final[,21] <- time
 
-colnames(survivor_data_final)[18] <- "status"
-colnames(survivor_data_final)[19] <- "time"
-```
-
-#### Create time and status variable
-```{r}
-# filtering of seasons moved to data wrangling file
-
-status <- c()
-time <- c()
-for (i in 1:nrow(survivor_data_final))
-  {
-  if(survivor_data_final[i,16] == "Quit"){
-    status[i] <- 0
-    time[i] <- survivor_data_final$days_survived[i]
-  }
-  else if(survivor_data_final[i,16] == "Sole Survivor"){
-    status[i] <- 0
-    time[i] <- survivor_data_final$days_survived[i]
-  } 
-  else if(survivor_data_final[i,16] == "Runner-up"){
-    status[i] <- 0
-    time[i] <- survivor_data_final$days_survived[i]
-  } else if(survivor_data_final[i,16] == "Co-runner-up"){
-    status[i] <- 0
-    time[i] <- survivor_data_final$days_survived[i]
-  }
-  else {
-    status[i] <- 1
-    time[i] <- survivor_data_final$days_survived[i]
-  }
-}
-survivor_data_final[,18] <- status
-survivor_data_final[,19] <- time
-
-colnames(survivor_data_final)[18] <- "status"
-colnames(survivor_data_final)[19] <- "time"
+colnames(survivor_data_final)[20] <- "status"
+colnames(survivor_data_final)[21] <- "time"
 ```
 
 ## Survival Unadjected Model
