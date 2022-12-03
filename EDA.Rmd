@@ -18,18 +18,25 @@ library(gtsummary)
 ```{r}
 ## reading in data
 survivor_data_final = 
-  read.csv("survivor_data_final")
+  read.csv("data/survivor_data_final.csv")
 ```
 
 
 
-## EDA (rough draft of tables)
+## EDA (tables)
 ```{r}
-
 ## overall summary table
 survivor_data_final %>% 
   select(gender, poc, personality_type_binary, age_during_show, days_survived) %>% 
-  tbl_summary(type = list(gender~ "categorical", poc~ "categorical", personality_type_binary~ "categorical", age_during_show ~ "continuous", days_survived ~ "continuous"), statistic = list(all_continuous() ~ "{mean} ({sd})"))
+  tbl_summary(type = list(gender~ "categorical", poc~ "categorical", personality_type_binary~ "categorical", age_during_show ~ "continuous", days_survived ~ "continuous"), 
+              statistic = list(all_continuous() ~ "{mean} ({sd})"), 
+              label = list(c(gender) ~ "Gender",
+                           c(poc) ~ "Person of Color",
+                           c(personality_type_binary) ~ "Personality Type",
+                           c(age_during_show) ~ "Age During Show (Years)",
+                           c(days_survived) ~ "Survival Time on Show (Days)")) %>% 
+  bold_labels()
+
 
 ## days survived by variables of interest
 ## personality type

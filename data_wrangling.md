@@ -5,7 +5,7 @@ data_wrangling
     ## # A tibble: 1 × 18
     ##   version_seas…¹ full_…² age_d…³ race_…⁴ poc_n…⁵ date_…⁶ date_…⁷ occup…⁸ gende…⁹
     ##            <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-    ## 1              0       0       0   0.728 0.00549 0.00549   0.981 0.00549 0.00549
+    ## 1              0       0       0   0.728 0.00549 0.00549   0.984 0.00549 0.00549
     ## # … with 9 more variables: ethnicity_name <dbl>,
     ## #   personality_type_binary_name <dbl>, episode_name <dbl>,
     ## #   days_survived_name <dbl>, order_name <dbl>, contestant_count_name <dbl>,

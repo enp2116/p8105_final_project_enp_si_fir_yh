@@ -60,7 +60,7 @@ colnames(survivor_data_final)[20] <- "status"
 colnames(survivor_data_final)[21] <- "time"
 ```
 
-## Survival Unadjected Model
+## Survival Unadjusted Model
 ```{r}
 surv_model_unadj <- survfit(Surv(time, status) ~ 1)
 
