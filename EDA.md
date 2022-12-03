@@ -18,19 +18,19 @@ survivor_data_final %>%
   tbl_summary(type = list(gender~ "categorical", poc~ "categorical", personality_type_binary~ "categorical", age_during_show ~ "continuous", days_survived ~ "continuous"), 
               statistic = list(all_continuous() ~ "{mean} ({sd})"), 
               label = list(c(gender) ~ "Gender",
-                           c(poc) ~ "Person of Color",
+                           c(poc) ~ "Race Identifier",
                            c(personality_type_binary) ~ "Personality Type",
                            c(age_during_show) ~ "Age During Show (Years)",
                            c(days_survived) ~ "Survival Time on Show (Days)")) %>% 
-  bold_labels()
+  bold_labels() 
 ```
 
-<div id="bjfyszgcaq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="edlufffhqo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#bjfyszgcaq .gt_table {
+#edlufffhqo .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -55,7 +55,7 @@ survivor_data_final %>%
   border-left-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_heading {
+#edlufffhqo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -67,7 +67,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_title {
+#edlufffhqo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -79,7 +79,7 @@ survivor_data_final %>%
   border-bottom-width: 0;
 }
 
-#bjfyszgcaq .gt_subtitle {
+#edlufffhqo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -91,13 +91,13 @@ survivor_data_final %>%
   border-top-width: 0;
 }
 
-#bjfyszgcaq .gt_bottom_border {
+#edlufffhqo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_col_headings {
+#edlufffhqo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -112,7 +112,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_col_heading {
+#edlufffhqo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -132,7 +132,7 @@ survivor_data_final %>%
   overflow-x: hidden;
 }
 
-#bjfyszgcaq .gt_column_spanner_outer {
+#edlufffhqo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -144,15 +144,15 @@ survivor_data_final %>%
   padding-right: 4px;
 }
 
-#bjfyszgcaq .gt_column_spanner_outer:first-child {
+#edlufffhqo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bjfyszgcaq .gt_column_spanner_outer:last-child {
+#edlufffhqo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bjfyszgcaq .gt_column_spanner {
+#edlufffhqo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -164,7 +164,7 @@ survivor_data_final %>%
   width: 100%;
 }
 
-#bjfyszgcaq .gt_group_heading {
+#edlufffhqo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -189,7 +189,7 @@ survivor_data_final %>%
   vertical-align: middle;
 }
 
-#bjfyszgcaq .gt_empty_group_heading {
+#edlufffhqo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -204,15 +204,15 @@ survivor_data_final %>%
   vertical-align: middle;
 }
 
-#bjfyszgcaq .gt_from_md > :first-child {
+#edlufffhqo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bjfyszgcaq .gt_from_md > :last-child {
+#edlufffhqo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bjfyszgcaq .gt_row {
+#edlufffhqo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -231,7 +231,7 @@ survivor_data_final %>%
   overflow-x: hidden;
 }
 
-#bjfyszgcaq .gt_stub {
+#edlufffhqo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -244,7 +244,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#bjfyszgcaq .gt_stub_row_group {
+#edlufffhqo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -258,11 +258,11 @@ survivor_data_final %>%
   vertical-align: top;
 }
 
-#bjfyszgcaq .gt_row_group_first td {
+#edlufffhqo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bjfyszgcaq .gt_summary_row {
+#edlufffhqo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -272,16 +272,16 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#bjfyszgcaq .gt_first_summary_row {
+#edlufffhqo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_first_summary_row.thick {
+#edlufffhqo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bjfyszgcaq .gt_last_summary_row {
+#edlufffhqo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -291,7 +291,7 @@ survivor_data_final %>%
   border-bottom-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_grand_summary_row {
+#edlufffhqo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -301,7 +301,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#bjfyszgcaq .gt_first_grand_summary_row {
+#edlufffhqo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -311,11 +311,11 @@ survivor_data_final %>%
   border-top-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_striped {
+#edlufffhqo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bjfyszgcaq .gt_table_body {
+#edlufffhqo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -324,7 +324,7 @@ survivor_data_final %>%
   border-bottom-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_footnotes {
+#edlufffhqo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -338,7 +338,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_footnote {
+#edlufffhqo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -347,7 +347,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#bjfyszgcaq .gt_sourcenotes {
+#edlufffhqo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -361,7 +361,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#bjfyszgcaq .gt_sourcenote {
+#edlufffhqo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -369,64 +369,64 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#bjfyszgcaq .gt_left {
+#edlufffhqo .gt_left {
   text-align: left;
 }
 
-#bjfyszgcaq .gt_center {
+#edlufffhqo .gt_center {
   text-align: center;
 }
 
-#bjfyszgcaq .gt_right {
+#edlufffhqo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bjfyszgcaq .gt_font_normal {
+#edlufffhqo .gt_font_normal {
   font-weight: normal;
 }
 
-#bjfyszgcaq .gt_font_bold {
+#edlufffhqo .gt_font_bold {
   font-weight: bold;
 }
 
-#bjfyszgcaq .gt_font_italic {
+#edlufffhqo .gt_font_italic {
   font-style: italic;
 }
 
-#bjfyszgcaq .gt_super {
+#edlufffhqo .gt_super {
   font-size: 65%;
 }
 
-#bjfyszgcaq .gt_footnote_marks {
+#edlufffhqo .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#bjfyszgcaq .gt_asterisk {
+#edlufffhqo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bjfyszgcaq .gt_indent_1 {
+#edlufffhqo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bjfyszgcaq .gt_indent_2 {
+#edlufffhqo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bjfyszgcaq .gt_indent_3 {
+#edlufffhqo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bjfyszgcaq .gt_indent_4 {
+#edlufffhqo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bjfyszgcaq .gt_indent_5 {
+#edlufffhqo .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -447,7 +447,7 @@ survivor_data_final %>%
 <td class="gt_row gt_center">368 (51%)</td></tr>
     <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
 <td class="gt_row gt_center">4</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Person of Color</td>
+    <tr><td class="gt_row gt_left" style="font-weight: bold;">Race Identifier</td>
 <td class="gt_row gt_center"></td></tr>
     <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">POC</td>
 <td class="gt_row gt_center">199 (27%)</td></tr>
@@ -478,10 +478,9 @@ survivor_data_final %>%
 </div>
 
 ``` r
-## days survived by variables of interest
+## days survived by variables of interest (planning to add tabs for these 3 tables)
+
 ## personality type
-## done with days survived (can replace with standardized percents if we change survival analysis)
-  
 survivor_data_final %>% 
   group_by(personality_type_binary) %>% 
   summarize(n_personality_type = n(),
