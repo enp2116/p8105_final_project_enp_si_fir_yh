@@ -1,0 +1,106 @@
+---
+title: "Logistic"
+output: html_document
+date: "2022-11-28"
+---
+
+```{r}
+library(survivoR)
+library(tidyverse)
+library(stringr)
+library(dplyr)
+library(glmnet)
+```
+
+```{r}
+survivor_logistic_data = read_csv("./data/survivor_data_final_including_2_41_42_43.csv") %>% 
+  mutate(finalist = ifelse(result == "winner", 1, 
+                           ifelse(result == "Runner-up", 1, 
+                                  ifelse(result == "2nd runner-up", 1, 0)))) %>% 
+  mutate(region = 
+    ifelse(
+    state == "Connecticut" 
+    | state == "Maine" 
+    | state == "Massachusetts" 
+    | state == "New Hampshire"
+    | state == "Rhode Island"
+    | state == "Vermont" 
+    | state == "New Jersey" 
+    | state == "New York" 
+    | state == "Pennsylvania", 
+    "Northeast",
+    
+    ifelse(
+    state == "Delaware" 
+    | state == "District of Columbia" 
+    | state == "Florida" 
+    | state == "Georgia" 
+    | state == "Maryland" 
+    | state == "North Carolina"
+    | state == "South Carolina" 
+    | state == "Virginia"
+    | state == "West Virginia" 
+    | state == "Alabama"
+    | state == "Kentucky" 
+    | state == "Mississippi"
+    | state == "Tennessee" 
+    | state == "Arkansas" 
+    | state == "Louisiana" 
+    | state == "Oklahoma" 
+    | state == "Texas", 
+      "South", 
+      
+    ifelse(
+      state == "Arizona"
+      | state == "Colorado"
+      | state == "Idaho"
+      | state == "New Mexico"
+      | state == "Montana"
+      | state == "Utah" 
+      | state == " Nevada"
+      | state == "Wyoming"
+      | state == "Alaska"
+      | state == "California"
+      | state == "Hawaii"
+      | state == "Oregon"
+      | state == "Washington"
+    ,  "West", "Midwest"
+    )))
+  ) %>%
+  filter(version_season != "US43") %>%
+  mutate(lnage = log(age_during_show)) %>%
+  dplyr::select(-age_during_show)
+
+survivor_logistic_data = survivor_logistic_data %>%
+  mutate(poc = as.factor(poc),
+         gender = as.factor(gender),
+         personality_type_binary = as.factor(personality_type_binary),
+         region = as.factor(region)) %>%
+ dplyr::select(finalist, lnage, gender, poc, region, personality_type_binary) %>% na.omit()
+```
+
+```{r}
+survivor_model <- glm(finalist ~ ., data = survivor_logistic_data, 
+               family = binomial(logit))
+
+summary(survivor_model)
+```
+
+```{r}
+# Converting categorical variables to dummy variables
+survivor_lasso_df = as_tibble(model.matrix(~ ., data = survivor_logistic_data)[,-1]) %>% select(-finalist)
+
+lambda_seq = 10^seq(-3, 0, by = .1)
+set.seed(43)
+
+cv_object =  cv.glmnet(as.matrix(survivor_lasso_df), survivor_logistic_data$finalist, family = "binomial",
+lambda = lambda_seq, alpha = 0)
+
+best_lambda = cv_object$lambda.min
+
+best_model = glmnet(as.matrix(survivor_lasso_df), survivor_logistic_data$finalist, alpha = 0, lambda = best_lambda)
+coef(best_model)
+```
+
+
+
