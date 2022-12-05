@@ -25,12 +25,12 @@ survivor_data_final %>%
   bold_labels() 
 ```
 
-<div id="tcweoqqraz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ashwkcghij" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#tcweoqqraz .gt_table {
+#ashwkcghij .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -55,7 +55,7 @@ survivor_data_final %>%
   border-left-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_heading {
+#ashwkcghij .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -67,12 +67,12 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_caption {
+#ashwkcghij .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tcweoqqraz .gt_title {
+#ashwkcghij .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -84,7 +84,7 @@ survivor_data_final %>%
   border-bottom-width: 0;
 }
 
-#tcweoqqraz .gt_subtitle {
+#ashwkcghij .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -96,13 +96,13 @@ survivor_data_final %>%
   border-top-width: 0;
 }
 
-#tcweoqqraz .gt_bottom_border {
+#ashwkcghij .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_col_headings {
+#ashwkcghij .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -117,7 +117,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_col_heading {
+#ashwkcghij .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -137,7 +137,7 @@ survivor_data_final %>%
   overflow-x: hidden;
 }
 
-#tcweoqqraz .gt_column_spanner_outer {
+#ashwkcghij .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -149,15 +149,15 @@ survivor_data_final %>%
   padding-right: 4px;
 }
 
-#tcweoqqraz .gt_column_spanner_outer:first-child {
+#ashwkcghij .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tcweoqqraz .gt_column_spanner_outer:last-child {
+#ashwkcghij .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tcweoqqraz .gt_column_spanner {
+#ashwkcghij .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -169,7 +169,7 @@ survivor_data_final %>%
   width: 100%;
 }
 
-#tcweoqqraz .gt_group_heading {
+#ashwkcghij .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -195,7 +195,7 @@ survivor_data_final %>%
   text-align: left;
 }
 
-#tcweoqqraz .gt_empty_group_heading {
+#ashwkcghij .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -210,15 +210,15 @@ survivor_data_final %>%
   vertical-align: middle;
 }
 
-#tcweoqqraz .gt_from_md > :first-child {
+#ashwkcghij .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tcweoqqraz .gt_from_md > :last-child {
+#ashwkcghij .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tcweoqqraz .gt_row {
+#ashwkcghij .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -237,7 +237,7 @@ survivor_data_final %>%
   overflow-x: hidden;
 }
 
-#tcweoqqraz .gt_stub {
+#ashwkcghij .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -250,7 +250,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tcweoqqraz .gt_stub_row_group {
+#ashwkcghij .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -264,11 +264,11 @@ survivor_data_final %>%
   vertical-align: top;
 }
 
-#tcweoqqraz .gt_row_group_first td {
+#ashwkcghij .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tcweoqqraz .gt_summary_row {
+#ashwkcghij .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -278,16 +278,16 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tcweoqqraz .gt_first_summary_row {
+#ashwkcghij .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_first_summary_row.thick {
+#ashwkcghij .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tcweoqqraz .gt_last_summary_row {
+#ashwkcghij .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -297,7 +297,7 @@ survivor_data_final %>%
   border-bottom-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_grand_summary_row {
+#ashwkcghij .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -307,7 +307,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tcweoqqraz .gt_first_grand_summary_row {
+#ashwkcghij .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -317,11 +317,11 @@ survivor_data_final %>%
   border-top-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_striped {
+#ashwkcghij .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tcweoqqraz .gt_table_body {
+#ashwkcghij .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -330,7 +330,7 @@ survivor_data_final %>%
   border-bottom-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_footnotes {
+#ashwkcghij .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -344,7 +344,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_footnote {
+#ashwkcghij .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -353,7 +353,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tcweoqqraz .gt_sourcenotes {
+#ashwkcghij .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -367,7 +367,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#tcweoqqraz .gt_sourcenote {
+#ashwkcghij .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -375,64 +375,64 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tcweoqqraz .gt_left {
+#ashwkcghij .gt_left {
   text-align: left;
 }
 
-#tcweoqqraz .gt_center {
+#ashwkcghij .gt_center {
   text-align: center;
 }
 
-#tcweoqqraz .gt_right {
+#ashwkcghij .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tcweoqqraz .gt_font_normal {
+#ashwkcghij .gt_font_normal {
   font-weight: normal;
 }
 
-#tcweoqqraz .gt_font_bold {
+#ashwkcghij .gt_font_bold {
   font-weight: bold;
 }
 
-#tcweoqqraz .gt_font_italic {
+#ashwkcghij .gt_font_italic {
   font-style: italic;
 }
 
-#tcweoqqraz .gt_super {
+#ashwkcghij .gt_super {
   font-size: 65%;
 }
 
-#tcweoqqraz .gt_footnote_marks {
+#ashwkcghij .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#tcweoqqraz .gt_asterisk {
+#ashwkcghij .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tcweoqqraz .gt_indent_1 {
+#ashwkcghij .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tcweoqqraz .gt_indent_2 {
+#ashwkcghij .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tcweoqqraz .gt_indent_3 {
+#ashwkcghij .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tcweoqqraz .gt_indent_4 {
+#ashwkcghij .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tcweoqqraz .gt_indent_5 {
+#ashwkcghij .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -580,10 +580,20 @@ ggplot(data = survivor_gender_over_time, aes(x = season, y = freq, group = 1)) +
   geom_line() +
   geom_point() +
   geom_smooth(se = FALSE) + 
-  ggtitle("Change in Proportion of Women Over Time ") +
+  ggtitle("Change in Proportion of Women Over Time") +
   xlab("Season") + ylab("Proportion of Women")
 ```
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
 ![](EDA_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+``` r
+ggplot(survivor_data_final, aes(x = age_during_show)) + 
+  geom_histogram(aes(y = after_stat(count/sum(count))), bins = 15) +
+  scale_y_continuous(labels = scales::percent) + 
+  ggtitle("Distribution of Ages") +
+  xlab("Age (During Show)") + ylab("Count")
+```
+
+![](EDA_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->

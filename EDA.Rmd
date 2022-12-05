@@ -104,7 +104,8 @@ ggplot(data = survivor_gender_over_time, aes(x = season, y = freq, group = 1)) +
 
 ```{r}
 ggplot(survivor_data_final, aes(x = age_during_show)) + 
-  geom_histogram(bins = 15) + 
+  geom_histogram(aes(y = after_stat(count/sum(count))), bins = 15) +
+  scale_y_continuous(labels = scales::percent) + 
   ggtitle("Distribution of Ages") +
   xlab("Age (During Show)") + ylab("Count")
 ```
