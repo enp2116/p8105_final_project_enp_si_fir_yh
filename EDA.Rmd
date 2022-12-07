@@ -14,16 +14,17 @@ library(survival)
 library(survminer)
 library(gtsummary)
 library(gridExtra)
+library(RColorBrewer)
 ```
 
-```{r}
+```{r, warning = FALSE, message = FALSE}
 ## reading in data
 survivor_data_final = 
   read.csv("data/survivor_data_final.csv")
 ```
 
 ## EDA (tables)
-```{r}
+```{r, warning = FALSE, message = FALSE}
 ## overall summary table
 survivor_data_final %>% 
   select(gender, poc, personality_type_binary, age_during_show, days_survived) %>% 
@@ -66,7 +67,8 @@ survivor_data_final %>%
 ```
 
 ## Change in Diversity (POC)
-```{r, warning = FALSE}
+```{r, warning = FALSE, message = FALSE}
+fill_color = brewer.pal(9,"Reds")[4]
 survivor_poc_over_time = survivor_data_final %>% 
   group_by(version_season, poc) %>%
   summarize(count = n()) %>%
@@ -77,15 +79,16 @@ survivor_poc_over_time = survivor_data_final %>%
   mutate(season = as.numeric(season))
 
 ggplot(data = survivor_poc_over_time, aes(x = season, y = freq, group = 1)) +
-  geom_line() +
-  geom_point() +
-  geom_smooth(se = FALSE) + 
+  geom_line(color = fill_color) +
+  geom_point(color = fill_color) +
+  geom_smooth(se = FALSE, color = "seashell") + 
   ggtitle("Change in Proportion of POC Over Time ") +
   xlab("Season") + ylab("Proportion of POC")
 ```
 
 ## Change in Diversity (Gender)
-```{r, warning = FALSE}
+```{r, warning = FALSE, message = FALSE}
+fill_color = brewer.pal(9,"Purples")[5]
 survivor_gender_over_time = survivor_data_final %>% 
   group_by(version_season, gender) %>%
   summarize(count = n()) %>%
@@ -96,16 +99,17 @@ survivor_gender_over_time = survivor_data_final %>%
   mutate(season = as.numeric(season))
 
 ggplot(data = survivor_gender_over_time, aes(x = season, y = freq, group = 1)) +
-  geom_line() +
-  geom_point() +
-  geom_smooth(se = FALSE) + 
+  geom_line(color = fill_color) +
+  geom_point(color = fill_color) +
+  geom_smooth(se = FALSE, color = "purple") + 
   ggtitle("Change in Proportion of Women Over Time") +
   xlab("Season") + ylab("Proportion of Women")
 ```
 
-```{r}
+```{r, warning = FALSE, message = FALSE}
+fill_color = brewer.pal(9,"PuBuGn")[5]
 ggplot(survivor_data_final, aes(x = age_during_show)) + 
-  geom_histogram(aes(y = after_stat(count/sum(count))), bins = 15) +
+  geom_histogram(aes(y = after_stat(count/sum(count))), bins = 15, fill = fill_color, col = "white") +
   scale_y_continuous(labels = scales::percent) + 
   ggtitle("Distribution of Ages") +
   xlab("Age (During Show)") + ylab("Count")
