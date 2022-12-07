@@ -25,12 +25,12 @@ survivor_data_final %>%
   bold_labels() 
 ```
 
-<div id="kojshqcszx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="fojavktyjt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#kojshqcszx .gt_table {
+#fojavktyjt .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -55,7 +55,7 @@ survivor_data_final %>%
   border-left-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_heading {
+#fojavktyjt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -67,12 +67,12 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_caption {
+#fojavktyjt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kojshqcszx .gt_title {
+#fojavktyjt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -84,7 +84,7 @@ survivor_data_final %>%
   border-bottom-width: 0;
 }
 
-#kojshqcszx .gt_subtitle {
+#fojavktyjt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -96,13 +96,13 @@ survivor_data_final %>%
   border-top-width: 0;
 }
 
-#kojshqcszx .gt_bottom_border {
+#fojavktyjt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_col_headings {
+#fojavktyjt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -117,7 +117,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_col_heading {
+#fojavktyjt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -137,7 +137,7 @@ survivor_data_final %>%
   overflow-x: hidden;
 }
 
-#kojshqcszx .gt_column_spanner_outer {
+#fojavktyjt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -149,15 +149,15 @@ survivor_data_final %>%
   padding-right: 4px;
 }
 
-#kojshqcszx .gt_column_spanner_outer:first-child {
+#fojavktyjt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kojshqcszx .gt_column_spanner_outer:last-child {
+#fojavktyjt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kojshqcszx .gt_column_spanner {
+#fojavktyjt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -169,7 +169,7 @@ survivor_data_final %>%
   width: 100%;
 }
 
-#kojshqcszx .gt_group_heading {
+#fojavktyjt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -195,7 +195,7 @@ survivor_data_final %>%
   text-align: left;
 }
 
-#kojshqcszx .gt_empty_group_heading {
+#fojavktyjt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -210,15 +210,15 @@ survivor_data_final %>%
   vertical-align: middle;
 }
 
-#kojshqcszx .gt_from_md > :first-child {
+#fojavktyjt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kojshqcszx .gt_from_md > :last-child {
+#fojavktyjt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kojshqcszx .gt_row {
+#fojavktyjt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -237,7 +237,7 @@ survivor_data_final %>%
   overflow-x: hidden;
 }
 
-#kojshqcszx .gt_stub {
+#fojavktyjt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -250,7 +250,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#kojshqcszx .gt_stub_row_group {
+#fojavktyjt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -264,11 +264,11 @@ survivor_data_final %>%
   vertical-align: top;
 }
 
-#kojshqcszx .gt_row_group_first td {
+#fojavktyjt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kojshqcszx .gt_summary_row {
+#fojavktyjt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -278,16 +278,16 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#kojshqcszx .gt_first_summary_row {
+#fojavktyjt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_first_summary_row.thick {
+#fojavktyjt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kojshqcszx .gt_last_summary_row {
+#fojavktyjt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -297,7 +297,7 @@ survivor_data_final %>%
   border-bottom-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_grand_summary_row {
+#fojavktyjt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -307,7 +307,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#kojshqcszx .gt_first_grand_summary_row {
+#fojavktyjt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -317,11 +317,11 @@ survivor_data_final %>%
   border-top-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_striped {
+#fojavktyjt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kojshqcszx .gt_table_body {
+#fojavktyjt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -330,7 +330,7 @@ survivor_data_final %>%
   border-bottom-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_footnotes {
+#fojavktyjt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -344,7 +344,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_footnote {
+#fojavktyjt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -353,7 +353,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#kojshqcszx .gt_sourcenotes {
+#fojavktyjt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -367,7 +367,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#kojshqcszx .gt_sourcenote {
+#fojavktyjt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -375,64 +375,64 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#kojshqcszx .gt_left {
+#fojavktyjt .gt_left {
   text-align: left;
 }
 
-#kojshqcszx .gt_center {
+#fojavktyjt .gt_center {
   text-align: center;
 }
 
-#kojshqcszx .gt_right {
+#fojavktyjt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kojshqcszx .gt_font_normal {
+#fojavktyjt .gt_font_normal {
   font-weight: normal;
 }
 
-#kojshqcszx .gt_font_bold {
+#fojavktyjt .gt_font_bold {
   font-weight: bold;
 }
 
-#kojshqcszx .gt_font_italic {
+#fojavktyjt .gt_font_italic {
   font-style: italic;
 }
 
-#kojshqcszx .gt_super {
+#fojavktyjt .gt_super {
   font-size: 65%;
 }
 
-#kojshqcszx .gt_footnote_marks {
+#fojavktyjt .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#kojshqcszx .gt_asterisk {
+#fojavktyjt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kojshqcszx .gt_indent_1 {
+#fojavktyjt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kojshqcszx .gt_indent_2 {
+#fojavktyjt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kojshqcszx .gt_indent_3 {
+#fojavktyjt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kojshqcszx .gt_indent_4 {
+#fojavktyjt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kojshqcszx .gt_indent_5 {
+#fojavktyjt .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -596,30 +596,4 @@ ggplot(survivor_data_final, aes(x = age_during_show)) +
   xlab("Age (During Show)") + ylab("Count")
 ```
 
-![](EDA_files/figure-gfm/unnamed-chunk-6-1.png)<!-- --> \##
-Confessionals per Season
-
-``` r
-confessionals_df = confessionals %>% 
-  filter(version == "US") %>%
-  dplyr::select(-c(version, version_season, season_name))
-
-seasons = list()
-for(i in 1:43)
-{
-  seasons[[i]] = confessionals_df %>%
-    filter(season == i) %>% 
-    group_by(castaway)
-}
-
-for(i in 1:43)
-{
-  print(ggplot(data = seasons[[i]], aes(x = episode, y = confessional_count, color = castaway)) +
-    geom_line() +
-    geom_point() +
-    ggtitle(paste0("Confessionals per Episode in Season ", i)) +
-    xlab("Episode") + ylab("Number of Confessionals"))
-}
-```
-
-![](EDA_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-3.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-4.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-5.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-6.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-7.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-8.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-9.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-10.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-11.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-12.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-13.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-14.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-15.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-16.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-17.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-18.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-19.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-20.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-21.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-22.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-23.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-24.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-25.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-26.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-27.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-28.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-29.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-30.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-31.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-32.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-33.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-34.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-35.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-36.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-37.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-38.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-39.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-40.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-41.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-42.png)<!-- -->![](EDA_files/figure-gfm/unnamed-chunk-7-43.png)<!-- -->
+![](EDA_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
