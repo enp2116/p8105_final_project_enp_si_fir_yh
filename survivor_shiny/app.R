@@ -17,6 +17,11 @@ confessionals_df = confessionals %>%
   filter(version == "US") %>%
   dplyr::select(-c(version, version_season, season_name))
 
+confessionals_per_season = confessionals_df %>%
+  group_by(season, castaway) %>%
+  summarize(sum_confessional = sum(confessional_count),
+            mean_confessionals = mean(confessional_count))
+
 seasons = list()
 for(i in 1:43)
 {
@@ -35,21 +40,80 @@ for(i in 1:43)
     xlab("Episode") + ylab("Number of Confessionals"))
 }
 
+plots_2 = list()
+
+seasons_2 = list()
+for(i in 1:43)
+{
+  seasons_2[[i]] = confessionals_per_season %>%
+    filter(season == i) %>%
+    arrange(-sum_confessional) %>%
+    mutate(castaway = as.factor(castaway))
+}
+
+
+for(i in 1:43)
+{
+  plots_2[[i]] = ggplotly(ggplot(data = seasons_2[[i]], aes(castaway, sum_confessional, fill = castaway)) +
+                            geom_col() + 
+                            ggtitle(paste0("Number of Confessionals per Contestant in Season ", i)) +
+                            xlab("Castaway") + ylab("Number of Confessionals") + 
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))) %>%
+    layout(xaxis = list(title = 'Castaway'), yaxis = list(title = 'Number of Confessionals'))
+}
+
+plots_3 = list()
+
+seasons_3 = list()
+for(i in 1:43)
+{
+  seasons_3[[i]] = confessionals_per_season %>%
+    filter(season == i) %>%
+    arrange(-mean_confessionals) %>%
+    mutate(castaway = as.factor(castaway))
+}
+
+
+for(i in 1:43)
+{
+  plots_3[[i]] = ggplotly(ggplot(data = seasons_3[[i]], aes(castaway, mean_confessionals, fill = castaway)) +
+                            geom_col() + 
+                            ggtitle(paste0("Mean # of Confessionals per Contestant (While on Show) in Season ", i)) +
+                            xlab("Castaway") + ylab("Mean Number of Confessionals") + 
+                            theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))) %>%
+    layout(xaxis = list(title = 'Castaway'), yaxis = list(title = 'Mean Number of Confessionals'))
+}
 
 ui <- fluidPage(
-  selectInput("plot", "Choose plot:", choices = 1:43),
+  selectInput("plot", "Choose Season:", choices = 1:43),
             hr(),
-            mainPanel(plotlyOutput("myplot"))
-)
+            mainPanel(plotlyOutput("myplot"),plotlyOutput("myplot2"),plotlyOutput("myplot3")
+                      ))
+
 
 server = function(input, output){
   output$myplot = renderPlotly({
     
     i = as.integer(input$plot)
     
-    subplot(plots[[i]])
+    subplot(plots[[i]], shareX = TRUE, shareY = TRUE)
+    
+  })
+  output$myplot2 = renderPlotly({
+    
+    i = as.integer(input$plot)
+    
+    subplot(plots_2[[i]], shareX = TRUE, shareY = TRUE, widths = 1)
+    
+  })
+  output$myplot3 = renderPlotly({
+    
+    i = as.integer(input$plot)
+    
+    subplot(plots_3[[i]], shareX = TRUE, shareY = TRUE, widths = 1)
     
   })
 }
+
 
 shinyApp(ui = ui, server = server)
