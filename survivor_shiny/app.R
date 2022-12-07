@@ -36,8 +36,8 @@ for(i in 1:43)
   plots[[i]] = ggplotly(ggplot(data = seasons[[i]], aes(x = episode, y = confessional_count, color = castaway)) +
     geom_line() +
     geom_point() +
-    ggtitle(paste0("Confessionals per Episode in Season ", i)) +
-    xlab("Episode") + ylab("Number of Confessionals"))
+    ggtitle(paste0("Confessionals per Episode in Season ", i))) %>%
+    layout(xaxis = list(title = 'Episode'), yaxis = list(title = 'Number of Confessionals'))
 }
 
 plots_2 = list()
