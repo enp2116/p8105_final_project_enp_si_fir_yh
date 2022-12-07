@@ -1,0 +1,13 @@
+name: survivor_shiny
+title: survivor_shiny
+username:
+account: shouldi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7840871
+bundleId: 6606772
+url: https://shouldi.shinyapps.io/survivor_shiny/
+when: 1670444385.49936
+lastSyncTime: 1670444385.49937
+asMultiple: FALSE
+asStatic: FALSE
