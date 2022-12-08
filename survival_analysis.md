@@ -23,8 +23,7 @@ status indicator as,
 $$\delta = \begin{cases} 
       & 1 &  T\leq C \\
       & 0 & T > C
-   \end{cases}
-$$
+   \end{cases}$$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ =
 0 if we observe the censoring.
@@ -189,6 +188,31 @@ summary(surv_model_cox2)
     ## Likelihood ratio test= 16.88  on 14 df,   p=0.3
     ## Wald test            = 31.88  on 14 df,   p=0.004
     ## Score (logrank) test = 65.12  on 14 df,   p=1e-08
+
+**HR interpretations:**
+
+As age increases in years, there is no difference in survival since the
+hazard ratio is 1. We are 95% confident that the HR falls between 0.9922
+to 1.008. However, the HR is not statistically significant since the
+p-value of 0.998 \> 0.05.
+
+For the gender variable, the HR value of 0.96 would suggest that the
+survival time for Male contestants compared to Female contestants (the
+reference category) is longer. We are 95% confident that the HR falls
+between 0.82 and 1.12. However, the HR is not statistically significant
+since the p-value of 0.57 \> 0.05.
+
+For the POC variable, the HR value of 0.8881 would suggest that the
+survival time for White contestants compared to POC contestants (the
+reference category) is longer. We are 95% confident that the HR falls
+between 0.7456 and 1.058. However, the HR is not statistically
+significant since the p-value of 0.184 \> 0.05.
+
+For personality type, the HR value of 1.0631 would suggest that the
+survival time for Introvert contestants compared to Extrovert
+contestants (the reference category) is shorter. We are 95% confident
+that the HR falls between 0.9076 - 1.245. However, the HR is not
+statistically significant since the p-value of 0.448 \> 0.05.
 
 The survival curve, or survival function, is defined as
 $$S(t) = Pr(T>t)$$ \## Kaplan-Meier plotter-personality

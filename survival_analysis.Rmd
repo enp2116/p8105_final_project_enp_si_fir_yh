@@ -1,6 +1,6 @@
 ---
 title: "Survival Analysis"
-output: github_document
+output: html_document
 date: "2022-11-26"
 ---
 
@@ -12,6 +12,8 @@ library(dplyr)
 library(survival)
 library(survminer)
 library(gtsummary)
+library(riskRegression)
+library(tab)
 ```
 
 Statistical Analysis
@@ -27,8 +29,7 @@ In other words, if the event occurs before the censoring such that T $<$ C, then
 $$\delta = \begin{cases} 
       & 1 &  T\leq C \\
       & 0 & T > C
-   \end{cases}
-$$
+   \end{cases}$$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe the censoring.
 
@@ -85,12 +86,22 @@ plot(surv_model_unadj, xlab = "Days",
      ylab = "Estimated Probability of Survival")
 ```
 
+## Cox-proposional hazard model full
+```{r}
+selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + state, data = survivor_data_final)
+```
+
 ## Cox-proposional hazard model 1
 ```{r}
 surv_model_cox1 <- coxph(data = survivor_data_final,
   Surv(time, status) ~  poc + age_during_show + personality_type_binary)
 
 summary(surv_model_cox1)
+
+#Clean table for Cox PH
+tabcoxph(surv_model_cox1, 
+         var.labels = list(poc = "POC", age_during_show = "Age", personality_type_binary = "Personality Type", gender = "Gender"), 
+         decimals = 2)
 ```
 
 ## Cox-proposional hazard model 2
@@ -101,8 +112,19 @@ surv_model_cox2 <- coxph(data = survivor_data_final,
 summary(surv_model_cox2)
 ```
 
+**HR interpretations:**
+
+As age increases in years, there is no difference in survival since the hazard ratio is 1. We are 95% confident that the HR falls between 0.9922 to 1.008. However, the HR is not statistically significant since the p-value of 0.998 > 0.05. 
+
+For the gender variable, the HR value of 0.96 would suggest that the survival time for Male contestants compared to Female contestants (the reference category) is longer. We are 95% confident that the HR falls between 0.82 and 1.12. However, the HR is not statistically significant since the p-value of 0.57 > 0.05. 
+
+For the POC variable, the HR value of 0.8881 would suggest that the survival time for White contestants compared to POC contestants (the reference category) is longer. We are 95% confident that the HR falls between 0.7456 and 1.058. However, the HR is not statistically significant since the p-value of 0.184 > 0.05.
+
+For personality type, the HR value of 1.0631 would suggest that the survival time for Introvert contestants compared to Extrovert contestants (the reference category) is shorter. We are 95% confident that the HR falls between 0.9076 - 1.245. However, the HR is not statistically significant since the p-value of 0.448 > 0.05. 
+
 The survival curve, or survival function, is defined as
 $$S(t) = Pr(T>t)$$
+
 ## Kaplan-Meier plotter-personality
 ```{r}
 surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
