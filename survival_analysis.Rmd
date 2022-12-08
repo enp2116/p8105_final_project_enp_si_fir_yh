@@ -29,7 +29,8 @@ $$\delta = \begin{cases}
       & 0 & T > C
    \end{cases}
 $$
-Thus, \delta = 1 if we observe the true survival time, and \delta = 0 if we observe the censoring.
+
+Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe the censoring.
 
 ## Survival Analysis
 
