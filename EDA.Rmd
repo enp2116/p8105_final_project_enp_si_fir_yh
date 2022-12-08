@@ -26,21 +26,18 @@ survivor_data_final =
 
 ## EDA (tables)
 ```{r, warning = FALSE, message = FALSE}
-## overall summary table
+## ages and survival times
 survivor_data_final %>% 
-  select(gender, poc, personality_type_binary, age_during_show, days_survived) %>% 
-  tbl_summary(type = list(gender~ "categorical", poc~ "categorical", personality_type_binary~ "categorical", age_during_show ~ "continuous", days_survived ~ "continuous"), 
+  select(age_during_show, 
+         days_survived) %>% 
+  tbl_summary(type = list(age_during_show ~ "continuous", 
+                          days_survived ~ "continuous"), 
               statistic = list(all_continuous() ~ "{mean} ({sd})"), 
-              label = list(c(gender) ~ "Gender",
-                           c(poc) ~ "Race Identifier",
-                           c(personality_type_binary) ~ "Personality Type",
-                           c(age_during_show) ~ "Age During Show (Years)",
-                           c(days_survived) ~ "Survival Time on Show (Days)")) %>% 
-  bold_labels() 
+              label = list(c(age_during_show) ~ "Age During Show (Years)",
+                           c(days_survived) ~ "Survival Time on Show (Days)")) %>% bold_labels()
+``` 
 
-
-## days survived by variables of interest (planning to add tabs for these 3 tables)
-
+```{r, warning = FALSE, message = FALSE}
 ## personality type
 survivor_data_final %>% 
   group_by(personality_type_binary) %>% 
