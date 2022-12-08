@@ -1,7 +1,6 @@
 ---
 title: "data_wrangling"
 output: github_document
-date: "2022-11-21"
 ---
 
 ```{r, include = FALSE}
@@ -11,9 +10,10 @@ library(stringr)
 library(dplyr)
 ```
 
-```{r, echo = FALSE}
+```{r, echo = TRUE}
+
 ## cleaning Castaway Details dataset: filtering-out non-US seasons, creating personality type variable
-castaway_details_US = castaway_details %>% 
+castaway_details_us = castaway_details %>% 
   filter(str_detect(castaway_id, '^US')) %>%
   mutate(
     personality_type_binary = ifelse(
@@ -21,15 +21,24 @@ castaway_details_US = castaway_details %>%
   select(-c(castaway_id, castaway, personality_type))
 
 ## Castaways dataset: filtering-out non-US seasons, renaming variables
-castaways_US = castaways %>% filter(version == "US") %>%
+castaways_us = castaways %>% filter(version == "US") %>%
   select(-c(version, season_name, season, castaway_id, castaway, jury_status, original_tribe)) %>%
   rename(age_during_show = age, days_survived = day)
 
 ## joining datasets
-survivor_data_final = full_join(castaway_details_US, castaways_US, by = "full_name")
+survivor_data_final = full_join(castaway_details_us, castaways_us, by = "full_name")
+
+# check for multiple unique names per season
+contestant_count_unique_rec = survivor_data_final %>%
+  group_by(version_season, full_name) %>%
+  summarise(count = n()) %>%
+  mutate(num = row_number())
 
 ## summarizing the number of contestants per season & adding to joined dataset
-contestant_count_df = survivor_data_final %>% group_by(version_season) %>% summarize(contestant_count = n())
+contestant_count_df = survivor_data_final %>%
+  group_by(version_season) %>%
+  summarise(contestant_count = n_distinct(full_name))
+
 survivor_data_final = full_join(survivor_data_final, contestant_count_df, by = "version_season")
 
 ## reordering variables, create new variable ethnicity, fix personality type variable
@@ -49,11 +58,9 @@ write.csv(survivor_data_final_including_2_41_42_43, file = "./data/survivor_data
 ## season 41 and 42, the longest survival time is 26 days, exclude these seasons
 ## season 2, the longest survival time is 42 days, exclude this season
 ## season 43 is incomplete, exclude this season
-survivor_data_final <- survivor_data_final %>% 
-  filter(version_season != "US02") %>%
-  filter(version_season != "US41") %>%
-  filter(version_season != "US42") %>%
-  filter(version_season != "US43")
+
+survivor_data_final = survivor_data_final %>%
+  filter(!(version_season %in% c("US02", "US41", "US42", "US43")))
 
 ## calculating percent NAs for all variables
 survivor_data_final %>% summarise_all(list(name = ~sum(is.na(.))/length(.)))
