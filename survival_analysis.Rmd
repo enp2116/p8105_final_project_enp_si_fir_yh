@@ -125,6 +125,14 @@ surv_model_cox2 <- coxph(data = survivor_data_final,
 summary(surv_model_cox2)
 ```
 
+## Cox-proposional hazard model 3 - interaction
+```{r}
+surv_model_cox3 <- coxph(data = survivor_data_final,
+  Surv(time, status) ~  poc * age_during_show * personality_type_binary)
+
+summary(surv_model_cox3)
+```
+
 
 The survival curve, or survival function, is defined as
 $$S(t) = Pr(T>t)$$
@@ -192,4 +200,25 @@ ggsurvplot(
 )
 ```
 
-## log-rank
+## log-rank for gender
+
+```{r}
+fit.cox <- survfit(Surv(time, status)~ survivor_data_final$gender)
+logrank.test <- survdiff(Surv(time, status) ~ survivor_data_final$gender)
+logrank.test
+#p = 0.5 >0.05 not statistically significant, no strong evidence to say there is difference in survival time between the female and male.
+
+summary(fit.cox)$logtest[1]
+summary(fit.cox)$waldtest[1]
+summary(fit.cox)$sctest[1]
+
+logrank.test$chisq
+```
+
+## log-rank for White vs Non-White
+```{r}
+fit.cox <- survfit(Surv(time, status)~ survivor_data_final$poc)
+logrank.test <- survdiff(Surv(time, status) ~ survivor_data_final$poc)
+logrank.test
+```
+
