@@ -44,7 +44,7 @@ survivor_data_final %>%
 ## personality type
 survivor_data_final %>% 
   group_by(personality_type_binary) %>% 
-  summarize(n_personality_type = n(),
+  summarize(n_personality_type = n_distinct(full_name),
             mean_days_survived = mean(days_survived)) %>% 
     na.omit()  %>%
   knitr::kable(digits = 3, col.names = c("Personality Type", "n", "Mean Days Survived"))
@@ -52,7 +52,7 @@ survivor_data_final %>%
 ## POC
 survivor_data_final %>% 
   group_by(poc) %>% 
-  summarize(n_poc = n(),
+  summarize(n_poc = n_distinct(full_name),
             mean_days_survived = mean(days_survived, na.rm = TRUE)) %>% 
     na.omit()  %>%
   knitr::kable(digits = 3, col.names = c("POC", "n", "Mean Days Survived"))
@@ -61,7 +61,7 @@ survivor_data_final %>%
 ## gender
 survivor_data_final %>% 
   group_by(gender) %>% 
-  summarize(n_gender= n(),
+  summarize(n_gender = n_distinct(full_name),
             mean_days_survived = mean(days_survived, na.rm = TRUE)) %>%
     na.omit()  %>%
   knitr::kable(digits = 3, col.names = c("Gender", "n", "Mean Days Survived"))
@@ -72,7 +72,7 @@ survivor_data_final %>%
 fill_color = brewer.pal(9,"Reds")[4]
 survivor_poc_over_time = survivor_data_final %>% 
   group_by(version_season, poc) %>%
-  summarize(count = n()) %>%
+  summarize(count = n_distinct(full_name)) %>%
   mutate(freq = count / sum(count)) %>%
   filter(poc == "POC") %>%
   separate(col = version_season, into = c('NA', 'season'), sep = 2) %>%
@@ -92,7 +92,7 @@ ggplot(data = survivor_poc_over_time, aes(x = season, y = freq, group = 1)) +
 fill_color = brewer.pal(9,"Purples")[5]
 survivor_gender_over_time = survivor_data_final %>% 
   group_by(version_season, gender) %>%
-  summarize(count = n()) %>%
+  summarize(count = n_distinct(full_name)) %>%
   mutate(freq = count / sum(count)) %>%
   filter(gender == "Female") %>%
   separate(col = version_season, into = c('NA', 'season'), sep = 2) %>%
