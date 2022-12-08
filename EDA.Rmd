@@ -130,3 +130,4 @@ plot_usmap(
   theme(legend.position = "right")
 ```
 
+Note: Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days
