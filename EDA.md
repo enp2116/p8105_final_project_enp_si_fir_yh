@@ -25,12 +25,12 @@ survivor_data_final %>%
   bold_labels() 
 ```
 
-<div id="tbokgboyxx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="timqvodsyi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#tbokgboyxx .gt_table {
+#timqvodsyi .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -55,7 +55,7 @@ survivor_data_final %>%
   border-left-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_heading {
+#timqvodsyi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -67,12 +67,12 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_caption {
+#timqvodsyi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tbokgboyxx .gt_title {
+#timqvodsyi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -84,7 +84,7 @@ survivor_data_final %>%
   border-bottom-width: 0;
 }
 
-#tbokgboyxx .gt_subtitle {
+#timqvodsyi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -96,13 +96,13 @@ survivor_data_final %>%
   border-top-width: 0;
 }
 
-#tbokgboyxx .gt_bottom_border {
+#timqvodsyi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_col_headings {
+#timqvodsyi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -117,7 +117,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_col_heading {
+#timqvodsyi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -137,7 +137,7 @@ survivor_data_final %>%
   overflow-x: hidden;
 }
 
-#tbokgboyxx .gt_column_spanner_outer {
+#timqvodsyi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -149,15 +149,15 @@ survivor_data_final %>%
   padding-right: 4px;
 }
 
-#tbokgboyxx .gt_column_spanner_outer:first-child {
+#timqvodsyi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tbokgboyxx .gt_column_spanner_outer:last-child {
+#timqvodsyi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tbokgboyxx .gt_column_spanner {
+#timqvodsyi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -169,7 +169,7 @@ survivor_data_final %>%
   width: 100%;
 }
 
-#tbokgboyxx .gt_group_heading {
+#timqvodsyi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -195,7 +195,7 @@ survivor_data_final %>%
   text-align: left;
 }
 
-#tbokgboyxx .gt_empty_group_heading {
+#timqvodsyi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -210,15 +210,15 @@ survivor_data_final %>%
   vertical-align: middle;
 }
 
-#tbokgboyxx .gt_from_md > :first-child {
+#timqvodsyi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tbokgboyxx .gt_from_md > :last-child {
+#timqvodsyi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tbokgboyxx .gt_row {
+#timqvodsyi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -237,7 +237,7 @@ survivor_data_final %>%
   overflow-x: hidden;
 }
 
-#tbokgboyxx .gt_stub {
+#timqvodsyi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -250,7 +250,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tbokgboyxx .gt_stub_row_group {
+#timqvodsyi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -264,11 +264,11 @@ survivor_data_final %>%
   vertical-align: top;
 }
 
-#tbokgboyxx .gt_row_group_first td {
+#timqvodsyi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tbokgboyxx .gt_summary_row {
+#timqvodsyi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -278,16 +278,16 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tbokgboyxx .gt_first_summary_row {
+#timqvodsyi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_first_summary_row.thick {
+#timqvodsyi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tbokgboyxx .gt_last_summary_row {
+#timqvodsyi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -297,7 +297,7 @@ survivor_data_final %>%
   border-bottom-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_grand_summary_row {
+#timqvodsyi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -307,7 +307,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tbokgboyxx .gt_first_grand_summary_row {
+#timqvodsyi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -317,11 +317,11 @@ survivor_data_final %>%
   border-top-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_striped {
+#timqvodsyi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tbokgboyxx .gt_table_body {
+#timqvodsyi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -330,7 +330,7 @@ survivor_data_final %>%
   border-bottom-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_footnotes {
+#timqvodsyi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -344,7 +344,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_footnote {
+#timqvodsyi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -353,7 +353,7 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tbokgboyxx .gt_sourcenotes {
+#timqvodsyi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -367,7 +367,7 @@ survivor_data_final %>%
   border-right-color: #D3D3D3;
 }
 
-#tbokgboyxx .gt_sourcenote {
+#timqvodsyi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -375,64 +375,64 @@ survivor_data_final %>%
   padding-right: 5px;
 }
 
-#tbokgboyxx .gt_left {
+#timqvodsyi .gt_left {
   text-align: left;
 }
 
-#tbokgboyxx .gt_center {
+#timqvodsyi .gt_center {
   text-align: center;
 }
 
-#tbokgboyxx .gt_right {
+#timqvodsyi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tbokgboyxx .gt_font_normal {
+#timqvodsyi .gt_font_normal {
   font-weight: normal;
 }
 
-#tbokgboyxx .gt_font_bold {
+#timqvodsyi .gt_font_bold {
   font-weight: bold;
 }
 
-#tbokgboyxx .gt_font_italic {
+#timqvodsyi .gt_font_italic {
   font-style: italic;
 }
 
-#tbokgboyxx .gt_super {
+#timqvodsyi .gt_super {
   font-size: 65%;
 }
 
-#tbokgboyxx .gt_footnote_marks {
+#timqvodsyi .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#tbokgboyxx .gt_asterisk {
+#timqvodsyi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tbokgboyxx .gt_indent_1 {
+#timqvodsyi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tbokgboyxx .gt_indent_2 {
+#timqvodsyi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tbokgboyxx .gt_indent_3 {
+#timqvodsyi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tbokgboyxx .gt_indent_4 {
+#timqvodsyi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tbokgboyxx .gt_indent_5 {
+#timqvodsyi .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -586,3 +586,19 @@ ggplot(survivor_data_final, aes(x = age_during_show)) +
 ```
 
 ![](EDA_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+``` r
+survivor_state = survivor_data_final %>%
+  group_by(state) %>%
+  summarize(n = n())
+
+plot_usmap(
+  data = survivor_state, values = "n", lines = "blue"
+) + 
+  scale_fill_continuous(type = "viridis", name = "Contestant Count", label = scales::comma
+  ) + 
+  labs(title = "US States", subtitle = "Geographic Distribution of Contestants") +
+  theme(legend.position = "right")
+```
+
+![](EDA_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
