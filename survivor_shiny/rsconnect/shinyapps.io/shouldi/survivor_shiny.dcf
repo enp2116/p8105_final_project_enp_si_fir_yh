@@ -5,9 +5,9 @@ account: shouldi
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7840871
-bundleId: 6606974
+bundleId: 6607984
 url: https://shouldi.shinyapps.io/survivor_shiny/
-when: 1670446986.45455
-lastSyncTime: 1670446986.45458
+when: 1670462288.08257
+lastSyncTime: 1670462288.08258
 asMultiple: FALSE
 asStatic: FALSE
