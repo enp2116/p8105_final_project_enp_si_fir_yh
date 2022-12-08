@@ -1,7 +1,5 @@
 ---
 title: "EDA"
-author: "Emily Potts"
-date: "2022-11-28"
 output: github_document
 ---
 
@@ -24,7 +22,8 @@ survivor_data_final =
   read.csv("data/survivor_data_final.csv")
 ```
 
-## EDA (tables)
+### Summary
+
 ```{r, warning = FALSE, message = FALSE}
 ## ages and survival times
 survivor_data_final %>% 
@@ -36,6 +35,7 @@ survivor_data_final %>%
               label = list(c(age_during_show) ~ "Age During Show (Years)",
                            c(days_survived) ~ "Survival Time on Show (Days)")) %>% bold_labels()
 ``` 
+
 Note: N = 728 refers to the total count of records (i.e. contestant occurrences) in `survivor_data_final`; distinct contestants may be listed in multiple records, across seasons and/or within seasons. 
 
 ```{r, warning = FALSE, message = FALSE}
@@ -45,7 +45,7 @@ survivor_data_final %>%
   summarize(n_personality_type = n_distinct(full_name),
             mean_days_survived = mean(days_survived)) %>% 
     na.omit()  %>%
-  knitr::kable(digits = 3, col.names = c("Personality Type", "n", "Mean Days Survived"))
+  knitr::kable(digits = 3, col.names = c("Personality Type", "Distinct Persons", "Mean Days Survived"))
 
 ## POC
 survivor_data_final %>% 
@@ -53,7 +53,7 @@ survivor_data_final %>%
   summarize(n_poc = n_distinct(full_name),
             mean_days_survived = mean(days_survived, na.rm = TRUE)) %>% 
     na.omit()  %>%
-  knitr::kable(digits = 3, col.names = c("POC", "n", "Mean Days Survived"))
+  knitr::kable(digits = 3, col.names = c("POC", "Distinct Persons", "Mean Days Survived"))
 
 
 ## gender
@@ -62,11 +62,13 @@ survivor_data_final %>%
   summarize(n_gender = n_distinct(full_name),
             mean_days_survived = mean(days_survived, na.rm = TRUE)) %>%
     na.omit()  %>%
-  knitr::kable(digits = 3, col.names = c("Gender", "n", "Mean Days Survived"))
+  knitr::kable(digits = 3, col.names = c("Gender", "Distinct Persons", "Mean Days Survived"))
 ```
+
 Note: We report distinct person counts by personality type, POC status, and gender.
 
-## Change in Diversity (POC)
+### POC and Gender Representation Across Seasons
+
 ```{r, warning = FALSE, message = FALSE}
 fill_color = brewer.pal(9,"Reds")[4]
 survivor_poc_over_time = survivor_data_final %>% 
@@ -85,9 +87,9 @@ ggplot(data = survivor_poc_over_time, aes(x = season, y = freq, group = 1)) +
   ggtitle("Change in Proportion of POC Over Time ") +
   xlab("Season") + ylab("Proportion of POC")
 ```
-* Note: We report distinct person counts by POC status.
 
-## Change in Diversity (Gender)
+Note: We report distinct person counts by POC status.
+
 ```{r, warning = FALSE, message = FALSE}
 fill_color = brewer.pal(9,"Purples")[5]
 survivor_gender_over_time = survivor_data_final %>% 
@@ -106,7 +108,10 @@ ggplot(data = survivor_gender_over_time, aes(x = season, y = freq, group = 1)) +
   ggtitle("Change in Proportion of Women Over Time") +
   xlab("Season") + ylab("Proportion of Women")
 ```
-* Note: We report distinct person counts by gender.
+
+Note: We report distinct person counts by gender.
+
+### Concentration of Contestants by Age and Geography
 
 ```{r, warning = FALSE, message = FALSE}
 fill_color = brewer.pal(9,"PuBuGn")[5]
@@ -116,6 +121,7 @@ ggplot(survivor_data_final, aes(x = age_during_show)) +
   ggtitle("Distribution of Ages Across Contestant Occurrences") +
   xlab("Age (During Show)") + ylab("Count")
 ```
+
 Note: Since contestants can re-appear across seasons at different ages, we rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of age data.
 
 ```{r, warning = FALSE, message = FALSE}
@@ -132,6 +138,6 @@ plot_usmap(
   theme(legend.position = "right")
 ```
 
-Note: Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days
-
-Note: Since contestants can re-appear across seasons with different states of residence, we similarly rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of location data.
+Notes: 
+(i) Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days
+(ii) Since contestants can re-appear across seasons with different states of residence, we similarly rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of location data.
