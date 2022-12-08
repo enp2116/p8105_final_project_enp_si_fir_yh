@@ -86,9 +86,13 @@ plot(surv_model_unadj, xlab = "Days",
      ylab = "Estimated Probability of Survival")
 ```
 
-## Cox-proposional hazard model full
+## Cox-proposional hazard model slection using `selectCox`
 ```{r}
-selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + state, data = survivor_data_final)
+surv_model_full <- coxph(data = survivor_data_final,
+                         Surv(time, status)~ poc + age_during_show + 
+                           personality_type_binary)
+
+selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary, data = survivor_data_final)
 ```
 
 ## Cox-proposional hazard model 1
@@ -103,15 +107,6 @@ tabcoxph(surv_model_cox1,
          var.labels = list(poc = "POC", age_during_show = "Age", personality_type_binary = "Personality Type", gender = "Gender"), 
          decimals = 2)
 ```
-
-## Cox-proposional hazard model 2
-```{r}
-surv_model_cox2 <- coxph(data = survivor_data_final,
-  Surv(time, status) ~  ethnicity + age_during_show + personality_type_binary)
-
-summary(surv_model_cox2)
-```
-
 **HR interpretations:**
 
 As age increases in years, there is no difference in survival since the hazard ratio is 1. We are 95% confident that the HR falls between 0.9922 to 1.008. However, the HR is not statistically significant since the p-value of 0.998 > 0.05. 
@@ -121,6 +116,15 @@ For the gender variable, the HR value of 0.96 would suggest that the survival ti
 For the POC variable, the HR value of 0.8881 would suggest that the survival time for White contestants compared to POC contestants (the reference category) is longer. We are 95% confident that the HR falls between 0.7456 and 1.058. However, the HR is not statistically significant since the p-value of 0.184 > 0.05.
 
 For personality type, the HR value of 1.0631 would suggest that the survival time for Introvert contestants compared to Extrovert contestants (the reference category) is shorter. We are 95% confident that the HR falls between 0.9076 - 1.245. However, the HR is not statistically significant since the p-value of 0.448 > 0.05. 
+
+## Cox-proposional hazard model 2
+```{r}
+surv_model_cox2 <- coxph(data = survivor_data_final,
+  Surv(time, status) ~  ethnicity + age_during_show + personality_type_binary)
+
+summary(surv_model_cox2)
+```
+
 
 The survival curve, or survival function, is defined as
 $$S(t) = Pr(T>t)$$
