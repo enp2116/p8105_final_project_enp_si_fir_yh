@@ -2,6 +2,31 @@ Survival Analysis
 ================
 2022-11-26
 
+Statistical Analysis Methodology For our project, we interest using
+Survival Analysis. Suppose that there is a true survival time, T, as
+well as a true censoring time, C. The survival time represents the time
+at which the event of interest occurs: in this dataset, the time at
+which participant is voted out. The censoring time is the time at which
+the participant drop out of the game show or survived until the last day
+of the show.
+
+We observed the Survival Time T and Censoring Time C. Suppose there is a
+random variable Y
+
+$$Y = min(T,C)$$
+
+In other words, if the event occurs before the censoring such that T $<$
+C, then we observed the true survival time T. If censoring occurs before
+the event such as T $>$ C, then we observe the censoring time. The
+status indicator as,
+
+$$\delta = \begin{cases} 
+      & 1 &  T\leq C \\
+      & 0 & T > C
+   \end{cases}
+$$ Thus, = 1 if we observe the true survival time, and = 0 if we observe
+the censoring.
+
 ## Survival Analysis
 
 ``` r
@@ -47,7 +72,7 @@ colnames(survivor_data_final)[20] <- "status"
 colnames(survivor_data_final)[21] <- "time"
 ```
 
-## Survival Unadjected Model
+## Survival Unadjusted Model
 
 ``` r
 surv_model_unadj <- survfit(Surv(time, status) ~ 1)
@@ -163,7 +188,8 @@ summary(surv_model_cox2)
     ## Wald test            = 31.88  on 14 df,   p=0.004
     ## Score (logrank) test = 65.12  on 14 df,   p=1e-08
 
-## Kaplan-Meier plotter-personality
+The survival curve, or survival function, is defined as
+$$S(t) = Pr(T>t)$$ \## Kaplan-Meier plotter-personality
 
 ``` r
 surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
