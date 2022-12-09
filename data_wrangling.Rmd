@@ -101,10 +101,10 @@ mutate(region =
     ,  "West", "Midwest"
     )))
   ) %>%
-  mutate(NE = ifelse(region== "Northeast", 1, 0)) %>%
-  mutate(South = ifelse(region== "South", 1, 0)) %>%
-  mutate(West = ifelse(region== "West", 1, 0)) %>%
-  mutate(Midwest = ifelse(region== "Midwest", 1, 0))
+  mutate(NE = ifelse(region == "Northeast", 1, 0)) %>%
+  mutate(South = ifelse(region == "South", 1, 0)) %>%
+  mutate(West = ifelse(region == "West", 1, 0)) %>%
+  mutate(Midwest = ifelse(region == "Midwest", 1, 0))
 
 survivor_data_final_including_2_41_42_43 = survivor_data_final
 
