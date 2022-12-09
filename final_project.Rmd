@@ -16,7 +16,6 @@ knitr::opts_chunk$set(echo = TRUE)
  While survival analysis is a statistical methodology typically used in health fields to understand the time to an event of interest (such as death, myocardial infarction, or cancer recurrence)$^{2}$, we are able to utilize the number of days survived on *Survivor* as our main outcome of interest. Our inspiration for this project came from a small scale paper studying the effects of demographics in *Masterchef Junior* contestant survival rates.$^{3}$ This research looked at race and gender to determine the outcome of percent of season survived, with the additional analysis to look at the impact of a female judge on these survival rates. While the TV series *Survivor* and *Masterchef Junior* differ in their elimination processes, both our studies explore the intricacies of societal bias and how that plays into game show success.
  
 ### Initial Questions:
-
   Our initial goal was to investigate the extent to which gender, race, and personality have led to differences in days survived on *Survivor*. Based on cultural norms in the U.S., we hypothesized that contestants who are white, male, or extroverts would have the longest survival time. In determining a lack of results on these measures, we decided to integrate geographic comparisons as well for survival time. More additional questions arose throughout the course of our research. We determined that another component of entertainment culture was not only how long the contestants stayed on the show, but how much individualized screen time they received while there. Thus, we decided to explore the frequency of confessionals as supplementary analyses.  Finally, in more recent years (in alignment with the Black Lives Matter movement in the U.S.), *Survivor* has made the effort to encourage more diversity within their casts. To this end, we also wanted to visually see if contestants had representation that evolved over the 42 seasons.  In this paper, we consider all these aspects as part of a comprehensive investigation of demographics on game show survival.
   
 ## Data Sources & Cleaning:
@@ -31,8 +30,24 @@ knitr::opts_chunk$set(echo = TRUE)
   
 ## Survival Analysis:
 ### Methodology:
+For our statistical analysis, we used survival analysis to understand the time to elimination for *Survivor* contestants. In this method, we suppose that there is a true survival time, T, as well as a true censoring time, C. The survival time represents the time at which the event of interest occurs: in this dataset, the time at which participant is voted out. The censoring time is the time at which the participant drop out of the game show or survived until the last day of the show.
+
+We observed the Survival Time T and Censoring Time C. Suppose there is a random variable Y
+
+$$Y = min(T,C)$$
+
+In other words, if the event occurs before the censoring such that T $<$ C, then we observed the true survival time T. If censoring occurs before the event such as T $>$ C, then we observe the censoring time. The status indicator as, 
+
+$$\delta = \begin{cases} 
+      & 1 &  T\leq C \\
+      & 0 & T > C
+   \end{cases}$$
+
+Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe the censoring.
  To investigate the number of days survived on *Survivor*, we built a Cox Proportional-Hazards Model adjusting for the variables of age, gender, personality type (introvert versus extravert) and POC (White vs POC). The Cox Proportional-Hazards model was chosen since it allows us to examine multiple factors that could be influencing the rate at which contestants are eliminated. 
  An assumption of the Cox Proportional-Hazards model is that each covariate has a multiplicative effect in the hazards function that is constant over time. After fitting the Cox model, we tested the assumption and none of the covariates in our model are in violation. The results of our model are displayed below. 
+ 
+ 
 
 ### Results:
 
