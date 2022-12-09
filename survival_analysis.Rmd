@@ -90,7 +90,7 @@ plot(surv_model_unadj, xlab = "Days",
 ```{r}
 surv_model_full <- coxph(data = survivor_data_final,
                          Surv(time, status)~ poc + age_during_show + 
-                           personality_type_binary)
+                           personality_type_binary + region)
 
 selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + Midwest, data = survivor_data_final)
 ```
@@ -98,13 +98,13 @@ selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + 
 ## Cox-proposional hazard model 1
 ```{r}
 surv_model_cox1 <- coxph(data = survivor_data_final,
-  Surv(time, status) ~  poc + age_during_show + personality_type_binary)
+  Surv(time, status) ~  poc + age_during_show + personality_type_binary + region)
 
 summary(surv_model_cox1)
 
 #Clean table for Cox PH
 tabcoxph(surv_model_cox1, 
-         var.labels = list(poc = "POC", age_during_show = "Age", personality_type_binary = "Personality Type", gender = "Gender"), 
+         var.labels = list(poc = "POC", age_during_show = "Age", personality_type_binary = "Personality Type", gender = "Gender", region = "Region"), 
          decimals = 2)
 ```
 **HR interpretations:**
