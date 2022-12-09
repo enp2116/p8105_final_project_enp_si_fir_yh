@@ -92,7 +92,7 @@ surv_model_full <- coxph(data = survivor_data_final,
                          Surv(time, status)~ poc + age_during_show + 
                            personality_type_binary + region)
 
-selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + Midwest, data = survivor_data_final)
+selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary, data = survivor_data_final)
 ```
 
 ## Cox-proposional hazard model 1
