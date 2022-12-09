@@ -155,19 +155,18 @@ For our statistical analysis, we used survival analysis to understand
 the time to elimination for *Survivor* contestants. In this method, we
 suppose that there is a true survival time, T, as well as a true
 censoring time, C. The survival time represents the time at which the
-event of interest occurs: in this dataset, the time at which participant
-is voted out. The censoring time is the time at which the participant
-drop out of the game show or survived until the last day of the show.
+event of interest occurs: in this dataset, the time (in days) at which
+participant is voted out. The censoring time is the time at which the
+participant drop out of the game show or survived until the last day of
+the show.
 
 We observed the Survival Time T and Censoring Time C. Suppose there is a
 random variable Y
 
-$$Y = min(T,C)$$
-
-In other words, if the event occurs before the censoring such that T $<$
-C, then we observed the true survival time T. If censoring occurs before
-the event such as T $>$ C, then we observe the censoring time. The
-status indicator as,
+$$Y = min(T,C)$$ In other words, if the event occurs before the
+censoring such that T $<$ C, then we observed the true survival time T.
+If censoring occurs before the event such as T $>$ C, then we observe
+the censoring time. The status indicator as,
 
 $$\delta = \begin{cases} 
       & 1 &  T\leq C \\
