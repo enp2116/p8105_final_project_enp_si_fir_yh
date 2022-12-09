@@ -83,7 +83,7 @@ we determined that missing data was not an issue, as it occurred in low
 frequency and was not patterned in nature. The final dataset used in the
 analysis contains unique information for each castaway for each season,
 including the following key variables: season, gender, age, POC status,
-days survived, and personality type.
+days survived, personality type and region.
 
 -   `season`: season number
 -   `age` : age, in years
@@ -174,8 +174,9 @@ $$\delta = \begin{cases}
    \end{cases}$$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ =
-0 if we observe the censoring. \<\<\<\<\<\<\< HEAD To investigate the
-number of days survived on *Survivor*, we built a Cox
+0 if we observe the censoring.
+
+To investigate the number of days survived on *Survivor*, we built a Cox
 Proportional-Hazards Model adjusting for the variables of age, gender,
 personality type (introvert versus extravert) and POC (White vs POC).
 The Cox Proportional-Hazards model was chosen since it allows us to
