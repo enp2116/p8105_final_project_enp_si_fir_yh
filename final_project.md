@@ -82,22 +82,22 @@ based on census regions and divisions of the United States.$^{6}$
 Furthermore, we determined that missing data was not an issue, as it
 occurred in low frequency and was not patterned in nature. The final
 dataset used in the analysis contains unique information for each
-castaway for each season, including the following key variables: season,
-gender, age, POC status, days survived, and personality type.
+castaway for each season, including the following key variables:
 
--   `season`: season number
--   `age` : age, in years
+-   `version_season`: version and season number
+-   `full_name`: contestant full name
+-   `age_during_show` : age, in years
+-   `poc` : POC indicator, if known. Else, marked as White.
 -   `gender`: 2 levels: Female, Male.
--   `POC` : POC indicator, if known. Else, marked as White.
--   `days survived`:
 -   `personality_type_binary` : Extracted from the Myer-Briggs
     personality type of the castaway. 2 levels: Extrovert, Introvert.
 -   `days_survived`: Number of days survived in the show until
     elimination
 -   `region`: region in the U.S. where the contestant is from. We
     created this variable based on the `state` variable available in the
-    dataset. 4 levels: West, Midwest, Northeast, South. Binary variables
-    for each of the 4 regions have also been created for analyses.
+    dataset. 4 levels: West, Midwest, Northeast, South. Indicator
+    variables for each of the 4 regions have also been created for
+    analyses.
 
 As a supplemental analysis, we also used the `confessionals` data from
 the same `survivoR` package to visualize the number of confessionals
