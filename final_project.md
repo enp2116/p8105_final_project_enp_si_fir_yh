@@ -222,8 +222,9 @@ our model are in violation.
 ## Kaplan-Meier Curves
 
 To investigate each of the covariates individually, we created
-Kaplan-Meier curves to look at survival time with respect to: -
-**Personality Type** (Introvert vs Extrovert)
+Kaplan-Meier curves to look at survival time with respect to:
+
+-   **Personality Type** (Introvert vs Extrovert)
 
 ``` r
 surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
@@ -278,6 +279,34 @@ The results of our Cox Proportional-Hazards model are displayed below.
 |           West            |             0.16 (0.13)             |     1.18 (0.91, 1.52)      | 0.2165  |
 
 **Notes: N = 721, number of events = 626**
+
+As age increases in years, there is no difference in survival since the
+hazard ratio is 1. We are 95% confident that the HR falls between 0.99
+to 1.01. However, the HR is not statistically significant.  
+- For gender, the HR value of 0.96 suggests that the survival time for
+male contestants is longer compared to female contestants (the reference
+category). We are 95% confident that the HR falls between 0.82 and 1.12.
+However, the HR is not statistically significant.  
+- For POC, the HR value of 0.89 would suggest that the survival time for
+White contestants is longer compared to POC contestants (the reference
+category). We are 95% confident that the HR falls between 0.75 and 1.06.
+However, the HR is not statistically significant.  
+- For personality type, the HR value of 1.07 would suggest that the
+survival time for introvert contestants is shorter compared to extrovert
+contestants (the reference category). We are 95% confident that the HR
+falls between 0.91 - 1.25. However, the HR is not statistically
+significant.  
+- For region, Midwest is the reference category. However, all of these
+hazard ratios are not statistically significant, p-value \> 0.05.  
++ The HR value of 0.99 for Northeast suggests that the survival time for
+contestants from the NE is longer compared to contestants from the
+Midwest.  
++ The HR value of 1.29 for the South suggests that the survival time for
+contestants from the South is shorter compared to contestants from the
+Midwest.  
++ The HR value of 1.18 for the West suggests that the survival time for
+contestants from the West is shorter compared to contestants from the
+Midwest.
 
 ## Discussion:
 
