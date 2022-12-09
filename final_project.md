@@ -174,8 +174,9 @@ $$\delta = \begin{cases}
    \end{cases}$$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ =
-0 if we observe the censoring. \<\<\<\<\<\<\< HEAD To investigate the
-number of days survived on *Survivor*, we built a Cox
+0 if we observe the censoring.
+
+To investigate the number of days survived on *Survivor*, we built a Cox
 Proportional-Hazards Model adjusting for the variables of age, gender,
 personality type (introvert versus extravert) and POC (White vs POC).
 The Cox Proportional-Hazards model was chosen since it allows us to
@@ -202,7 +203,27 @@ below.
 
 The results of our model are displayed below.
 
-*table*
+**Table 2: Modeling Survival Time by POC, Age, Personality Type**
+
+|        Risk Factor        | Parameter Estimate (Standard Error) | Hazard Ratio (HR) (95% CI) | P-Value |
+|:-------------------------:|:-----------------------------------:|:--------------------------:|:-------:|
+|  Age during show (years)  |             0.00 (0.00)             |     1.00 (0.99, 1.01)      |  0.998  |
+|        **Gender**         |                                     |                            |         |
+|          Female           |                 Ref                 |                            |         |
+|           Male            |            -0.05 (0.08)             |     0.96 (0.82, 1.12)      | 0.5003  |
+| **POC (person of color)** |                                     |                            |         |
+|            POC            |                 Ref                 |                            |         |
+|           White           |            -0.11 (0.09)             |     0.89 (0.75, 1.06)      | 0.1915  |
+|   **Personality Type**    |                                     |                            |         |
+|         Extrovert         |                 Ref                 |            Ref             |         |
+|         Introvert         |             0.06 (0.08)             |     1.07 (0.91, 1.25)      | 0.4468  |
+|        **Region**         |                                     |                            |         |
+|          Midwest          |                 Ref                 |                            |         |
+|         Northeast         |            -0.01 (0.15)             |     0.99 (0.75, 1.32)      | 0.9530  |
+|           South           |             0.26 (0.14)             |     1.29 (0.99, 1.69)      | 0.0582  |
+|           West            |             0.16 (0.13)             |     1.18 (0.91, 1.52)      | 0.2165  |
+
+**Notes: N = 721, number of events = 626**
 
 ## Discussion:
 
