@@ -12,7 +12,7 @@ library(dplyr)
 library(survival)
 library(survminer)
 library(gtsummary)
-library(riskRegression)
+#library(riskRegression)
 library(tab)
 ```
 
@@ -92,7 +92,7 @@ surv_model_full <- coxph(data = survivor_data_final,
                          Surv(time, status)~ poc + age_during_show + 
                            personality_type_binary)
 
-selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + Midwest, data = survivor_data_final)
+#selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + Midwest, data = survivor_data_final)
 ```
 
 ## Cox-proposional hazard model 1
@@ -116,6 +116,11 @@ For the gender variable, the HR value of 0.96 would suggest that the survival ti
 For the POC variable, the HR value of 0.8881 would suggest that the survival time for White contestants compared to POC contestants (the reference category) is longer. We are 95% confident that the HR falls between 0.7456 and 1.058. However, the HR is not statistically significant since the p-value of 0.184 > 0.05.
 
 For personality type, the HR value of 1.0631 would suggest that the survival time for Introvert contestants compared to Extrovert contestants (the reference category) is shorter. We are 95% confident that the HR falls between 0.9076 - 1.245. However, the HR is not statistically significant since the p-value of 0.448 > 0.05. 
+
+For region (Midwest is the reference category), the HR value of 0.99 for Northeast suggests that the survival time for contestants from the NE is longer compared to contestants from the Midwest. 
+The HR value of 1.29 for the South suggests that the survival time for contestants from the South is shorter compared to contestants from the Midwest.
+The HR value of 1.18 for the West suggests that the survival time for contestants from the West is shorter compared to contestants from the Midwest. 
+However, all of these hazard ratios are not statisticially significant, p-value > 0.05. 
 
 ## Cox-proposional hazard model 2
 ```{r}
