@@ -299,3 +299,9 @@ logrank.test <- survdiff(Surv(time, status) ~ survivor_data_final$poc)
 logrank.test
 ```
 
+## log-rank for Northeast
+```{r}
+fit.cox <- survfit(Surv(time, status)~ survivor_data_final$NE)
+logrank.test <- survdiff(Surv(time, status) ~ survivor_data_final$NE)
+logrank.test
+```

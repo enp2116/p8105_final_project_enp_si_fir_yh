@@ -1160,6 +1160,20 @@ logrank.test</code></pre>
 ## 
 ##  Chisq= 1.9  on 1 degrees of freedom, p= 0.2</code></pre>
 </div>
+<div id="log-rank-for-northeast" class="section level2">
+<h2>log-rank for Northeast</h2>
+<pre class="r"><code>fit.cox &lt;- survfit(Surv(time, status)~ survivor_data_final$NE)
+logrank.test &lt;- survdiff(Surv(time, status) ~ survivor_data_final$NE)
+logrank.test</code></pre>
+<pre><code>## Call:
+## survdiff(formula = Surv(time, status) ~ survivor_data_final$NE)
+## 
+##                            N Observed Expected (O-E)^2/E (O-E)^2/V
+## survivor_data_final$NE=0 575      505      485     0.818      3.87
+## survivor_data_final$NE=1 153      126      146     2.719      3.87
+## 
+##  Chisq= 3.9  on 1 degrees of freedom, p= 0.05</code></pre>
+</div>
 
 
 
