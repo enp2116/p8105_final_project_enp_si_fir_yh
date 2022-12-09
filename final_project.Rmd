@@ -6,6 +6,18 @@ output: github_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(survivoR)
+library(tidyverse)
+library(stringr)
+library(dplyr)
+library(survival)
+library(survminer)
+library(gtsummary)
+library(riskRegression)
+library(tab)
+library(gridExtra)
+library(RColorBrewer)
+library(usmap)
 ```
 
 ## Introduction
@@ -42,12 +54,11 @@ knitr::opts_chunk$set(echo = TRUE)
   
 ## Survival Analysis:
 ### Methodology:
-For our statistical analysis, we used survival analysis to understand the time to elimination for *Survivor* contestants. In this method, we suppose that there is a true survival time, T, as well as a true censoring time, C. The survival time represents the time at which the event of interest occurs: in this dataset, the time at which participant is voted out. The censoring time is the time at which the participant drop out of the game show or survived until the last day of the show.
+For our statistical analysis, we used survival analysis to understand the time to elimination for *Survivor* contestants. In this method, we suppose that there is a true survival time, T, as well as a true censoring time, C. The survival time represents the time at which the event of interest occurs: in this dataset, the time (in days) at which participant is voted out. The censoring time is the time at which the participant drop out of the game show or survived until the last day of the show.
 
 We observed the Survival Time T and Censoring Time C. Suppose there is a random variable Y
 
 $$Y = min(T,C)$$
-
 In other words, if the event occurs before the censoring such that T $<$ C, then we observed the true survival time T. If censoring occurs before the event such as T $>$ C, then we observe the censoring time. The status indicator as, 
 
 $$\delta = \begin{cases} 
@@ -56,12 +67,20 @@ $$\delta = \begin{cases}
    \end{cases}$$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe the censoring.
+
  To investigate the number of days survived on *Survivor*, we built a Cox Proportional-Hazards Model adjusting for the variables of age, gender, personality type (introvert versus extravert) and POC (White vs POC). The Cox Proportional-Hazards model was chosen since it allows us to examine multiple factors that could be influencing the rate at which contestants are eliminated. 
- An assumption of the Cox Proportional-Hazards model is that each covariate has a multiplicative effect in the hazards function that is constant over time. After fitting the Cox model, we tested the assumption and none of the covariates in our model are in violation. The results of our model are displayed below. 
+ An assumption of the Cox Proportional-Hazards model is that each covariate has a multiplicative effect in the hazards function that is constant over time. After fitting the Cox model, we tested the assumption and none of the covariates in our model are in violation. 
  
  
 
+
+To investigate the number of days survived on *Survivor*, we built a Cox Proportional-Hazards Model adjusting for the variables of age, gender, personality type (introvert versus extrovert) and POC (White vs POC). The Cox Proportional-Hazards model was chosen since it allows us to examine multiple factors that could be influencing the rate at which contestants are eliminated. 
+ An assumption of the Cox Proportional-Hazards model is that each covariate has a multiplicative effect in the hazards function that is constant over time. After fitting the Cox model, we tested the assumption and none of the covariates in our model are in violation. The results of our model are displayed below. 
+
+
+
 ### Results:
+The results of our model are displayed below. 
 
 *table*
 
