@@ -78,12 +78,12 @@ to best model our covariates of interest, we then created a new
 personality type variable (extracting whether a person is an introvert
 or extrovert) and a POC indicator variable instead of individual races.
 We also used contestants’ home states to code contestants into a region
-based on census regions and divisions of the United States. Furthermore,
-we determined that missing data was not an issue, as it occurred in low
-frequency and was not patterned in nature. The final dataset used in the
-analysis contains unique information for each castaway for each season,
-including the following key variables: season, gender, age, POC status,
-days survived, and personality type.
+based on census regions and divisions of the United States.$^{6}$
+Furthermore, we determined that missing data was not an issue, as it
+occurred in low frequency and was not patterned in nature. The final
+dataset used in the analysis contains unique information for each
+castaway for each season, including the following key variables: season,
+gender, age, POC status, days survived, and personality type.
 
 -   `season`: season number
 -   `age` : age, in years
@@ -189,7 +189,7 @@ our model are in violation.
 
 To investigate the number of days survived on *Survivor*, we built a Cox
 Proportional-Hazards Model adjusting for the variables of age, gender,
-personality type (introvert versus extravert) and POC (White vs POC).
+personality type (introvert versus extrovert) and POC (White vs POC).
 The Cox Proportional-Hazards model was chosen since it allows us to
 examine multiple factors that could be influencing the rate at which
 contestants are eliminated. An assumption of the Cox
@@ -235,3 +235,5 @@ The results of our model are displayed below.
 \[3\] <https://www.katiejolly.io/pdf/survival_analysis_paper.pdf>  
 \[4\] <https://github.com/doehm/survivoR>  
 \[5\] <https://cran.r-project.org/web//packages/survivoR/survivoR.pdf>
+\[6\]
+<https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf>
