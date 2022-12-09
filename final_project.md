@@ -203,7 +203,55 @@ below.
 
 The results of our model are displayed below.
 
-*table*
+**Table 2: Modeling Survival Time by POC, Age, Personality Type**
+
+|        Risk Factor        | Parameter Estimate (Standard Error) | Hazard Ratio (HR) (95% CI) | P-Value |
+|:-------------------------:|:-----------------------------------:|:--------------------------:|:-------:|
+|  Age during show (years)  |             0.00 (0.00)             |     1.00 (0.99, 1.01)      |  0.998  |
+|        **Gender**         |                                     |                            |         |
+|          Female           |                 Ref                 |                            |         |
+|           Male            |            -0.05 (0.08)             |     0.96 (0.82, 1.12)      | 0.5003  |
+| **POC (person of color)** |                                     |                            |         |
+|            POC            |                 Ref                 |                            |         |
+|           White           |            -0.11 (0.09)             |     0.89 (0.75, 1.06)      | 0.1915  |
+|   **Personality Type**    |                                     |                            |         |
+|         Extrovert         |                 Ref                 |            Ref             |         |
+|         Introvert         |             0.06 (0.08)             |     1.07 (0.91, 1.25)      | 0.4468  |
+|        **Region**         |                                     |                            |         |
+|          Midwest          |                 Ref                 |                            |         |
+|         Northeast         |            -0.01 (0.15)             |     0.99 (0.75, 1.32)      | 0.9530  |
+|           South           |             0.26 (0.14)             |     1.29 (0.99, 1.69)      | 0.0582  |
+|           West            |             0.16 (0.13)             |     1.18 (0.91, 1.52)      | 0.2165  |
+
+**Notes: N = 721, number of events = 626**
+
+As age increases in years, there is no difference in survival since the
+hazard ratio is 1. We are 95% confident that the HR falls between 0.99
+to 1.01. However, the HR is not statistically significant.  
+- For gender, the HR value of 0.96 suggests that the survival time for
+male contestants is longer compared to female contestants (the reference
+category). We are 95% confident that the HR falls between 0.82 and 1.12.
+However, the HR is not statistically significant.  
+- For POC, the HR value of 0.89 would suggest that the survival time for
+White contestants is longer compared to POC contestants (the reference
+category). We are 95% confident that the HR falls between 0.75 and 1.06.
+However, the HR is not statistically significant.  
+- For personality type, the HR value of 1.07 would suggest that the
+survival time for introvert contestants is shorter compared to extrovert
+contestants (the reference category). We are 95% confident that the HR
+falls between 0.91 - 1.25. However, the HR is not statistically
+significant.  
+- For region, Midwest is the reference category. However, all of these
+hazard ratios are not statistically significant, p-value \> 0.05.  
++ The HR value of 0.99 for Northeast suggests that the survival time for
+contestants from the NE is longer compared to contestants from the
+Midwest.  
++ The HR value of 1.29 for the South suggests that the survival time for
+contestants from the South is shorter compared to contestants from the
+Midwest.  
++ The HR value of 1.18 for the West suggests that the survival time for
+contestants from the West is shorter compared to contestants from the
+Midwest.
 
 ## Discussion:
 

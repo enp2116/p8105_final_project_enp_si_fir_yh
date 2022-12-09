@@ -1,6 +1,6 @@
 ---
 title: "EDA"
-output: github_document
+output: pdf_document
 ---
 
 ```{r, include = FALSE}
@@ -17,55 +17,62 @@ library(usmap)
 ```
 
 ```{r, warning = FALSE, message = FALSE}
-## reading in data
-survivor_data_final = 
-  read.csv("data/survivor_data_final.csv")
+survivor_data_final = read.csv("data/survivor_data_final.csv")
 ```
 
 ### Summary
 
 ```{r, warning = FALSE, message = FALSE}
-## ages and survival times
 survivor_data_final %>% 
-  select(age_during_show, 
-         days_survived) %>% 
-  tbl_summary(type = list(age_during_show ~ "continuous", 
+  select(gender, poc, personality_type_binary, age_during_show, days_survived) %>% 
+  tbl_summary(type = list(gender ~ "categorical", 
+                          poc ~ "categorical", 
+                          personality_type_binary ~ "categorical", 
+                          age_during_show ~ "continuous", 
                           days_survived ~ "continuous"), 
               statistic = list(all_continuous() ~ "{mean} ({sd})"), 
-              label = list(c(age_during_show) ~ "Age During Show (Years)",
-                           c(days_survived) ~ "Survival Time on Show (Days)")) %>% bold_labels()
+              digits = all_continuous() ~ 1,
+              label = list(c(gender) ~ "Gender",
+                           c(poc) ~ "Race Identifier",
+                           c(personality_type_binary) ~ "Personality Type",
+                           c(age_during_show) ~ "Age During Show (Years)",
+                           c(days_survived) ~ "Survival Time on Show (Days)")) %>% 
+  bold_labels() 
 ``` 
 
-Note: N = 728 refers to the total count of records (i.e. contestant occurrences) in `survivor_data_final`; distinct contestants may be listed in multiple records, across seasons and/or within seasons. 
+Note: N = 728 refers to the total count of records (i.e. contestant occurrences) in `survivor_data_final`; distinct persons may be listed in multiple records, across seasons and/or within seasons. 
 
 ```{r, warning = FALSE, message = FALSE}
-## personality type
+## Personality type
 survivor_data_final %>% 
   group_by(personality_type_binary) %>% 
-  summarize(n_personality_type = n_distinct(full_name),
+  summarize(n_personality_dist = n_distinct(full_name),
+            n_personality_occ = n(),
             mean_days_survived = mean(days_survived)) %>% 
     na.omit()  %>%
-  knitr::kable(digits = 3, col.names = c("Personality Type", "Distinct Persons", "Mean Days Survived"))
+  knitr::kable(digits = 1, col.names = c("Personality Type", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
 
-## POC
+## POC Status
 survivor_data_final %>% 
   group_by(poc) %>% 
-  summarize(n_poc = n_distinct(full_name),
+  summarize(n_poc_dist = n_distinct(full_name),
+            n_poc_occ = n(),
             mean_days_survived = mean(days_survived, na.rm = TRUE)) %>% 
     na.omit()  %>%
-  knitr::kable(digits = 3, col.names = c("POC", "Distinct Persons", "Mean Days Survived"))
+  knitr::kable(digits = 1, col.names = c("POC Status", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
 
 
-## gender
+## Gender
 survivor_data_final %>% 
   group_by(gender) %>% 
-  summarize(n_gender = n_distinct(full_name),
+  summarize(n_gender_dist = n_distinct(full_name),
+            n_gender_occ = n(),
             mean_days_survived = mean(days_survived, na.rm = TRUE)) %>%
     na.omit()  %>%
-  knitr::kable(digits = 3, col.names = c("Gender", "Distinct Persons", "Mean Days Survived"))
+  knitr::kable(digits = 1, col.names = c("Gender", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
 ```
 
-Note: We report distinct person counts by personality type, POC status, and gender.
+Note: We report both distinct person counts and contestant occurrences by personality type, POC status, and gender.
 
 ### POC and Gender Representation Across Seasons
 
@@ -88,7 +95,7 @@ ggplot(data = survivor_poc_over_time, aes(x = season, y = freq, group = 1)) +
   xlab("Season") + ylab("Proportion of POC")
 ```
 
-Note: We report distinct person counts by POC status.
+Note: Distinct person counts by POC status.
 
 ```{r, warning = FALSE, message = FALSE}
 fill_color = brewer.pal(9,"Purples")[5]
@@ -109,7 +116,7 @@ ggplot(data = survivor_gender_over_time, aes(x = season, y = freq, group = 1)) +
   xlab("Season") + ylab("Proportion of Women")
 ```
 
-Note: We report distinct person counts by gender.
+Note: Distinct person counts by gender.
 
 ### Concentration of Contestants by Age and Geography
 
@@ -139,5 +146,5 @@ plot_usmap(
 ```
 
 Notes: 
-(i) Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days
+(i) Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days.
 (ii) Since contestants can re-appear across seasons with different states of residence, we similarly rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of location data.
