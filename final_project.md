@@ -77,11 +77,13 @@ integral to filter and only analyze data from the U.S. edition. In order
 to best model our covariates of interest, we then created a new
 personality type variable (extracting whether a person is an introvert
 or extrovert) and a POC indicator variable instead of individual races.
-Furthermore, we determined that missing data was not an issue, as it
-occurred in low frequency and was not patterned in nature. The final
-dataset used in the analysis contains unique information for each
-castaway for each season, including the following key variables: season,
-gender, age, POC status, days survived, and personality type.
+We also used contestants’ home states to code contestants into a region
+based on census regions and divisions of the United States. Furthermore,
+we determined that missing data was not an issue, as it occurred in low
+frequency and was not patterned in nature. The final dataset used in the
+analysis contains unique information for each castaway for each season,
+including the following key variables: season, gender, age, POC status,
+days survived, and personality type.
 
 -   `season`: season number
 -   `age` : age, in years
@@ -181,10 +183,11 @@ could be influencing the rate at which contestants are eliminated. An
 assumption of the Cox Proportional-Hazards model is that each covariate
 has a multiplicative effect in the hazards function that is constant
 over time. After fitting the Cox model, we tested the assumption and
-none of the covariates in our model are in violation. The results of our
-model are displayed below.
+none of the covariates in our model are in violation.
 
 ### Results:
+
+The results of our model are displayed below.
 
 *table*
 
