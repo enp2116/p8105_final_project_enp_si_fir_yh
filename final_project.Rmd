@@ -1,10 +1,7 @@
 ---
 title: "Survivor(al) Analysis: Impacts of Demographics on Game Show Contestant Survival"
-author: "Emily Potts"
-date: "2022-12-09"
-output: html_document
-    toc: true
-    toc_float: true
+output: github_document
+
 ---
 
 ```{r setup, include=FALSE}
@@ -30,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
   
 ## Methods:
 \indent To investigate the number of days survived on “Survivor”, we built a Cox Proportional-Hazards Model adjusting for the variables of age, gender, personality type (introvert versus extravert) and POC (White vs POC). The Cox Proportional-Hazards model was chosen since it allows us to examine multiple factors that could be influencing the rate at which contestants are eliminated. 
-\indent An assumption of the Cox Proportional-Hazards model is that each covariate has a multiplicative effect in the hazards function that is constant over time (Xue et al, 2013). After fitting the Cox model, we tested the assumption and none of the covariates in our model are in violation. The results of our model are displayed below. 
+\indent An assumption of the Cox Proportional-Hazards model is that each covariate has a multiplicative effect in the hazards function that is constant over time. After fitting the Cox model, we tested the assumption and none of the covariates in our model are in violation. The results of our model are displayed below. 
 
 ## Results:
 
@@ -40,9 +37,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## References:
 
-[1] https://www.cbs.com/shows/survivor/about/ 
-[2] https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_survival/BS704_Survival_print.html
-[3] https://www.katiejolly.io/pdf/survival_analysis_paper.pdf 
-[4] https://github.com/doehm/survivoR
-[5] https://cran.r-project.org/web//packages/survivoR/survivoR.pdf 
+[1] https://www.cbs.com/shows/survivor/about/  
+[2] https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_survival/BS704_Survival_print.html  
+[3] https://www.katiejolly.io/pdf/survival_analysis_paper.pdf  
+[4] https://github.com/doehm/survivoR  
+[5] https://cran.r-project.org/web//packages/survivoR/survivoR.pdf   
 
