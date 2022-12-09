@@ -71,11 +71,11 @@ for (i in 1:nrow(survivor_data_final))
     time[i] <- survivor_data_final$days_survived[i]
   }
 }
-survivor_data_final[,20] <- status
-survivor_data_final[,21] <- time
+survivor_data_final[,25] <- status
+survivor_data_final[,26] <- time
 
-colnames(survivor_data_final)[20] <- "status"
-colnames(survivor_data_final)[21] <- "time"
+colnames(survivor_data_final)[25] <- "status"
+colnames(survivor_data_final)[26] <- "time"
 ```
 
 ## Survival Unadjusted Model
@@ -198,6 +198,83 @@ ggsurvplot(
   risk.table.height = 0.25, # Useful to change when you have multiple groups
   ggtheme = theme_bw()      # Change ggplot2 theme
 )
+```
+
+## Kaplan-Meier plotter-Northeast
+```{r}
+surv_model_NE <- survfit(Surv(time, status)~ survivor_data_final$NE)
+
+ggsurvplot(
+  surv_model_NE,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Non-Northeast", "Northeast"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+## Kaplan-Meier plotter-South
+```{r}
+surv_model_South <- survfit(Surv(time, status)~ survivor_data_final$South)
+
+ggsurvplot(
+  surv_model_South,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Non-South", "South"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+## Kaplan-Meier plotter-West
+```{r}
+surv_model_West <- survfit(Surv(time, status)~ survivor_data_final$West)
+
+ggsurvplot(
+  surv_model_West,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Non-West", "West"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+
+```
+## Kaplan-Meier plotter-Midwest
+```{r}
+surv_model_Midwest <- survfit(Surv(time, status)~ survivor_data_final$Midwest)
+
+ggsurvplot(
+  surv_model_Midwest,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Non-Midwest", "Midwest"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+
 ```
 
 ## log-rank for gender
