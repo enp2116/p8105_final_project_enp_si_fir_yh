@@ -92,7 +92,7 @@ surv_model_full <- coxph(data = survivor_data_final,
                          Surv(time, status)~ poc + age_during_show + 
                            personality_type_binary)
 
-selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary, data = survivor_data_final)
+selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + Midwest, data = survivor_data_final)
 ```
 
 ## Cox-proposional hazard model 1
@@ -199,6 +199,25 @@ ggsurvplot(
   ggtheme = theme_bw()      # Change ggplot2 theme
 )
 ```
+## Kaplan-Meier plotter-Region
+```{r}
+surv_model_Region <- survfit(Surv(time, status)~ survivor_data_final$region)
+
+ggsurvplot(
+  surv_model_Region,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Midwest", "Northeast", "South", "West"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
 
 ## Kaplan-Meier plotter-Northeast
 ```{r}
@@ -274,7 +293,6 @@ ggsurvplot(
   risk.table.height = 0.25, # Useful to change when you have multiple groups
   ggtheme = theme_bw()      # Change ggplot2 theme
 )
-
 ```
 
 ## log-rank for gender
