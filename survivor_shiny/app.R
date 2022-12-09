@@ -85,12 +85,11 @@ for(i in 1:43)
     layout(xaxis = list(title = 'Castaway'), yaxis = list(title = 'Mean Number of Confessionals'))
 } 
 
-ui = pageWithSidebar(
-  headerPanel("Confessionals in Each Season"),
-  sidebarPanel(selectInput("plot", "Choose Season:", choices = 1:43)),
+ui <- fluidPage(
+  selectInput("plot", "Choose Season:", choices = 1:43),
+            hr(),
             mainPanel(plotlyOutput("myplot"),plotlyOutput("myplot2"),plotlyOutput("myplot3")
-                      )
-)
+                      ))
 
 
 server = function(input, output){
