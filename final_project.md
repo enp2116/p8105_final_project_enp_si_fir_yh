@@ -84,6 +84,66 @@ occurred in low frequency and was not patterned in nature. The final
 dataset used in the analysis contains unique information for each
 castaway for each season, including the following key variables:
 
+In order to analyze the show *Survivor*, we used data sources from the
+`castaway_details` and `castaways` datasets$^{4}$, as well as others,
+from the `survivoR` package.$^{5}$ This fan-made package contains data
+from all seasons of the U.S. TV show *Survivor*. According to the
+authors of the package, “the data was sourced from Wikipedia and the
+Survivor Wiki. Other data, such as the tribe colours, was manually
+recorded and entered by myself and contributors.” As each dataset
+contained distinct information on the contestants for each season, it
+was necessary to use joins to combine datasets to produce a final
+dataset to be analyzed. This was performed using a full join on the
+contestants’ full names. It should be noted that a few contestants
+appear in multiple seasons, however we treated them as separate
+throughout most of our analysis for the purposes of getting an accurate
+picture of each season. Additionally, in order to standardize our
+results for the survival analysis and exploratory data analysis, we
+removed seasons 2, 41, 42, and 43 as the seasons contained data for a
+different number of days from the standard 39 days. As the original data
+contains information from several versions around the globe, it was
+integral to filter and only analyze data from the U.S. edition. In order
+to best model our covariates of interest, we then created a new
+personality type variable (extracting whether a person is an introvert
+or extrovert) and a POC indicator variable instead of individual races.
+We also used contestants’ home states to code contestants into a region
+based on census regions and divisions of the United States. Furthermore,
+we determined that missing data was not an issue, as it occurred in low
+frequency and was not patterned in nature. The final dataset used in the
+analysis contains unique information for each castaway for each season,
+including the following key variables: season, gender, age, POC status,
+days survived, personality type and region.
+
+In order to analyze the show *Survivor*, we used data sources from the
+`castaway_details` and `castaways` datasets$^{4}$, as well as others,
+from the `survivoR` package.$^{5}$ This fan-made package contains data
+from all seasons of the U.S. TV show *Survivor*. According to the
+authors of the package, “the data was sourced from Wikipedia and the
+Survivor Wiki. Other data, such as the tribe colours, was manually
+recorded and entered by myself and contributors.” As each dataset
+contained distinct information on the contestants for each season, it
+was necessary to use joins to combine datasets to produce a final
+dataset to be analyzed. This was performed using a full join on the
+contestants’ full names. It should be noted that a few contestants
+appear in multiple seasons, however we treated them as separate
+throughout most of our analysis for the purposes of getting an accurate
+picture of each season. Additionally, in order to standardize our
+results for the survival analysis and exploratory data analysis, we
+removed seasons 2, 41, 42, and 43 as the seasons contained data for a
+different number of days from the standard 39 days. As the original data
+contains information from several versions around the globe, it was
+integral to filter and only analyze data from the U.S. edition. In order
+to best model our covariates of interest, we then created a new
+personality type variable (extracting whether a person is an introvert
+or extrovert) and a POC indicator variable instead of individual races.
+We also used contestants’ home states to code contestants into a region
+based on census regions and divisions of the United States.$^{6}$
+Furthermore, we determined that missing data was not an issue, as it
+occurred in low frequency and was not patterned in nature. The final
+dataset used in the analysis contains unique information for each
+castaway for each season, including the following key variables: season,
+gender, age, POC status, days survived, and personality type.
+
 -   `version_season`: version and season number
 -   `full_name`: contestant full name
 -   `age_during_show` : age, in years
@@ -176,6 +236,8 @@ $$\delta = \begin{cases}
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ =
 0 if we observe the censoring.
 
+## Cox Proportional-Hazards Model
+
 To investigate the number of days survived on *Survivor*, we built a Cox
 Proportional-Hazards Model adjusting for the variables of age, gender,
 personality type (introvert versus extravert) and POC (White vs POC).
@@ -187,21 +249,44 @@ effect in the hazards function that is constant over time. After fitting
 the Cox model, we tested the assumption and none of the covariates in
 our model are in violation.
 
-To investigate the number of days survived on *Survivor*, we built a Cox
-Proportional-Hazards Model adjusting for the variables of age, gender,
-personality type (introvert versus extrovert) and POC (White vs POC).
-The Cox Proportional-Hazards model was chosen since it allows us to
-examine multiple factors that could be influencing the rate at which
-contestants are eliminated. An assumption of the Cox
-Proportional-Hazards model is that each covariate has a multiplicative
-effect in the hazards function that is constant over time. After fitting
-the Cox model, we tested the assumption and none of the covariates in
-our model are in violation. The results of our model are displayed
-below.
+## Kaplan-Meier Curves
+
+To investigate each of the covariates individually, we created
+Kaplan-Meier curves to look at survival time with respect to:
+
+-   **Personality Type** (Introvert vs Extrovert)
+
+``` r
+surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
+
+ggsurvplot(
+  surv_model_per,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  palette =
+    c("#E7B800", "#2E9FDF"),# custom color palettes
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Extrovert", "Introvert"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+![](final_project_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+-   POC (White vs Non-White)
+
+-   Gender (Female vs Male)
+
+-   Region
 
 ### Results:
 
-The results of our model are displayed below.
+The results of our Cox Proportional-Hazards model are displayed below.
 
 **Table 2: Modeling Survival Time by POC, Age, Personality Type**
 
@@ -254,6 +339,15 @@ contestants from the West is shorter compared to contestants from the
 Midwest.
 
 ## Discussion:
+
+From conducting survival analyses, we did not observe any statistically
+significant covariates. This stands in contrast with our initial
+hypotheses that race, gender, and personality type would impact days
+survived. The HR values for gender (males surviving longer than female
+contestants), POC (White contestants surviving longer than POC),
+personality type (extrovert surviving longer than introverts) follow our
+general expectations. However, since none of the hazard ratios are
+statistically significant, we cannot make any conclusions.
 
 ## References:
 

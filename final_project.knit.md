@@ -4,57 +4,9 @@ output: github_document
 
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(survivoR)
-library(tidyverse)
-library(stringr)
-library(dplyr)
-library(survival)
-library(survminer)
-library(gtsummary)
-#library(riskRegression)
-library(tab)
-library(gridExtra)
-library(RColorBrewer)
-library(usmap)
-```
 
-```{r, include = FALSE}
-## reading in data
-survivor_data_final = 
-  read.csv("data/survivor_data_final.csv")
 
-status <- c()
-time <- c()
-for (i in 1:nrow(survivor_data_final))
-  {
-  if (survivor_data_final[i,17] == "Quit") {
-    status[i] <- 0
-    time[i] <- survivor_data_final$days_survived[i]
-  }
-  else if (survivor_data_final[i,17] == "Sole Survivor") {
-    status[i] <- 0
-    time[i] <- survivor_data_final$days_survived[i]
-  } 
-  else if (survivor_data_final[i,17] == "Runner-up") {
-    status[i] <- 0
-    time[i] <- survivor_data_final$days_survived[i]
-  } else if (survivor_data_final[i,17] == "Co-runner-up") {
-    status[i] <- 0
-    time[i] <- survivor_data_final$days_survived[i]
-  }
-  else {
-    status[i] <- 1
-    time[i] <- survivor_data_final$days_survived[i]
-  }
-}
-survivor_data_final[,25] <- status
-survivor_data_final[,26] <- time
 
-colnames(survivor_data_final)[25] <- "status"
-colnames(survivor_data_final)[26] <- "time"
-```
 
 ## Introduction
 ### Motivation:
@@ -119,7 +71,8 @@ To investigate each of the covariates individually, we created Kaplan-Meier curv
 
 - **Personality Type** (Introvert vs Extrovert)
 
-```{r, }
+
+```r
 surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
 
 ggsurvplot(
@@ -138,6 +91,8 @@ ggsurvplot(
   ggtheme = theme_bw()      # Change ggplot2 theme
 )
 ```
+
+![](final_project_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 
 
