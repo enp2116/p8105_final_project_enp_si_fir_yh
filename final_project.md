@@ -174,16 +174,29 @@ $$\delta = \begin{cases}
    \end{cases}$$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ =
-0 if we observe the censoring. To investigate the number of days
-survived on *Survivor*, we built a Cox Proportional-Hazards Model
-adjusting for the variables of age, gender, personality type (introvert
-versus extravert) and POC (White vs POC). The Cox Proportional-Hazards
-model was chosen since it allows us to examine multiple factors that
-could be influencing the rate at which contestants are eliminated. An
-assumption of the Cox Proportional-Hazards model is that each covariate
-has a multiplicative effect in the hazards function that is constant
-over time. After fitting the Cox model, we tested the assumption and
-none of the covariates in our model are in violation.
+0 if we observe the censoring. \<\<\<\<\<\<\< HEAD To investigate the
+number of days survived on *Survivor*, we built a Cox
+Proportional-Hazards Model adjusting for the variables of age, gender,
+personality type (introvert versus extravert) and POC (White vs POC).
+The Cox Proportional-Hazards model was chosen since it allows us to
+examine multiple factors that could be influencing the rate at which
+contestants are eliminated. An assumption of the Cox
+Proportional-Hazards model is that each covariate has a multiplicative
+effect in the hazards function that is constant over time. After fitting
+the Cox model, we tested the assumption and none of the covariates in
+our model are in violation.
+
+To investigate the number of days survived on *Survivor*, we built a Cox
+Proportional-Hazards Model adjusting for the variables of age, gender,
+personality type (introvert versus extravert) and POC (White vs POC).
+The Cox Proportional-Hazards model was chosen since it allows us to
+examine multiple factors that could be influencing the rate at which
+contestants are eliminated. An assumption of the Cox
+Proportional-Hazards model is that each covariate has a multiplicative
+effect in the hazards function that is constant over time. After fitting
+the Cox model, we tested the assumption and none of the covariates in
+our model are in violation. The results of our model are displayed
+below.
 
 ### Results:
 
