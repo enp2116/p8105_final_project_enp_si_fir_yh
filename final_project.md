@@ -83,6 +83,27 @@ dataset used in the analysis contains unique information for each
 castaway for each season, including the following key variables: season,
 gender, age, POC status, days survived, and personality type.
 
+-   `season`: season number
+-   `age` : age, in years
+-   `gender`: 2 levels: Female, Male.
+-   `POC` : POC indicator, if known. Else, marked as White.
+-   `days survived`:
+-   `personality_type_binary` : Extracted from the Myer-Briggs
+    personality type of the castaway. 2 levels: Extrovert, Introvert.
+-   `days_survived`: Number of days survived in the show until
+    elimination
+-   `region`: region in the U.S. where the contestant is from. We
+    created this variable based on the `state` variable available in the
+    dataset. 4 levels: West, Midwest, Northeast, South. Binary variables
+    for each of the 4 regions have also been created for analyses.
+
+As a supplemental analysis, we also used the `confessionals` data from
+the same `survivoR` package to visualize the number of confessionals
+each contestant received. This data looked at all seasons as it was
+unrelated to the survival analysis and consistency in the datasets was
+not necessary. Nevertheless, this data also only looked at the U.S.
+edition of the show.
+
 As a supplemental analysis, we also used the `confessionals` data from
 the same `survivoR` package to visualize the number of confessionals
 each contestant received. This data looked at all seasons as it was
@@ -128,17 +149,41 @@ while on the show.
 
 ### Methodology:
 
-To investigate the number of days survived on *Survivor*, we built a Cox
-Proportional-Hazards Model adjusting for the variables of age, gender,
-personality type (introvert versus extravert) and POC (White vs POC).
-The Cox Proportional-Hazards model was chosen since it allows us to
-examine multiple factors that could be influencing the rate at which
-contestants are eliminated. An assumption of the Cox
-Proportional-Hazards model is that each covariate has a multiplicative
-effect in the hazards function that is constant over time. After fitting
-the Cox model, we tested the assumption and none of the covariates in
-our model are in violation. The results of our model are displayed
-below.
+For our statistical analysis, we used survival analysis to understand
+the time to elimination for *Survivor* contestants. In this method, we
+suppose that there is a true survival time, T, as well as a true
+censoring time, C. The survival time represents the time at which the
+event of interest occurs: in this dataset, the time at which participant
+is voted out. The censoring time is the time at which the participant
+drop out of the game show or survived until the last day of the show.
+
+We observed the Survival Time T and Censoring Time C. Suppose there is a
+random variable Y
+
+$$Y = min(T,C)$$
+
+In other words, if the event occurs before the censoring such that T $<$
+C, then we observed the true survival time T. If censoring occurs before
+the event such as T $>$ C, then we observe the censoring time. The
+status indicator as,
+
+$$\delta = \begin{cases} 
+      & 1 &  T\leq C \\
+      & 0 & T > C
+   \end{cases}$$
+
+Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ =
+0 if we observe the censoring. To investigate the number of days
+survived on *Survivor*, we built a Cox Proportional-Hazards Model
+adjusting for the variables of age, gender, personality type (introvert
+versus extravert) and POC (White vs POC). The Cox Proportional-Hazards
+model was chosen since it allows us to examine multiple factors that
+could be influencing the rate at which contestants are eliminated. An
+assumption of the Cox Proportional-Hazards model is that each covariate
+has a multiplicative effect in the hazards function that is constant
+over time. After fitting the Cox model, we tested the assumption and
+none of the covariates in our model are in violation. The results of our
+model are displayed below.
 
 ### Results:
 

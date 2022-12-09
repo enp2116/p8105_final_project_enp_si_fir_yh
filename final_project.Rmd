@@ -16,11 +16,22 @@ knitr::opts_chunk$set(echo = TRUE)
  While survival analysis is a statistical methodology typically used in health fields to understand the time to an event of interest (such as death, myocardial infarction, or cancer recurrence)$^{2}$, we are able to utilize the number of days survived on *Survivor* as our main outcome of interest. Our inspiration for this project came from a small scale paper studying the effects of demographics in *Masterchef Junior* contestant survival rates.$^{3}$ This research looked at race and gender to determine the outcome of percent of season survived, with the additional analysis to look at the impact of a female judge on these survival rates. While the TV series *Survivor* and *Masterchef Junior* differ in their elimination processes, both our studies explore the intricacies of societal bias and how that plays into game show success.
  
 ### Initial Questions:
-
   Our initial goal was to investigate the extent to which gender, race, and personality have led to differences in days survived on *Survivor*. Based on cultural norms in the U.S., we hypothesized that contestants who are white, male, or extroverts would have the longest survival time. In determining a lack of results on these measures, we decided to integrate geographic comparisons as well for survival time. More additional questions arose throughout the course of our research. We determined that another component of entertainment culture was not only how long the contestants stayed on the show, but how much individualized screen time they received while there. Thus, we decided to explore the frequency of confessionals as supplementary analyses.  Finally, in more recent years (in alignment with the Black Lives Matter movement in the U.S.), *Survivor* has made the effort to encourage more diversity within their casts. To this end, we also wanted to visually see if contestants had representation that evolved over the 42 seasons.  In this paper, we consider all these aspects as part of a comprehensive investigation of demographics on game show survival.
   
 ## Data Sources & Cleaning:
  In order to analyze the show *Survivor*, we used data sources from the `castaway_details` and `castaways` datasets$^{4}$, as well as others, from the `survivoR` package.$^{5}$ This fan-made package contains data from all seasons of the U.S. TV show *Survivor*. According to the authors of the package, “the data was sourced from Wikipedia and the Survivor Wiki. Other data, such as the tribe colours, was manually recorded and entered by myself and contributors.” As each dataset contained distinct information on the contestants for each season, it was necessary to use joins to combine datasets to produce a final dataset to be analyzed. This was performed using a full join on the contestants’ full names. It should be noted that a few contestants appear in multiple seasons, however we treated them as separate throughout most of our analysis for the purposes of getting an accurate picture of each season. Additionally, in order to standardize our results for the survival analysis and exploratory data analysis, we removed seasons 2, 41, 42, and 43 as the seasons contained data for a different number of days from the standard 39 days. As the original data contains information from several versions around the globe, it was integral to filter and only analyze data from the U.S. edition. In order to best model our covariates of interest, we then created a new personality type variable (extracting whether a person is an introvert or extrovert) and a POC indicator variable instead of individual races. We also used contestants' home states to code contestants into a region based on census regions and divisions of the United States. Furthermore, we determined that missing data was not an issue, as it occurred in low frequency and was not patterned in nature. The final dataset used in the analysis contains unique information for each castaway for each season, including the following key variables: season, gender, age, POC status, days survived, and personality type. 
+
+- `season`: season number
+- `age` : age, in years
+- `gender`: 2 levels: Female, Male. 
+- `POC` : POC indicator, if known. Else, marked as White. 
+- `days survived`: 
+- `personality_type_binary` : Extracted from the Myer-Briggs personality type of the castaway. 2 levels: Extrovert, Introvert.
+- `days_survived`: Number of days survived in the show until elimination
+- `region`: region in the U.S. where the contestant is from. We created this variable based on the `state` variable available in the dataset. 4 levels: West, Midwest, Northeast, South. Binary variables for each of the 4 regions have also been created for analyses. 
+
+
+\indent As a supplemental analysis, we also used the `confessionals` data from the same  `survivoR` package to visualize the number of confessionals each contestant received. This data looked at all seasons as it was unrelated to the survival analysis and consistency in the datasets was not necessary. Nevertheless, this data also only looked at the U.S. edition of the show.
 
  As a supplemental analysis, we also used the `confessionals` data from the same  `survivoR` package to visualize the number of confessionals each contestant received. This data looked at all seasons as it was unrelated to the survival analysis and consistency in the datasets was not necessary. Nevertheless, this data also only looked at the U.S. edition of the show.
 
@@ -31,8 +42,24 @@ knitr::opts_chunk$set(echo = TRUE)
   
 ## Survival Analysis:
 ### Methodology:
+For our statistical analysis, we used survival analysis to understand the time to elimination for *Survivor* contestants. In this method, we suppose that there is a true survival time, T, as well as a true censoring time, C. The survival time represents the time at which the event of interest occurs: in this dataset, the time at which participant is voted out. The censoring time is the time at which the participant drop out of the game show or survived until the last day of the show.
+
+We observed the Survival Time T and Censoring Time C. Suppose there is a random variable Y
+
+$$Y = min(T,C)$$
+
+In other words, if the event occurs before the censoring such that T $<$ C, then we observed the true survival time T. If censoring occurs before the event such as T $>$ C, then we observe the censoring time. The status indicator as, 
+
+$$\delta = \begin{cases} 
+      & 1 &  T\leq C \\
+      & 0 & T > C
+   \end{cases}$$
+
+Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe the censoring.
  To investigate the number of days survived on *Survivor*, we built a Cox Proportional-Hazards Model adjusting for the variables of age, gender, personality type (introvert versus extravert) and POC (White vs POC). The Cox Proportional-Hazards model was chosen since it allows us to examine multiple factors that could be influencing the rate at which contestants are eliminated. 
  An assumption of the Cox Proportional-Hazards model is that each covariate has a multiplicative effect in the hazards function that is constant over time. After fitting the Cox model, we tested the assumption and none of the covariates in our model are in violation. The results of our model are displayed below. 
+ 
+ 
 
 ### Results:
 
