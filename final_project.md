@@ -77,6 +77,8 @@ integral to filter and only analyze data from the U.S. edition. In order
 to best model our covariates of interest, we then created a new
 personality type variable (extracting whether a person is an introvert
 or extrovert) and a POC indicator variable instead of individual races.
+We also used contestants’ home states to code contestants into a region
+based on census regions and divisions of the United States.$^{6}$
 Furthermore, we determined that missing data was not an issue, as it
 occurred in low frequency and was not patterned in nature. The final
 dataset used in the analysis contains unique information for each
@@ -199,3 +201,5 @@ model are displayed below.
 \[3\] <https://www.katiejolly.io/pdf/survival_analysis_paper.pdf>  
 \[4\] <https://github.com/doehm/survivoR>  
 \[5\] <https://cran.r-project.org/web//packages/survivoR/survivoR.pdf>
+\[6\]
+<https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf>
