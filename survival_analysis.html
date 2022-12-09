@@ -667,9 +667,9 @@ plot(surv_model_unadj, xlab = &quot;Days&quot;,
 <code>selectCox</code></h2>
 <pre class="r"><code>surv_model_full &lt;- coxph(data = survivor_data_final,
                          Surv(time, status)~ poc + age_during_show + 
-                           personality_type_binary + region)
+                           personality_type_binary)
 
-selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary, data = survivor_data_final)</code></pre>
+selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + Midwest, data = survivor_data_final)</code></pre>
 <pre><code>## $fit
 ## 
 ## Call: prodlim::prodlim(formula = newform, data = data)</code></pre>
@@ -681,7 +681,7 @@ selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary, d
 ## 
 ## $call
 ## selectCox(formula = Surv(time, status) ~ poc + age_during_show + 
-##     personality_type_binary, data = survivor_data_final)
+##     personality_type_binary + Midwest, data = survivor_data_final)
 ## 
 ## attr(,&quot;class&quot;)
 ## [1] &quot;selectCox&quot;</code></pre>
@@ -689,48 +689,37 @@ selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary, d
 <div id="cox-proposional-hazard-model-1" class="section level2">
 <h2>Cox-proposional hazard model 1</h2>
 <pre class="r"><code>surv_model_cox1 &lt;- coxph(data = survivor_data_final,
-  Surv(time, status) ~  poc + age_during_show + personality_type_binary + region)
+  Surv(time, status) ~  poc + age_during_show + personality_type_binary)
 
 summary(surv_model_cox1)</code></pre>
 <pre><code>## Call:
 ## coxph(formula = Surv(time, status) ~ poc + age_during_show + 
-##     personality_type_binary + region, data = survivor_data_final)
+##     personality_type_binary, data = survivor_data_final)
 ## 
 ##   n= 721, number of events= 626 
 ##    (7 observations deleted due to missingness)
 ## 
 ##                                        coef  exp(coef)   se(coef)      z
-## pocWhite                         -0.1169218  0.8896548  0.0895186 -1.306
-## age_during_show                  -0.0004669  0.9995332  0.0039863 -0.117
-## personality_type_binaryIntrovert  0.0619436  1.0639024  0.0814195  0.761
-## regionNortheast                  -0.0085551  0.9914813  0.1450801 -0.059
-## regionSouth                       0.2582002  1.2945980  0.1363168  1.894
-## regionWest                        0.1625195  1.1764712  0.1315054  1.236
-##                                  Pr(&gt;|z|)  
-## pocWhite                           0.1915  
-## age_during_show                    0.9068  
-## personality_type_binaryIntrovert   0.4468  
-## regionNortheast                    0.9530  
-## regionSouth                        0.0582 .
-## regionWest                         0.2165  
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## pocWhite                         -1.186e-01  8.881e-01  8.923e-02 -1.330
+## age_during_show                  -8.572e-06  1.000e+00  3.976e-03 -0.002
+## personality_type_binaryIntrovert  6.114e-02  1.063e+00  8.065e-02  0.758
+##                                  Pr(&gt;|z|)
+## pocWhite                            0.184
+## age_during_show                     0.998
+## personality_type_binaryIntrovert    0.448
 ## 
 ##                                  exp(coef) exp(-coef) lower .95 upper .95
-## pocWhite                            0.8897     1.1240    0.7465     1.060
-## age_during_show                     0.9995     1.0005    0.9918     1.007
-## personality_type_binaryIntrovert    1.0639     0.9399    0.9070     1.248
-## regionNortheast                     0.9915     1.0086    0.7461     1.318
-## regionSouth                         1.2946     0.7724    0.9911     1.691
-## regionWest                          1.1765     0.8500    0.9092     1.522
+## pocWhite                            0.8881     1.1260    0.7456     1.058
+## age_during_show                     1.0000     1.0000    0.9922     1.008
+## personality_type_binaryIntrovert    1.0631     0.9407    0.9076     1.245
 ## 
-## Concordance= 0.534  (se = 0.014 )
-## Likelihood ratio test= 9.47  on 6 df,   p=0.1
-## Wald test            = 9.4  on 6 df,   p=0.2
-## Score (logrank) test = 9.44  on 6 df,   p=0.2</code></pre>
+## Concordance= 0.517  (se = 0.014 )
+## Likelihood ratio test= 2.47  on 3 df,   p=0.5
+## Wald test            = 2.5  on 3 df,   p=0.5
+## Score (logrank) test = 2.51  on 3 df,   p=0.5</code></pre>
 <pre class="r"><code>#Clean table for Cox PH
 tabcoxph(surv_model_cox1, 
-         var.labels = list(poc = &quot;POC&quot;, age_during_show = &quot;Age&quot;, personality_type_binary = &quot;Personality Type&quot;, gender = &quot;Gender&quot;, region = &quot;Region&quot;), 
+         var.labels = list(poc = &quot;POC&quot;, age_during_show = &quot;Age&quot;, personality_type_binary = &quot;Personality Type&quot;, gender = &quot;Gender&quot;), 
          decimals = 2)</code></pre>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -786,7 +775,7 @@ POC
 0.89 (0.75, 1.06)
 </td>
 <td style="text-align:left;">
-0.19
+0.18
 </td>
 </tr>
 <tr>
@@ -800,7 +789,7 @@ Age
 1.00 (0.99, 1.01)
 </td>
 <td style="text-align:left;">
-0.91
+1.00
 </td>
 </tr>
 <tr>
@@ -840,73 +829,6 @@ Personality Type
 </td>
 <td style="text-align:left;">
 0.45
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Region
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-     Midwest (ref)
-</td>
-<td style="text-align:left;">
-–
-</td>
-<td style="text-align:left;">
-–
-</td>
-<td style="text-align:left;">
-–
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-     Northeast
-</td>
-<td style="text-align:left;">
--0.01 (0.15)
-</td>
-<td style="text-align:left;">
-0.99 (0.75, 1.32)
-</td>
-<td style="text-align:left;">
-0.95
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-     South
-</td>
-<td style="text-align:left;">
-0.26 (0.14)
-</td>
-<td style="text-align:left;">
-1.29 (0.99, 1.69)
-</td>
-<td style="text-align:left;">
-0.06
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-     West
-</td>
-<td style="text-align:left;">
-0.16 (0.13)
-</td>
-<td style="text-align:left;">
-1.18 (0.91, 1.52)
-</td>
-<td style="text-align:left;">
-0.22
 </td>
 </tr>
 </tbody>
