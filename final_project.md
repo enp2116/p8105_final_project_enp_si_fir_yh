@@ -121,7 +121,7 @@ analysis).
 
 <center>
 
-<img src="table_1.png" width="400" />
+<img src="table_1_new.png" width="400" />
 
 </center>
 
