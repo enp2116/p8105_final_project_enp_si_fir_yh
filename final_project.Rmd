@@ -224,12 +224,24 @@ We observed the Survival Time T and Censoring Time C. Suppose there is a random 
 $$Y = min(T,C)$$
 In other words, if the event occurs before the censoring such that T $<$ C, then we observed the true survival time T. If censoring occurs before the event such as T $>$ C, then we observe the censoring time. The status indicator as, 
 
-$$\delta = \begin{cases} 
-      & 1 &  T\leq C \\
-      & 0 & T > C
-   \end{cases}$$
+$$\delta =  \left\{
+\begin{array}{ll} 
+     1 &  T\leq C \\
+     0 & T > C \\
+   \end{array}
+   \right. $$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe the censoring.
+
+We use the Cox-propositional hazard model to evaluate the effect of several factors on survival time in Survivor Show. It allows us to examine how specified factors influence the rate of the event that we interested at a particular point in time. This rate is the hazard rate. Covariates are age, gender, personality type, and region in this model. 
+The Cox model is expressed by the hazard function denoted by h(t). Briefly, the hazard function can be interpreted as the risk of voted out at time t. It can be estimated as follow:
+$$h(t) = h_0(t)\exp(x_1\beta_1 + x_2\beta_2 + x_3\beta_3 + x_4\beta_4 + x_4\beta_5)$$
+where, \ 
+
+* $t$ represents the survival time 
+* $h(t)$ is the hazard function determined by a set of participants' covariates $(x_1, x_2, x_3, x_4, x_5)$: $x_1$ is POC, $x_2$ is age during the show, $x_3$ is personality type, $x_4$ is gender, and $x_5$ is region 
+* the coefficients $(\beta1, \beta2, \beta3, \beta4, \beta5)$ measures the impact of covariates
+* $h_0(t)\geq 0$ is the baseline hazard function. It is the hazard function for an individual if all $(x_1, x_2, x_3, x_4, x_5)$ are equal to zero.
 
 ## Cox Proportional-Hazards Model 
 

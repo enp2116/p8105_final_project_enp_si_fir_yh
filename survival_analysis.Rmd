@@ -104,8 +104,8 @@ $$h(t) = h_0(t)\exp(x_1\beta_1 + x_2\beta_2 + x_3\beta_3 + x_4\beta_4 + x_4\beta
 where, \ 
 
 * $t$ represents the survival time 
-* $h(t)$ is the hazard function determined by a set of participants' covariates $(x_1, x_2, x_3, x_4)$: $x_1$ is POC, $x_2$ is age during the show, $x_3$ is personality type, $x_4$ is gender, and $x_5$ is region 
-* the coefficients (\beta1, \beta2, \beta3, \beta4, \beta5) measures the impact of covariates
+* $h(t)$ is the hazard function determined by a set of participants' covariates $(x_1, x_2, x_3, x_4, x_5)$: $x_1$ is POC, $x_2$ is age during the show, $x_3$ is personality type, $x_4$ is gender, and $x_5$ is region 
+* the coefficients $(\beta1, \beta2, \beta3, \beta4, \beta5)$ measures the impact of covariates
 * $h_0(t)\geq 0$ is the baseline hazard function. It is the hazard function for an individual if all $(x_1, x_2, x_3, x_4, x_5)$ are equal to zero.
 
 

@@ -84,20 +84,18 @@ frequency and was not patterned in nature. The final dataset used in the
 analysis contains unique information for each castaway for each season,
 including the following key variables:
 
--   `version_season`: version and season number
--   `full_name`: contestant full name
--   `age_during_show` : age, in years
--   `poc` : POC indicator, if known. Else, marked as White.
--   `gender`: 2 levels: Female, Male.
--   `personality_type_binary` : Extracted from the Myer-Briggs
-    personality type of the castaway. 2 levels: Extrovert, Introvert.
--   `days_survived`: Number of days survived in the show until
-    elimination
--   `region`: region in the U.S. where the contestant is from. We
-    created this variable based on the `state` variable available in the
-    dataset. 4 levels: West, Midwest, Northeast, South. Indicator
-    variables for each of the 4 regions have also been created for
-    analyses.
+- `version_season`: version and season number
+- `full_name`: contestant full name
+- `age_during_show` : age, in years
+- `poc` : POC indicator, if known. Else, marked as White.
+- `gender`: 2 levels: Female, Male.
+- `personality_type_binary` : Extracted from the Myer-Briggs personality
+  type of the castaway. 2 levels: Extrovert, Introvert.
+- `days_survived`: Number of days survived in the show until elimination
+- `region`: region in the U.S. where the contestant is from. We created
+  this variable based on the `state` variable available in the dataset.
+  4 levels: West, Midwest, Northeast, South. Indicator variables for
+  each of the 4 regions have also been created for analyses.
 
 As a supplemental analysis, we also used the `confessionals` data from
 the same `survivoR` package to visualize the number of confessionals
@@ -118,12 +116,12 @@ they appeared in multiple seasons (in contrast to the rest of our
 analysis). We also included tables showing the mean days survived based
 on these demographic measures of interest.
 
-<div id="khtzhonmby" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vtnrjehish" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#khtzhonmby .gt_table {
+#vtnrjehish .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -148,7 +146,7 @@ on these demographic measures of interest.
   border-left-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_heading {
+#vtnrjehish .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -160,7 +158,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_title {
+#vtnrjehish .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -172,7 +170,7 @@ on these demographic measures of interest.
   border-bottom-width: 0;
 }
 
-#khtzhonmby .gt_subtitle {
+#vtnrjehish .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -184,13 +182,13 @@ on these demographic measures of interest.
   border-top-width: 0;
 }
 
-#khtzhonmby .gt_bottom_border {
+#vtnrjehish .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_col_headings {
+#vtnrjehish .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -205,7 +203,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_col_heading {
+#vtnrjehish .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -225,7 +223,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#khtzhonmby .gt_column_spanner_outer {
+#vtnrjehish .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -237,15 +235,15 @@ on these demographic measures of interest.
   padding-right: 4px;
 }
 
-#khtzhonmby .gt_column_spanner_outer:first-child {
+#vtnrjehish .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#khtzhonmby .gt_column_spanner_outer:last-child {
+#vtnrjehish .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#khtzhonmby .gt_column_spanner {
+#vtnrjehish .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -257,7 +255,7 @@ on these demographic measures of interest.
   width: 100%;
 }
 
-#khtzhonmby .gt_group_heading {
+#vtnrjehish .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -282,7 +280,7 @@ on these demographic measures of interest.
   vertical-align: middle;
 }
 
-#khtzhonmby .gt_empty_group_heading {
+#vtnrjehish .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -297,15 +295,15 @@ on these demographic measures of interest.
   vertical-align: middle;
 }
 
-#khtzhonmby .gt_from_md > :first-child {
+#vtnrjehish .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#khtzhonmby .gt_from_md > :last-child {
+#vtnrjehish .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#khtzhonmby .gt_row {
+#vtnrjehish .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -324,7 +322,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#khtzhonmby .gt_stub {
+#vtnrjehish .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -337,7 +335,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#khtzhonmby .gt_stub_row_group {
+#vtnrjehish .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -351,11 +349,11 @@ on these demographic measures of interest.
   vertical-align: top;
 }
 
-#khtzhonmby .gt_row_group_first td {
+#vtnrjehish .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#khtzhonmby .gt_summary_row {
+#vtnrjehish .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -365,16 +363,16 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#khtzhonmby .gt_first_summary_row {
+#vtnrjehish .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_first_summary_row.thick {
+#vtnrjehish .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#khtzhonmby .gt_last_summary_row {
+#vtnrjehish .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -384,7 +382,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_grand_summary_row {
+#vtnrjehish .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -394,7 +392,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#khtzhonmby .gt_first_grand_summary_row {
+#vtnrjehish .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -404,11 +402,11 @@ on these demographic measures of interest.
   border-top-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_striped {
+#vtnrjehish .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#khtzhonmby .gt_table_body {
+#vtnrjehish .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -417,7 +415,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_footnotes {
+#vtnrjehish .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -431,7 +429,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_footnote {
+#vtnrjehish .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -440,7 +438,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#khtzhonmby .gt_sourcenotes {
+#vtnrjehish .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -454,7 +452,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#khtzhonmby .gt_sourcenote {
+#vtnrjehish .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -462,64 +460,64 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#khtzhonmby .gt_left {
+#vtnrjehish .gt_left {
   text-align: left;
 }
 
-#khtzhonmby .gt_center {
+#vtnrjehish .gt_center {
   text-align: center;
 }
 
-#khtzhonmby .gt_right {
+#vtnrjehish .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#khtzhonmby .gt_font_normal {
+#vtnrjehish .gt_font_normal {
   font-weight: normal;
 }
 
-#khtzhonmby .gt_font_bold {
+#vtnrjehish .gt_font_bold {
   font-weight: bold;
 }
 
-#khtzhonmby .gt_font_italic {
+#vtnrjehish .gt_font_italic {
   font-style: italic;
 }
 
-#khtzhonmby .gt_super {
+#vtnrjehish .gt_super {
   font-size: 65%;
 }
 
-#khtzhonmby .gt_footnote_marks {
+#vtnrjehish .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#khtzhonmby .gt_asterisk {
+#vtnrjehish .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#khtzhonmby .gt_indent_1 {
+#vtnrjehish .gt_indent_1 {
   text-indent: 5px;
 }
 
-#khtzhonmby .gt_indent_2 {
+#vtnrjehish .gt_indent_2 {
   text-indent: 10px;
 }
 
-#khtzhonmby .gt_indent_3 {
+#vtnrjehish .gt_indent_3 {
   text-indent: 15px;
 }
 
-#khtzhonmby .gt_indent_4 {
+#vtnrjehish .gt_indent_4 {
   text-indent: 20px;
 }
 
-#khtzhonmby .gt_indent_5 {
+#vtnrjehish .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -534,27 +532,27 @@ on these demographic measures of interest.
   <tbody class="gt_table_body">
     <tr><td class="gt_row gt_left" style="font-weight: bold;">Gender</td>
 <td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Female</td>
+    <tr><td class="gt_row gt_left">    Female</td>
 <td class="gt_row gt_center">356 (49%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Male</td>
+    <tr><td class="gt_row gt_left">    Male</td>
 <td class="gt_row gt_center">368 (51%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
+    <tr><td class="gt_row gt_left">    Unknown</td>
 <td class="gt_row gt_center">4</td></tr>
     <tr><td class="gt_row gt_left" style="font-weight: bold;">Race Identifier</td>
 <td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">POC</td>
+    <tr><td class="gt_row gt_left">    POC</td>
 <td class="gt_row gt_center">199 (27%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">White</td>
+    <tr><td class="gt_row gt_left">    White</td>
 <td class="gt_row gt_center">525 (73%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
+    <tr><td class="gt_row gt_left">    Unknown</td>
 <td class="gt_row gt_center">4</td></tr>
     <tr><td class="gt_row gt_left" style="font-weight: bold;">Personality Type</td>
 <td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Extrovert</td>
+    <tr><td class="gt_row gt_left">    Extrovert</td>
 <td class="gt_row gt_center">401 (56%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Introvert</td>
+    <tr><td class="gt_row gt_left">    Introvert</td>
 <td class="gt_row gt_center">320 (44%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
+    <tr><td class="gt_row gt_left">    Unknown</td>
 <td class="gt_row gt_center">7</td></tr>
     <tr><td class="gt_row gt_left" style="font-weight: bold;">Age During Show (Years)</td>
 <td class="gt_row gt_center">33.4 (10.1)</td></tr>
@@ -800,13 +798,37 @@ censoring such that T $<$ C, then we observed the true survival time T.
 If censoring occurs before the event such as T $>$ C, then we observe
 the censoring time. The status indicator as,
 
-$$\delta = \begin{cases} 
-      & 1 &  T\leq C \\
-      & 0 & T > C
-   \end{cases}$$
+$$\delta =  \left\{
+\begin{array}{ll} 
+     1 &  T\leq C \\
+     0 & T > C \\
+   \end{array}
+   \right. $$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ =
 0 if we observe the censoring.
+
+We use the Cox-propositional hazard model to evaluate the effect of
+several factors on survival time in Survivor Show. It allows us to
+examine how specified factors influence the rate of the event that we
+interested at a particular point in time. This rate is the hazard rate.
+Covariates are age, gender, personality type, and region in this model.
+The Cox model is expressed by the hazard function denoted by h(t).
+Briefly, the hazard function can be interpreted as the risk of voted out
+at time t. It can be estimated as follow:
+$$h(t) = h_0(t)\exp(x_1\beta_1 + x_2\beta_2 + x_3\beta_3 + x_4\beta_4 + x_4\beta_5)$$
+where,  
+
+- $t$ represents the survival time
+- $h(t)$ is the hazard function determined by a set of participants’
+  covariates $(x_1, x_2, x_3, x_4, x_5)$: $x_1$ is POC, $x_2$ is age
+  during the show, $x_3$ is personality type, $x_4$ is gender, and $x_5$
+  is region
+- the coefficients $(\beta1, \beta2, \beta3, \beta4, \beta5)$ measures
+  the impact of covariates
+- $h_0(t)\geq 0$ is the baseline hazard function. It is the hazard
+  function for an individual if all $(x_1, x_2, x_3, x_4, x_5)$ are
+  equal to zero.
 
 ## Cox Proportional-Hazards Model
 
@@ -826,7 +848,7 @@ our model are in violation.
 To investigate each of the covariates individually, we created
 Kaplan-Meier curves to look at survival time with respect to:
 
--   **Personality Type** (Introvert vs Extrovert)
+- **Personality Type** (Introvert vs Extrovert)
 
 ``` r
 surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
@@ -850,11 +872,11 @@ ggsurvplot(
 
 ![](final_project_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
--   POC (White vs Non-White)
+- POC (White vs Non-White)
 
--   Gender (Female vs Male)
+- Gender (Female vs Male)
 
--   Region
+- Region
 
 ### Results:
 
