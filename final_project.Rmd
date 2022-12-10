@@ -83,6 +83,7 @@ As a supplemental analysis, we also used the `confessionals` data from the same 
 ## Exploratory Analysis:
  We performed exploratory data analysis to visualize the distributions of our variables of interest, including POC, gender, personality type, age, and geographic location. In order to best depict the true nature of our data, we used a combination of tables and plots, depending on which method we believed to be most effective. In our summary demographic table*, we decided to only count contestants once, regardless of if they appeared in multiple seasons (in contrast to the rest of our analysis). 
 
+**Table 1: Summary Statistics** 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
  survivor_data_final %>% 
   select(gender, poc, personality_type_binary, age_during_show, days_survived, region) %>% 
@@ -106,6 +107,7 @@ As a supplemental analysis, we also used the `confessionals` data from the same 
 
 *Note: N = 728 refers to the total count of records (i.e. contestant occurrences) in `survivor_data_final`; distinct persons may be listed in multiple records, across seasons and/or within seasons.*
 
+
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
 fill_color = brewer.pal(9,"PuBuGn")[5]
 ggplot(survivor_data_final, aes(x = age_during_show)) + 
@@ -119,7 +121,7 @@ ggplot(survivor_data_final, aes(x = age_during_show)) +
 
 We also included tables showing the mean days survived based on these demographic measures of interest. 
 
-### Personality Type 
+ 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
 ## Personality type
 survivor_data_final %>% 
