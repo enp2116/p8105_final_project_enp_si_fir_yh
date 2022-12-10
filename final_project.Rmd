@@ -287,7 +287,7 @@ ggsurvplot(
 ### Results:
 The results of our Cox Proportional-Hazards model are displayed below. 
 
-**Table 2: Modeling Survival Time by POC, Age, Personality Type**  
+**Table 2: Modeling Survival Time by Age, Gender, POC, Personality Type, Region**  
 
 | Risk Factor | Parameter Estimate (Standard Error) | Hazard Ratio (HR) (95% CI) | P-Value |
 |:---:|:---:|:---:|:---:|

@@ -666,8 +666,7 @@ plot(surv_model_unadj, xlab = &quot;Days&quot;,
 <h2>Cox-proposional hazard model selection using
 <code>selectCox</code></h2>
 <pre class="r"><code>surv_model_full &lt;- coxph(data = survivor_data_final,
-                         Surv(time, status)~ poc + age_during_show + 
-                           personality_type_binary + gender + region)
+                         Surv(time, status)~ age_during_show + gender + poc + personality_type_binary + region)
 
 selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + gender + region, data = survivor_data_final)</code></pre>
 <pre><code>## $fit
@@ -692,17 +691,16 @@ selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + 
 several factors on survival time in Survivor Show. It allows us to
 examine how specified factors influence the rate of the event that we
 interested at a particular point in time. This rate is the hazard rate.
-Covariates are age, gender, personality type, and region in this model.
-The Cox model is expressed by the hazard function denoted by h(t).
-Briefly, the hazard function can be interpreted as the risk of dying at
-time t. It can be estimated as follow: <span class="math display">\[h(t)
-= h_0(t)\exp(x_1\beta_1 + x_2\beta_2 + x_3\beta_3 + x_4\beta_4 +
-x_4\beta_5)\]</span> where,  </p>
+Covariates are age, gender, poc, personality type, and region in this
+model. The Cox model is expressed by the hazard function denoted by
+h(t). Briefly, the hazard function can be interpreted as the risk of
+dying at time t. It can be estimated as follow: <span class="math display">\[h(t) = h_0(t)\exp(x_1\beta_1 + x_2\beta_2 +
+x_3\beta_3 + x_4\beta_4 + x_4\beta_5)\]</span> where,  </p>
 <ul>
 <li><span class="math inline">\(t\)</span> represents the survival
 time</li>
 <li><span class="math inline">\(h(t)\)</span> is the hazard function
-determined by a set of participants’ covariates <span class="math inline">\((x_1, x_2, x_3, x_4, x_5)\)</span>: <span class="math inline">\(x_1\)</span> is POC, <span class="math inline">\(x_2\)</span> is age during the show, <span class="math inline">\(x_3\)</span> is personality type, <span class="math inline">\(x_4\)</span> is gender, and <span class="math inline">\(x_5\)</span> is region</li>
+determined by a set of participants’ covariates <span class="math inline">\((x_1, x_2, x_3, x_4, x_5)\)</span>: <span class="math inline">\(x_1\)</span> is age during the show, <span class="math inline">\(x_2\)</span> is gender, <span class="math inline">\(x_3\)</span> is POC, , <span class="math inline">\(x_4\)</span> is personality type, and <span class="math inline">\(x_5\)</span> is region</li>
 <li>the coefficients <span class="math inline">\((\beta1, \beta2,
 \beta3, \beta4, \beta5)\)</span> measures the impact of covariates</li>
 <li><span class="math inline">\(h_0(t)\geq 0\)</span> is the baseline
@@ -710,32 +708,32 @@ hazard function. It is the hazard function for an individual if all
 <span class="math inline">\((x_1, x_2, x_3, x_4, x_5)\)</span> are equal
 to zero.</li>
 </ul>
-<div id="cox-proposional-hazard-model-1" class="section level2">
-<h2>Cox-proposional hazard model 1</h2>
+<p>Age, Gender, POC, Personality Type, Region ## Cox-proposional hazard
+model 1</p>
 <pre class="r"><code>surv_model_cox1 &lt;- coxph(data = survivor_data_final,
-  Surv(time, status) ~  poc + age_during_show + personality_type_binary + gender + region)
+  Surv(time, status) ~   age_during_show + gender + poc + personality_type_binary + region)
 
 summary(surv_model_cox1)</code></pre>
 <pre><code>## Call:
-## coxph(formula = Surv(time, status) ~ poc + age_during_show + 
-##     personality_type_binary + gender + region, data = survivor_data_final)
+## coxph(formula = Surv(time, status) ~ age_during_show + gender + 
+##     poc + personality_type_binary + region, data = survivor_data_final)
 ## 
 ##   n= 721, number of events= 626 
 ##    (7 observations deleted due to missingness)
 ## 
 ##                                       coef exp(coef)  se(coef)      z Pr(&gt;|z|)
-## pocWhite                         -0.112428  0.893661  0.089760 -1.253   0.2104
 ## age_during_show                  -0.000232  0.999768  0.004004 -0.058   0.9538
-## personality_type_binaryIntrovert  0.065163  1.067333  0.081534  0.799   0.4242
 ## genderMale                       -0.054515  0.946945  0.080883 -0.674   0.5003
+## pocWhite                         -0.112428  0.893661  0.089760 -1.253   0.2104
+## personality_type_binaryIntrovert  0.065163  1.067333  0.081534  0.799   0.4242
 ## regionNortheast                  -0.002191  0.997811  0.145374 -0.015   0.9880
 ## regionSouth                       0.264563  1.302861  0.136629  1.936   0.0528
 ## regionWest                        0.169487  1.184697  0.131924  1.285   0.1989
 ##                                   
-## pocWhite                          
 ## age_during_show                   
-## personality_type_binaryIntrovert  
 ## genderMale                        
+## pocWhite                          
+## personality_type_binaryIntrovert  
 ## regionNortheast                   
 ## regionSouth                      .
 ## regionWest                        
@@ -743,10 +741,10 @@ summary(surv_model_cox1)</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ##                                  exp(coef) exp(-coef) lower .95 upper .95
-## pocWhite                            0.8937     1.1190    0.7495     1.066
 ## age_during_show                     0.9998     1.0002    0.9920     1.008
-## personality_type_binaryIntrovert    1.0673     0.9369    0.9097     1.252
 ## genderMale                          0.9469     1.0560    0.8081     1.110
+## pocWhite                            0.8937     1.1190    0.7495     1.066
+## personality_type_binaryIntrovert    1.0673     0.9369    0.9097     1.252
 ## regionNortheast                     0.9978     1.0022    0.7504     1.327
 ## regionSouth                         1.3029     0.7675    0.9968     1.703
 ## regionWest                          1.1847     0.8441    0.9148     1.534
@@ -757,7 +755,7 @@ summary(surv_model_cox1)</code></pre>
 ## Score (logrank) test = 9.89  on 7 df,   p=0.2</code></pre>
 <pre class="r"><code>#Clean table for Cox PH
 tabcoxph(surv_model_cox1, 
-         var.labels = list(poc = &quot;POC&quot;, age_during_show = &quot;Age&quot;, personality_type_binary = &quot;Personality Type&quot;, gender = &quot;Gender&quot;, region = &quot;Region&quot;), 
+         var.labels = list(age_during_show = &quot;Age&quot;, gender = &quot;Gender&quot;, poc = &quot;POC&quot;,  personality_type_binary = &quot;Personality Type&quot;,  region = &quot;Region&quot;), 
          decimals = 2)</code></pre>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -777,6 +775,59 @@ P
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Age
+</td>
+<td style="text-align:left;">
+-0.00 (0.00)
+</td>
+<td style="text-align:left;">
+1.00 (0.99, 1.01)
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gender
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+     Female (ref)
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+     Male
+</td>
+<td style="text-align:left;">
+-0.05 (0.08)
+</td>
+<td style="text-align:left;">
+0.95 (0.81, 1.11)
+</td>
+<td style="text-align:left;">
+0.50
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 POC
@@ -818,20 +869,6 @@ POC
 </tr>
 <tr>
 <td style="text-align:left;">
-Age
-</td>
-<td style="text-align:left;">
--0.00 (0.00)
-</td>
-<td style="text-align:left;">
-1.00 (0.99, 1.01)
-</td>
-<td style="text-align:left;">
-0.95
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Personality Type
 </td>
 <td style="text-align:left;">
@@ -867,45 +904,6 @@ Personality Type
 </td>
 <td style="text-align:left;">
 0.42
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Gender
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-     Female (ref)
-</td>
-<td style="text-align:left;">
-–
-</td>
-<td style="text-align:left;">
-–
-</td>
-<td style="text-align:left;">
-–
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-     Male
-</td>
-<td style="text-align:left;">
--0.05 (0.08)
-</td>
-<td style="text-align:left;">
-0.95 (0.81, 1.11)
-</td>
-<td style="text-align:left;">
-0.50
 </td>
 </tr>
 <tr>
@@ -997,7 +995,6 @@ survival time for Introvert contestants compared to Extrovert
 contestants (the reference category) is shorter. We are 95% confident
 that the HR falls between 0.9076 - 1.245. However, the HR is not
 statistically significant since the p-value of 0.448 &gt; 0.05.</p>
-</div>
 <div id="cox-proposional-hazard-model-2" class="section level2">
 <h2>Cox-proposional hazard model 2</h2>
 <pre class="r"><code>surv_model_cox2 &lt;- coxph(data = survivor_data_final,
