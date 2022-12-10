@@ -89,7 +89,7 @@ colnames(survivor_data_final)[26] <- "time"
 As a supplemental analysis, we also used the `confessionals` data from the same  `survivoR` package to visualize the number of confessionals each contestant received. This data looked at all seasons as it was unrelated to the survival analysis and consistency in the datasets was not necessary. Nevertheless, this data also only looked at the U.S. edition of the show.
 
 ## Exploratory Analysis:
- We performed exploratory data analysis to visualize the distributions of our variables of interest, including POC, gender, personality type, age, and geographic location. In order to best depict the true nature of our data, we used a combination of tables and plots, depending on which method we believed to be most effective. In our summary demographic table, we decided to only count contestants once, regardless of if they appeared in multiple seasons (in contrast to the rest of our analysis). 
+ We performed exploratory data analysis to visualize the distributions of our variables of interest, including POC, gender, personality type, age, and geographic location. In order to best depict the true nature of our data, we used a combination of tables and plots, depending on which method we believed to be most effective. In our summary demographic table, we specifically count contestant occurrences, while noting that distinct individuals can recur across multiple seasons or episodes within a season. 
 
 **Table 1: Summary Statistics** 
 ```{r, echo = FALSE, eval = FALSE}
