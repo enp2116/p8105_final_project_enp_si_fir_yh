@@ -81,14 +81,15 @@ colnames(survivor_data_final)[26] <- "time"
 As a supplemental analysis, we also used the `confessionals` data from the same  `survivoR` package to visualize the number of confessionals each contestant received. This data looked at all seasons as it was unrelated to the survival analysis and consistency in the datasets was not necessary. Nevertheless, this data also only looked at the U.S. edition of the show.
 
 ## Exploratory Analysis:
- We performed exploratory data analysis to visualize the distributions of our variables of interest, including POC, gender, personality type, age, and geographic location. In order to best depict the true nature of our data, we used a combination of tables and plots, depending on which method we believed to be most effective. In our summary demographic table*, we decided to only count contestants once, regardless of if they appeared in multiple seasons (in contrast to the rest of our analysis). We also included tables showing the mean days survived based on these demographic measures of interest. 
+ We performed exploratory data analysis to visualize the distributions of our variables of interest, including POC, gender, personality type, age, and geographic location. In order to best depict the true nature of our data, we used a combination of tables and plots, depending on which method we believed to be most effective. In our summary demographic table*, we decided to only count contestants once, regardless of if they appeared in multiple seasons (in contrast to the rest of our analysis). 
 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
-survivor_data_final %>% 
-  select(gender, poc, personality_type_binary, age_during_show, days_survived) %>% 
+ survivor_data_final %>% 
+  select(gender, poc, personality_type_binary, age_during_show, days_survived, region) %>% 
   tbl_summary(type = list(gender ~ "categorical", 
                           poc ~ "categorical", 
                           personality_type_binary ~ "categorical", 
+                          region ~ "categorical",
                           age_during_show ~ "continuous", 
                           days_survived ~ "continuous"), 
               statistic = list(all_continuous() ~ "{mean} ({sd})"), 
@@ -96,12 +97,14 @@ survivor_data_final %>%
               label = list(c(gender) ~ "Gender",
                            c(poc) ~ "Race Identifier",
                            c(personality_type_binary) ~ "Personality Type",
+                           c(region) ~ "Region",
                            c(age_during_show) ~ "Age During Show (Years)",
                            c(days_survived) ~ "Survival Time on Show (Days)")) %>% 
   bold_labels() 
-``` 
+```
 
-Note: N = 728 refers to the total count of records (i.e. contestant occurrences) in `survivor_data_final`; distinct persons may be listed in multiple records, across seasons and/or within seasons.
+
+*Note: N = 728 refers to the total count of records (i.e. contestant occurrences) in `survivor_data_final`; distinct persons may be listed in multiple records, across seasons and/or within seasons.*
 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
 fill_color = brewer.pal(9,"PuBuGn")[5]
@@ -112,7 +115,9 @@ ggplot(survivor_data_final, aes(x = age_during_show)) +
   xlab("Age (During Show)") + ylab("Count")
 ```
 
-Note: Since contestants can re-appear across seasons at different ages, we rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of age data.
+*Note: Since contestants can re-appear across seasons at different ages, we rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of age data.*
+
+We also included tables showing the mean days survived based on these demographic measures of interest. 
 
 ### Personality Type 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
@@ -142,6 +147,15 @@ survivor_data_final %>%
             mean_days_survived = mean(days_survived, na.rm = TRUE)) %>%
     na.omit()  %>%
   knitr::kable(digits = 1, col.names = c("Gender", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
+
+## Region
+survivor_data_final %>% 
+  group_by(region) %>% 
+  summarize(n_gender_dist = n_distinct(full_name),
+            n_gender_occ = n(),
+            mean_days_survived = mean(days_survived, na.rm = TRUE)) %>%
+    na.omit()  %>%
+  knitr::kable(digits = 1, col.names = c("Region", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
 ```
  
 Next, to visualize the geographic origins of *Survivor* contestants, we created a map to chart the number of contestants coming from each state. This map indicates that California was the most popular state of origin for contestants.
@@ -159,10 +173,9 @@ plot_usmap(
   labs(title = "US States", subtitle = "Geographic Distribution of Contestants") +
   theme(legend.position = "right")
 ```
-
-Notes: 
-i) Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days.
-ii) Since contestants can re-appear across seasons with different states of residence, we similarly rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of location data.
+*Notes:* 
+*i) Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days.* 
+*ii) Since contestants can re-appear across seasons with different states of residence, we similarly rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of location data.*
  
 Additionally, we used a line plot* to visualize the change in diversity (looking at both POC status and gender) to view how the proportion of POC and women has changed over the show’s many seasons. 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
@@ -184,7 +197,7 @@ ggplot(data = survivor_poc_over_time, aes(x = season, y = freq, group = 1)) +
   xlab("Season") + ylab("Proportion of POC")
 ```
 
-Note: Distinct person counts by POC status.
+*Note: Distinct person counts by POC status.*
 
 According to the trends of the proportion of POC, the initial seasons had a very low proportion of POC contestants and the overall data shows an increasing trend in the proportion of POC. It was interesting to note that some “early” seasons such as seasons 13 and 14 had very high proportions of POC (over 0.5). 
 
@@ -207,7 +220,7 @@ ggplot(data = survivor_gender_over_time, aes(x = season, y = freq, group = 1)) +
   xlab("Season") + ylab("Proportion of Women")
 ```
 
-Note: Distinct person counts by gender.
+*Note: Distinct person counts by gender.*
 
 The graph for the proportion of women per season shows a relatively steady trend around 0.5, indicating a generally even distribution of men and women in the data. There are some seasons with a proportion less than 0.5 and greater than 0.5, but a majority of seasons had an exact proportion of 0.5.  
 In addition to the aforementioned exploratory data analysis, we were curious to see which contestants were receiving the most confessionals. As a result, we created a Shiny app that allows users to select which season they would like to view. Users can then examine the number of confessionals each contestant received, as well as the total number of confessionals they received over the season, and the mean number of confessionals per episode they received while on the show.  
@@ -240,7 +253,7 @@ where, \
 
 ## Cox Proportional-Hazards Model 
 
- To investigate the number of days survived on *Survivor*, we built a Cox Proportional-Hazards Model adjusting for the variables of age, gender, personality type (introvert versus extravert) and POC (White vs POC). The Cox Proportional-Hazards model was chosen since it allows us to examine multiple factors that could be influencing the rate at which contestants are eliminated. 
+ To investigate the number of days survived on *Survivor*, we built a Cox Proportional-Hazards Model adjusting for the variables of age, gender, personality type (introvert versus extrovert) and POC (White vs POC). The Cox Proportional-Hazards model was chosen since it allows us to examine multiple factors that could be influencing the rate at which contestants are eliminated. 
  An assumption of the Cox Proportional-Hazards model is that each covariate has a multiplicative effect in the hazards function that is constant over time. After fitting the Cox model, we tested the assumption and none of the covariates in our model are in violation. 
  
 ### Results:
@@ -425,7 +438,7 @@ The results of our Cox Proportional-Hazards model are displayed below.
 | South | 0.26 (0.14) | 1.30 (1.00, 1.70) | 0.0528 |
 | West | 0.17 (0.13) | 1.18 (0.91, 1.53) | 0.1989 |
 
-**Notes: N = 721, number of events = 626**  
+*Notes: N = 721, number of events = 626*
 
 As age increases in years, there is no difference in survival since the hazard ratio is 1. We are 95% confident that the HR falls between 0.99 to 1.01. However, the HR is not statistically significant.  
 - For gender, the HR value of 0.96 suggests that the survival time for male contestants is longer compared to female contestants (the reference category). We are 95% confident that the HR falls between 0.82 and 1.12. However, the HR is not statistically significant.  
