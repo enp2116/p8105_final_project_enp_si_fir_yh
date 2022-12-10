@@ -119,12 +119,12 @@ analysis).
 
 **Table 1: Summary Statistics**
 
-<div id="zslvsjimfj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="dhmxibgktv" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zslvsjimfj .gt_table {
+#dhmxibgktv .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -149,7 +149,7 @@ analysis).
   border-left-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_heading {
+#dhmxibgktv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -161,7 +161,7 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_title {
+#dhmxibgktv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -173,7 +173,7 @@ analysis).
   border-bottom-width: 0;
 }
 
-#zslvsjimfj .gt_subtitle {
+#dhmxibgktv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -185,13 +185,13 @@ analysis).
   border-top-width: 0;
 }
 
-#zslvsjimfj .gt_bottom_border {
+#dhmxibgktv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_col_headings {
+#dhmxibgktv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -206,7 +206,7 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_col_heading {
+#dhmxibgktv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -226,7 +226,7 @@ analysis).
   overflow-x: hidden;
 }
 
-#zslvsjimfj .gt_column_spanner_outer {
+#dhmxibgktv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -238,15 +238,15 @@ analysis).
   padding-right: 4px;
 }
 
-#zslvsjimfj .gt_column_spanner_outer:first-child {
+#dhmxibgktv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zslvsjimfj .gt_column_spanner_outer:last-child {
+#dhmxibgktv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zslvsjimfj .gt_column_spanner {
+#dhmxibgktv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -258,7 +258,7 @@ analysis).
   width: 100%;
 }
 
-#zslvsjimfj .gt_group_heading {
+#dhmxibgktv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -283,7 +283,7 @@ analysis).
   vertical-align: middle;
 }
 
-#zslvsjimfj .gt_empty_group_heading {
+#dhmxibgktv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -298,15 +298,15 @@ analysis).
   vertical-align: middle;
 }
 
-#zslvsjimfj .gt_from_md > :first-child {
+#dhmxibgktv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zslvsjimfj .gt_from_md > :last-child {
+#dhmxibgktv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zslvsjimfj .gt_row {
+#dhmxibgktv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,7 +325,7 @@ analysis).
   overflow-x: hidden;
 }
 
-#zslvsjimfj .gt_stub {
+#dhmxibgktv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -338,7 +338,7 @@ analysis).
   padding-right: 5px;
 }
 
-#zslvsjimfj .gt_stub_row_group {
+#dhmxibgktv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -352,11 +352,11 @@ analysis).
   vertical-align: top;
 }
 
-#zslvsjimfj .gt_row_group_first td {
+#dhmxibgktv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zslvsjimfj .gt_summary_row {
+#dhmxibgktv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -366,16 +366,16 @@ analysis).
   padding-right: 5px;
 }
 
-#zslvsjimfj .gt_first_summary_row {
+#dhmxibgktv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_first_summary_row.thick {
+#dhmxibgktv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zslvsjimfj .gt_last_summary_row {
+#dhmxibgktv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -385,7 +385,7 @@ analysis).
   border-bottom-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_grand_summary_row {
+#dhmxibgktv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -395,7 +395,7 @@ analysis).
   padding-right: 5px;
 }
 
-#zslvsjimfj .gt_first_grand_summary_row {
+#dhmxibgktv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -405,11 +405,11 @@ analysis).
   border-top-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_striped {
+#dhmxibgktv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zslvsjimfj .gt_table_body {
+#dhmxibgktv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -418,7 +418,7 @@ analysis).
   border-bottom-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_footnotes {
+#dhmxibgktv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -432,7 +432,7 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_footnote {
+#dhmxibgktv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -441,7 +441,7 @@ analysis).
   padding-right: 5px;
 }
 
-#zslvsjimfj .gt_sourcenotes {
+#dhmxibgktv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -455,7 +455,7 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
-#zslvsjimfj .gt_sourcenote {
+#dhmxibgktv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -463,64 +463,64 @@ analysis).
   padding-right: 5px;
 }
 
-#zslvsjimfj .gt_left {
+#dhmxibgktv .gt_left {
   text-align: left;
 }
 
-#zslvsjimfj .gt_center {
+#dhmxibgktv .gt_center {
   text-align: center;
 }
 
-#zslvsjimfj .gt_right {
+#dhmxibgktv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zslvsjimfj .gt_font_normal {
+#dhmxibgktv .gt_font_normal {
   font-weight: normal;
 }
 
-#zslvsjimfj .gt_font_bold {
+#dhmxibgktv .gt_font_bold {
   font-weight: bold;
 }
 
-#zslvsjimfj .gt_font_italic {
+#dhmxibgktv .gt_font_italic {
   font-style: italic;
 }
 
-#zslvsjimfj .gt_super {
+#dhmxibgktv .gt_super {
   font-size: 65%;
 }
 
-#zslvsjimfj .gt_footnote_marks {
+#dhmxibgktv .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#zslvsjimfj .gt_asterisk {
+#dhmxibgktv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zslvsjimfj .gt_indent_1 {
+#dhmxibgktv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zslvsjimfj .gt_indent_2 {
+#dhmxibgktv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zslvsjimfj .gt_indent_3 {
+#dhmxibgktv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zslvsjimfj .gt_indent_4 {
+#dhmxibgktv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zslvsjimfj .gt_indent_5 {
+#dhmxibgktv .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -585,6 +585,7 @@ analysis).
 occurrences) in `survivor_data_final`; distinct persons may be listed in
 multiple records, across seasons and/or within seasons.*
 
+**Figure 1: Distribution of Age**
 <img src="final_project_files/figure-gfm/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 
 *Note: Since contestants can re-appear across seasons at different ages,
@@ -821,6 +822,7 @@ created a map to chart the number of contestants coming from each state.
 This map indicates that California was the most popular state of origin
 for contestants.
 
+**Figure 2: Map of Geographic Origins**
 <img src="final_project_files/figure-gfm/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 *Notes:* *i) Seasons 2, 41, 42, and 43 have been removed from the
 exploratory analysis due to inconsistent number of days.* *ii) Since
@@ -833,6 +835,8 @@ data.*
 Additionally, we used a line plot\* to visualize the change in diversity
 (looking at both POC status and gender) to view how the proportion of
 POC and women has changed over the show’s many seasons.
+
+**Figure 2: Contestant POC over Time**
 <img src="final_project_files/figure-gfm/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 
 *Note: Distinct person counts by POC status.*
@@ -843,6 +847,7 @@ an increasing trend in the proportion of POC. It was interesting to note
 that some “early” seasons such as seasons 13 and 14 had very high
 proportions of POC (over 0.5).
 
+**Figure 3: Contestant Gender over Time**
 <img src="final_project_files/figure-gfm/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
 
 *Note: Distinct person counts by gender.*
@@ -931,29 +936,20 @@ our model are in violation.
 To investigate each of the covariates individually, we created
 Kaplan-Meier curves to look at survival time with respect to:
 
--   **Personality Type** (Introvert vs Extrovert)
-
+**Figure 4: Personality Type** (Introvert vs Extrovert)
 <img src="final_project_files/figure-gfm/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
 
--   **POC** (White vs Non-White)
-
+**Figure 5: POC** (White vs Non-White)
 <img src="final_project_files/figure-gfm/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
 
--   **Gender** (Female vs Male)
-
+**Figure 5: Gender** (Female vs Male)
 <img src="final_project_files/figure-gfm/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
 
--   **Region**
-
+**Figure 6: Region**
 <img src="final_project_files/figure-gfm/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" />
 
+**Figure 7: Northeast vs Non-Northeast Region**
 <img src="final_project_files/figure-gfm/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" />
-
-<img src="final_project_files/figure-gfm/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" />
-
-<img src="final_project_files/figure-gfm/unnamed-chunk-14-1.png" width="90%" style="display: block; margin: auto;" />
-
-<img src="final_project_files/figure-gfm/unnamed-chunk-15-1.png" width="90%" style="display: block; margin: auto;" />
 
 The results of our Cox Proportional-Hazards model are displayed below.
 
