@@ -4,7 +4,7 @@ Survival
 
 ## Introduction
 
-### Motivation:
+### Motivation
 
 In this report, we utilize survival analysis to explore the implications
 of known race, gender, and personality type to game show survival. In
@@ -18,7 +18,7 @@ heavily influence how people are perceived in a social context, we
 hypothesize that contestant outcomes may differ on the measures related
 to retention or screen time.
 
-### Related Work:
+### Related Work
 
 While survival analysis is a statistical methodology typically used in
 health fields to understand the time to an event of interest (such as
@@ -33,7 +33,7 @@ the TV series *Survivor* and *Masterchef Junior* differ in their
 elimination processes, both our studies explore the intricacies of
 societal bias and how that plays into game show success.
 
-### Initial Questions:
+### Initial Questions
 
 Our initial goal was to investigate the extent to which gender, race,
 and personality have led to differences in days survived on *Survivor*.
@@ -53,21 +53,20 @@ had representation that evolved over the 42 seasons. In this paper, we
 consider all these aspects as part of a comprehensive investigation of
 demographics on game show survival.
 
-## Data Sources & Cleaning:
+## Data Sources & Cleaning
 
 In order to analyze the show *Survivor*, we used data sources from the
 `castaway_details` and `castaways` datasets[^4], as well as others, from
 the `survivoR` package.[^5] This fan-made package contains data from all
-seasons of the U.S. TV show *Survivor*. According to the authors of the
-package, “the data was sourced from Wikipedia and the Survivor Wiki.
-Other data, such as the tribe colours, was manually recorded and entered
-by myself and contributors.” As each dataset contained distinct
-information on the contestants for each season, it was necessary to use
-joins to combine datasets to produce a final dataset to be analyzed.
-This was performed using a full join on the contestants’ full names. It
-should be noted that a few contestants appear in multiple seasons,
-however we treated them as separate throughout most of our analysis for
-the purposes of getting an accurate picture of each season.
+seasons of *Survivor*. According to the authors of the package, “the
+data was sourced from Wikipedia and the Survivor Wiki. Other data, such
+as the tribe colours, was manually recorded and entered by myself and
+contributors.” As each dataset contained distinct information on the
+contestants for each season, it was necessary to use joins to combine
+datasets to produce a final dataset to be analyzed. This was performed
+using a full join on the contestants’ full names. It should be noted
+that contestants can appear in multiple seasons; we rely on contestant
+occurrences as the unit of analysis throughout most of our analysis.
 Additionally, in order to standardize our results for the survival
 analysis and exploratory data analysis, we removed seasons 2, 41, 42,
 and 43 as the seasons contained data for a different number of days from
@@ -94,7 +93,7 @@ contributors.” As each dataset contained distinct information on the
 contestants for each season, it was necessary to use joins to combine
 datasets to produce a final dataset to be analyzed. This was performed
 using a full join on the contestants’ full names. It should be noted
-that a few contestants appear in multiple seasons, however we treated
+that a few contestants appear in multiple seasons; however we treated
 them as separate throughout most of our analysis for the purposes of
 getting an accurate picture of each season. Additionally, in order to
 standardize our results for the survival analysis and exploratory data
@@ -135,15 +134,16 @@ unrelated to the survival analysis and consistency in the datasets was
 not necessary. Nevertheless, this data also only looked at the U.S.
 edition of the show.
 
-## Exploratory Analysis:
+## Exploratory Analysis
 
 We performed exploratory data analysis to visualize the distributions of
 our variables of interest, including POC, gender, personality type, age,
 and geographic location. In order to best depict the true nature of our
 data, we used a combination of tables and plots, depending on which
 method we believed to be most effective. In our summary demographic
-table, we decided to only count contestants once, regardless of if they
-appeared in multiple seasons (in contrast to the rest of our analysis).
+table, we specifically count contestant occurrences, while noting that
+distinct individuals can recur across multiple seasons or episodes
+within a season.
 
 **Table 1: Summary Statistics**
 
@@ -505,7 +505,7 @@ that each covariate has a multiplicative effect in the hazards function
 that is constant over time. After fitting the Cox model, we tested the
 assumption and none of the covariates in our model are in violation.
 
-# Results:
+# Results
 
 ## Kaplan-Meier Curves
 
