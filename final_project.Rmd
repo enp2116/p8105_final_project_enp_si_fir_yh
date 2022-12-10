@@ -311,7 +311,7 @@ ggsurvplot(
   risk.table.col = "strata",# Risk table color by groups
   legend.labs =
     c("Extrovert", "Introvert"),    # Change legend labels
-  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  risk.table.height = 0.35, # Useful to change when you have multiple groups
   ggtheme = theme_bw()      # Change ggplot2 theme
 )
 ```
@@ -331,7 +331,7 @@ ggsurvplot(
   risk.table.col = "strata",# Risk table color by groups
   legend.labs =
     c("POC", "White"),    # Change legend labels
-  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  risk.table.height = 0.35, # Useful to change when you have multiple groups
   ggtheme = theme_bw()      # Change ggplot2 theme
 )
 ```
@@ -351,7 +351,7 @@ ggsurvplot(
   risk.table.col = "strata",# Risk table color by groups
   legend.labs =
     c("female", "male"),    # Change legend labels
-  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  risk.table.height = 0.35, # Useful to change when you have multiple groups
   ggtheme = theme_bw()      # Change ggplot2 theme
 )
 ```
@@ -371,7 +371,7 @@ ggsurvplot(
   risk.table.col = "strata",# Risk table color by groups
   legend.labs =
     c("Midwest", "Northeast", "South", "West"),    # Change legend labels
-  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  risk.table.height = 0.5, # Useful to change when you have multiple groups
   ggtheme = theme_bw()      # Change ggplot2 theme
 )
 ```
@@ -390,7 +390,7 @@ ggsurvplot(
   risk.table.col = "strata",# Risk table color by groups
   legend.labs =
     c("Non-Northeast", "Northeast"),    # Change legend labels
-  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  risk.table.height = 0.35, # Useful to change when you have multiple groups
   ggtheme = theme_bw()      # Change ggplot2 theme
 )
 ```
