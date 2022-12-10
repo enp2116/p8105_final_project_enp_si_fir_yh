@@ -224,12 +224,10 @@ We observed the Survival Time T and Censoring Time C. Suppose there is a random 
 $$Y = min(T,C)$$
 In other words, if the event occurs before the censoring such that T $<$ C, then we observed the true survival time T. If censoring occurs before the event such as T $>$ C, then we observe the censoring time. The status indicator as, 
 
-$$\delta =  \left\{
-\begin{array}{ll} 
-     1 &  T\leq C \\
-     0 & T > C \\
-   \end{array}
-   \right. $$
+$$\delta = \begin{cases} 
+      & 1 &  T\leq C \\
+      & 0 & T > C
+   \end{cases}$$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe the censoring.
 
