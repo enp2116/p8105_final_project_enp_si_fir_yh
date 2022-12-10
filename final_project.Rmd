@@ -246,13 +246,14 @@ where, \
  To investigate the number of days survived on *Survivor*, we built a Cox Proportional-Hazards Model adjusting for the variables of age, gender, personality type (introvert versus extravert) and POC (White vs POC). The Cox Proportional-Hazards model was chosen since it allows us to examine multiple factors that could be influencing the rate at which contestants are eliminated. 
  An assumption of the Cox Proportional-Hazards model is that each covariate has a multiplicative effect in the hazards function that is constant over time. After fitting the Cox model, we tested the assumption and none of the covariates in our model are in violation. 
  
+### Results:
 ## Kaplan-Meier Curves
 
 To investigate each of the covariates individually, we created Kaplan-Meier curves to look at survival time with respect to: 
 
 - **Personality Type** (Introvert vs Extrovert)
 
-```{r, }
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
 surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
 
 ggsurvplot(
@@ -272,40 +273,160 @@ ggsurvplot(
 )
 ```
 
+- **POC** (White vs Non-White)
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+surv_model_poc <- survfit(Surv(time, status)~ survivor_data_final$poc)
+
+ggsurvplot(
+  surv_model_poc,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("POC", "White"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+- **Gender** (Female vs Male)
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+surv_model_sex <- survfit(Surv(time, status)~ survivor_data_final$gender)
+
+ggsurvplot(
+  surv_model_sex,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("female", "male"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+- **Region**
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+surv_model_Region <- survfit(Surv(time, status)~ survivor_data_final$region)
+
+ggsurvplot(
+  surv_model_Region,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Midwest", "Northeast", "South", "West"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+surv_model_NE <- survfit(Surv(time, status)~ survivor_data_final$NE)
+
+ggsurvplot(
+  surv_model_NE,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Non-Northeast", "Northeast"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+surv_model_South <- survfit(Surv(time, status)~ survivor_data_final$South)
+
+ggsurvplot(
+  surv_model_South,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Non-South", "South"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+surv_model_West <- survfit(Surv(time, status)~ survivor_data_final$West)
+
+ggsurvplot(
+  surv_model_West,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Non-West", "West"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+surv_model_Midwest <- survfit(Surv(time, status)~ survivor_data_final$Midwest)
+
+ggsurvplot(
+  surv_model_Midwest,
+  data = survivor_data_final,
+  size = 1,                 # change line size
+  conf.int = FALSE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Non-Midwest", "Midwest"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
 
 
-- POC (White vs Non-White)
-
-
-- Gender (Female vs Male)
-
-
-- Region 
-
-
-
-### Results:
 The results of our Cox Proportional-Hazards model are displayed below. 
 
 **Table 2: Modeling Survival Time by Age, Gender, POC, Personality Type, Region**  
 
 | Risk Factor | Parameter Estimate (Standard Error) | Hazard Ratio (HR) (95% CI) | P-Value |
 |:---:|:---:|:---:|:---:|
-| Age during show (years) | 0.00 (0.00) | 1.00 (0.99, 1.01) | 0.998 |
+| Age during show (years) | -0.00 (0.00) | 1.00 (0.99, 1.01) | 0.9538 |
 | **Gender** |  |  |  |
 | Female | Ref |  |  |
-| Male | -0.05 (0.08) | 0.96 (0.82, 1.12) | 0.5003 |
+| Male | -0.05 (0.08) | 0.95 (0.81, 1.11) | 0.5003 |
 | **POC (person of color)**  |  |  |  |
 | POC | Ref  |  |  |
-| White | -0.11 (0.09) | 0.89 (0.75, 1.06) | 0.1915 |
+| White | -0.11 (0.09) | 0.89 (0.75, 1.07) | 0.2104 |
 | **Personality Type** |  |  |  |
 | Extrovert | Ref | Ref |  |
-| Introvert | 0.06 (0.08) | 1.07 (0.91, 1.25) | 0.4468 |
+| Introvert | 0.06 (0.08) | 1.07 (0.91, 1.25) | 0.4242 |
 | **Region** |  |  |  |
 | Midwest | Ref |  |  |
-| Northeast | -0.01 (0.15) | 0.99 (0.75, 1.32) | 0.9530 |
-| South | 0.26 (0.14) | 1.29 (0.99, 1.69) | 0.0582 |
-| West | 0.16 (0.13) | 1.18 (0.91, 1.52) | 0.2165 |
+| Northeast | -0.00 (0.15) | 1.00 (0.75, 1.33) | 0.9880 |
+| South | 0.26 (0.14) | 1.30 (1.00, 1.70) | 0.0528 |
+| West | 0.17 (0.13) | 1.18 (0.91, 1.53) | 0.1989 |
 
 **Notes: N = 721, number of events = 626**  
 
