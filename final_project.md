@@ -9,7 +9,7 @@ Survival
 In this report, we utilize survival analysis to explore the implications
 of known race, gender, and personality type to game show survival. In
 particular, we focus on the American classic TV series *Survivor*, which
-is currently on its 43rd season. In this show, each season 16 to 18
+is currently on its 43rd season. In each season of the show, 16 to 18
 contestants are divided into tribes and navigate challenges within these
 social alliances in order to promote their own survival.[^1] Throughout
 each season, contestants are progressively eliminated by vote of their
@@ -432,8 +432,7 @@ proportions of POC (over 0.5).
 The graph for the proportion of women per season shows a relatively
 steady trend around 0.5, indicating a generally even distribution of men
 and women in the data. There are some seasons with a proportion less
-than 0.5 and greater than 0.5, but a majority of seasons had an exact
-proportion of 0.5.
+than 0.5, but a majority of seasons had an exact proportion of 0.5.
 
 In addition to the aforementioned exploratory data analysis, we were
 curious to see which contestants were receiving the most confessionals.
