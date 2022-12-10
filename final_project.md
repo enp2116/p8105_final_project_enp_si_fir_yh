@@ -113,18 +113,17 @@ our variables of interest, including POC, gender, personality type, age,
 and geographic location. In order to best depict the true nature of our
 data, we used a combination of tables and plots, depending on which
 method we believed to be most effective. In our summary demographic
-table\*, we decided to only count contestants once, regardless of if
-they appeared in multiple seasons (in contrast to the rest of our
-analysis).
+table, we decided to only count contestants once, regardless of if they
+appeared in multiple seasons (in contrast to the rest of our analysis).
 
 **Table 1: Summary Statistics**
 
-<div id="dhmxibgktv" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="aaafpbness" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#dhmxibgktv .gt_table {
+#aaafpbness .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -149,7 +148,7 @@ analysis).
   border-left-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_heading {
+#aaafpbness .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -161,7 +160,7 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_title {
+#aaafpbness .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -173,7 +172,7 @@ analysis).
   border-bottom-width: 0;
 }
 
-#dhmxibgktv .gt_subtitle {
+#aaafpbness .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -185,13 +184,13 @@ analysis).
   border-top-width: 0;
 }
 
-#dhmxibgktv .gt_bottom_border {
+#aaafpbness .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_col_headings {
+#aaafpbness .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -206,7 +205,7 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_col_heading {
+#aaafpbness .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -226,7 +225,7 @@ analysis).
   overflow-x: hidden;
 }
 
-#dhmxibgktv .gt_column_spanner_outer {
+#aaafpbness .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -238,15 +237,15 @@ analysis).
   padding-right: 4px;
 }
 
-#dhmxibgktv .gt_column_spanner_outer:first-child {
+#aaafpbness .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dhmxibgktv .gt_column_spanner_outer:last-child {
+#aaafpbness .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dhmxibgktv .gt_column_spanner {
+#aaafpbness .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -258,7 +257,7 @@ analysis).
   width: 100%;
 }
 
-#dhmxibgktv .gt_group_heading {
+#aaafpbness .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -283,7 +282,7 @@ analysis).
   vertical-align: middle;
 }
 
-#dhmxibgktv .gt_empty_group_heading {
+#aaafpbness .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -298,15 +297,15 @@ analysis).
   vertical-align: middle;
 }
 
-#dhmxibgktv .gt_from_md > :first-child {
+#aaafpbness .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dhmxibgktv .gt_from_md > :last-child {
+#aaafpbness .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dhmxibgktv .gt_row {
+#aaafpbness .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,7 +324,7 @@ analysis).
   overflow-x: hidden;
 }
 
-#dhmxibgktv .gt_stub {
+#aaafpbness .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -338,7 +337,7 @@ analysis).
   padding-right: 5px;
 }
 
-#dhmxibgktv .gt_stub_row_group {
+#aaafpbness .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -352,11 +351,11 @@ analysis).
   vertical-align: top;
 }
 
-#dhmxibgktv .gt_row_group_first td {
+#aaafpbness .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dhmxibgktv .gt_summary_row {
+#aaafpbness .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -366,16 +365,16 @@ analysis).
   padding-right: 5px;
 }
 
-#dhmxibgktv .gt_first_summary_row {
+#aaafpbness .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_first_summary_row.thick {
+#aaafpbness .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dhmxibgktv .gt_last_summary_row {
+#aaafpbness .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -385,7 +384,7 @@ analysis).
   border-bottom-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_grand_summary_row {
+#aaafpbness .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -395,7 +394,7 @@ analysis).
   padding-right: 5px;
 }
 
-#dhmxibgktv .gt_first_grand_summary_row {
+#aaafpbness .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -405,11 +404,11 @@ analysis).
   border-top-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_striped {
+#aaafpbness .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dhmxibgktv .gt_table_body {
+#aaafpbness .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -418,7 +417,7 @@ analysis).
   border-bottom-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_footnotes {
+#aaafpbness .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -432,7 +431,7 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_footnote {
+#aaafpbness .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -441,7 +440,7 @@ analysis).
   padding-right: 5px;
 }
 
-#dhmxibgktv .gt_sourcenotes {
+#aaafpbness .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -455,7 +454,7 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
-#dhmxibgktv .gt_sourcenote {
+#aaafpbness .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -463,64 +462,64 @@ analysis).
   padding-right: 5px;
 }
 
-#dhmxibgktv .gt_left {
+#aaafpbness .gt_left {
   text-align: left;
 }
 
-#dhmxibgktv .gt_center {
+#aaafpbness .gt_center {
   text-align: center;
 }
 
-#dhmxibgktv .gt_right {
+#aaafpbness .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dhmxibgktv .gt_font_normal {
+#aaafpbness .gt_font_normal {
   font-weight: normal;
 }
 
-#dhmxibgktv .gt_font_bold {
+#aaafpbness .gt_font_bold {
   font-weight: bold;
 }
 
-#dhmxibgktv .gt_font_italic {
+#aaafpbness .gt_font_italic {
   font-style: italic;
 }
 
-#dhmxibgktv .gt_super {
+#aaafpbness .gt_super {
   font-size: 65%;
 }
 
-#dhmxibgktv .gt_footnote_marks {
+#aaafpbness .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#dhmxibgktv .gt_asterisk {
+#aaafpbness .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dhmxibgktv .gt_indent_1 {
+#aaafpbness .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dhmxibgktv .gt_indent_2 {
+#aaafpbness .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dhmxibgktv .gt_indent_3 {
+#aaafpbness .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dhmxibgktv .gt_indent_4 {
+#aaafpbness .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dhmxibgktv .gt_indent_5 {
+#aaafpbness .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -585,6 +584,9 @@ analysis).
 occurrences) in `survivor_data_final`; distinct persons may be listed in
 multiple records, across seasons and/or within seasons.*
 
+Additionally, we used a histogram plot to identify a right-skewed
+distribution in ages of contestants.
+
 **Figure 1: Distribution of Age**
 <img src="final_project_files/figure-gfm/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 
@@ -596,6 +598,7 @@ comprehensiveness of age data.*
 We also included tables showing the mean days survived based on these
 demographic measures of interest.
 
+**Table 2: Days Survived by Covariates**  
 <table>
 <thead>
 <tr>
@@ -823,21 +826,22 @@ This map indicates that California was the most popular state of origin
 for contestants.
 
 **Figure 2: Map of Geographic Origins**
-<img src="final_project_files/figure-gfm/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
-*Notes:* *i) Seasons 2, 41, 42, and 43 have been removed from the
-exploratory analysis due to inconsistent number of days.* *ii) Since
-contestants can re-appear across seasons with different states of
-residence, we similarly rely on discrete records from
+<img src="final_project_files/figure-gfm/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
+*Notes:*  
+*i) Seasons 2, 41, 42, and 43 have been removed from the exploratory
+analysis due to inconsistent number of days.*  
+*ii) Since contestants can re-appear across seasons with different
+states of residence, we similarly rely on discrete records from
 `survivor_data_final` (i.e. contestant occurrences) as the unit of
 analysis for this plot in order to ensure comprehensiveness of location
 data.*
 
-Additionally, we used a line plot\* to visualize the change in diversity
+Additionally, we used a line plot to visualize the change in diversity
 (looking at both POC status and gender) to view how the proportion of
 POC and women has changed over the show’s many seasons.
 
-**Figure 2: Contestant POC over Time**
-<img src="final_project_files/figure-gfm/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+**Figure 3:**
+<img src="final_project_files/figure-gfm/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
 
 *Note: Distinct person counts by POC status.*
 
@@ -847,8 +851,8 @@ an increasing trend in the proportion of POC. It was interesting to note
 that some “early” seasons such as seasons 13 and 14 had very high
 proportions of POC (over 0.5).
 
-**Figure 3: Contestant Gender over Time**
-<img src="final_project_files/figure-gfm/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+**Figure 4:**
+<img src="final_project_files/figure-gfm/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
 
 *Note: Distinct person counts by gender.*
 
@@ -856,7 +860,8 @@ The graph for the proportion of women per season shows a relatively
 steady trend around 0.5, indicating a generally even distribution of men
 and women in the data. There are some seasons with a proportion less
 than 0.5 and greater than 0.5, but a majority of seasons had an exact
-proportion of 0.5.  
+proportion of 0.5.
+
 In addition to the aforementioned exploratory data analysis, we were
 curious to see which contestants were receiving the most confessionals.
 As a result, we created a Shiny app that allows users to select which
@@ -920,40 +925,41 @@ where,  
 
 To investigate the number of days survived on *Survivor*, we built a Cox
 Proportional-Hazards Model adjusting for the variables of age, gender,
-personality type (introvert versus extrovert) and POC (White vs POC).
-The Cox Proportional-Hazards model was chosen since it allows us to
-examine multiple factors that could be influencing the rate at which
-contestants are eliminated. An assumption of the Cox
-Proportional-Hazards model is that each covariate has a multiplicative
-effect in the hazards function that is constant over time. After fitting
-the Cox model, we tested the assumption and none of the covariates in
-our model are in violation.
+personality type (introvert vs extrovert) and POC (White vs POC). The
+Cox Proportional-Hazards model was chosen since it allows us to examine
+multiple factors that could be influencing the rate at which contestants
+are eliminated. An assumption of the Cox Proportional-Hazards model is
+that each covariate has a multiplicative effect in the hazards function
+that is constant over time. After fitting the Cox model, we tested the
+assumption and none of the covariates in our model are in violation.
 
-### Results:
+# Results:
 
 ## Kaplan-Meier Curves
 
 To investigate each of the covariates individually, we created
 Kaplan-Meier curves to look at survival time with respect to:
 
-**Figure 4: Personality Type** (Introvert vs Extrovert)
-<img src="final_project_files/figure-gfm/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
-
-**Figure 5: POC** (White vs Non-White)
-<img src="final_project_files/figure-gfm/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
-
-**Figure 5: Gender** (Female vs Male)
-<img src="final_project_files/figure-gfm/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
-
-**Figure 6: Region**
+**Figure 5: Personality Type** (Introvert vs Extrovert)
 <img src="final_project_files/figure-gfm/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" />
 
-**Figure 7: Northeast vs Non-Northeast Region**
+**Figure 6: POC** (White vs Non-White)
 <img src="final_project_files/figure-gfm/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" />
+
+**Figure 7: Gender** (Female vs Male)
+<img src="final_project_files/figure-gfm/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" />
+
+**Figure 8: Region**
+<img src="final_project_files/figure-gfm/unnamed-chunk-14-1.png" width="90%" style="display: block; margin: auto;" />
+
+**Figure 9: Northeast vs Non-Northeast Region**
+<img src="final_project_files/figure-gfm/unnamed-chunk-15-1.png" width="90%" style="display: block; margin: auto;" />
+*Notes: Included only Northeast vs Non-Northeast plot due to
+non-significance of other pairwise survival comparisons*
 
 The results of our Cox Proportional-Hazards model are displayed below.
 
-**Table 2: Modeling Survival Time by Age, Gender, POC, Personality Type,
+**Table 3: Modeling Survival Time by Age, Gender, POC, Personality Type,
 Region**
 
 |        Risk Factor        | Parameter Estimate (Standard Error) | Hazard Ratio (HR) (95% CI) | P-Value |
