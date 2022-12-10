@@ -115,15 +115,14 @@ data, we used a combination of tables and plots, depending on which
 method we believed to be most effective. In our summary demographic
 table\*, we decided to only count contestants once, regardless of if
 they appeared in multiple seasons (in contrast to the rest of our
-analysis). We also included tables showing the mean days survived based
-on these demographic measures of interest.
+analysis).
 
-<div id="wikqvdinjg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="rbkzhuhbkt" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wikqvdinjg .gt_table {
+#rbkzhuhbkt .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -148,7 +147,7 @@ on these demographic measures of interest.
   border-left-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_heading {
+#rbkzhuhbkt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -160,7 +159,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_title {
+#rbkzhuhbkt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -172,7 +171,7 @@ on these demographic measures of interest.
   border-bottom-width: 0;
 }
 
-#wikqvdinjg .gt_subtitle {
+#rbkzhuhbkt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -184,13 +183,13 @@ on these demographic measures of interest.
   border-top-width: 0;
 }
 
-#wikqvdinjg .gt_bottom_border {
+#rbkzhuhbkt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_col_headings {
+#rbkzhuhbkt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -205,7 +204,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_col_heading {
+#rbkzhuhbkt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -225,7 +224,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#wikqvdinjg .gt_column_spanner_outer {
+#rbkzhuhbkt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -237,15 +236,15 @@ on these demographic measures of interest.
   padding-right: 4px;
 }
 
-#wikqvdinjg .gt_column_spanner_outer:first-child {
+#rbkzhuhbkt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wikqvdinjg .gt_column_spanner_outer:last-child {
+#rbkzhuhbkt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wikqvdinjg .gt_column_spanner {
+#rbkzhuhbkt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -257,7 +256,7 @@ on these demographic measures of interest.
   width: 100%;
 }
 
-#wikqvdinjg .gt_group_heading {
+#rbkzhuhbkt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -282,7 +281,7 @@ on these demographic measures of interest.
   vertical-align: middle;
 }
 
-#wikqvdinjg .gt_empty_group_heading {
+#rbkzhuhbkt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -297,15 +296,15 @@ on these demographic measures of interest.
   vertical-align: middle;
 }
 
-#wikqvdinjg .gt_from_md > :first-child {
+#rbkzhuhbkt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wikqvdinjg .gt_from_md > :last-child {
+#rbkzhuhbkt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wikqvdinjg .gt_row {
+#rbkzhuhbkt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -324,7 +323,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#wikqvdinjg .gt_stub {
+#rbkzhuhbkt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -337,7 +336,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_stub_row_group {
+#rbkzhuhbkt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -351,11 +350,11 @@ on these demographic measures of interest.
   vertical-align: top;
 }
 
-#wikqvdinjg .gt_row_group_first td {
+#rbkzhuhbkt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wikqvdinjg .gt_summary_row {
+#rbkzhuhbkt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -365,16 +364,16 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_first_summary_row {
+#rbkzhuhbkt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_first_summary_row.thick {
+#rbkzhuhbkt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wikqvdinjg .gt_last_summary_row {
+#rbkzhuhbkt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -384,7 +383,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_grand_summary_row {
+#rbkzhuhbkt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -394,7 +393,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_first_grand_summary_row {
+#rbkzhuhbkt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -404,11 +403,11 @@ on these demographic measures of interest.
   border-top-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_striped {
+#rbkzhuhbkt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wikqvdinjg .gt_table_body {
+#rbkzhuhbkt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -417,7 +416,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_footnotes {
+#rbkzhuhbkt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -431,7 +430,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_footnote {
+#rbkzhuhbkt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -440,7 +439,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_sourcenotes {
+#rbkzhuhbkt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -454,7 +453,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_sourcenote {
+#rbkzhuhbkt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -462,64 +461,64 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_left {
+#rbkzhuhbkt .gt_left {
   text-align: left;
 }
 
-#wikqvdinjg .gt_center {
+#rbkzhuhbkt .gt_center {
   text-align: center;
 }
 
-#wikqvdinjg .gt_right {
+#rbkzhuhbkt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wikqvdinjg .gt_font_normal {
+#rbkzhuhbkt .gt_font_normal {
   font-weight: normal;
 }
 
-#wikqvdinjg .gt_font_bold {
+#rbkzhuhbkt .gt_font_bold {
   font-weight: bold;
 }
 
-#wikqvdinjg .gt_font_italic {
+#rbkzhuhbkt .gt_font_italic {
   font-style: italic;
 }
 
-#wikqvdinjg .gt_super {
+#rbkzhuhbkt .gt_super {
   font-size: 65%;
 }
 
-#wikqvdinjg .gt_footnote_marks {
+#rbkzhuhbkt .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#wikqvdinjg .gt_asterisk {
+#rbkzhuhbkt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wikqvdinjg .gt_indent_1 {
+#rbkzhuhbkt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wikqvdinjg .gt_indent_2 {
+#rbkzhuhbkt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wikqvdinjg .gt_indent_3 {
+#rbkzhuhbkt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wikqvdinjg .gt_indent_4 {
+#rbkzhuhbkt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wikqvdinjg .gt_indent_5 {
+#rbkzhuhbkt .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -560,6 +559,16 @@ on these demographic measures of interest.
 <td class="gt_row gt_center">33.4 (10.1)</td></tr>
     <tr><td class="gt_row gt_left" style="font-weight: bold;">Survival Time on Show (Days)</td>
 <td class="gt_row gt_center">23.9 (12.1)</td></tr>
+    <tr><td class="gt_row gt_left" style="font-weight: bold;">Region</td>
+<td class="gt_row gt_center"></td></tr>
+    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Midwest</td>
+<td class="gt_row gt_center">99 (14%)</td></tr>
+    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Northeast</td>
+<td class="gt_row gt_center">153 (21%)</td></tr>
+    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">South</td>
+<td class="gt_row gt_center">207 (28%)</td></tr>
+    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">West</td>
+<td class="gt_row gt_center">269 (37%)</td></tr>
   </tbody>
   
   <tfoot class="gt_footnotes">
@@ -570,16 +579,19 @@ on these demographic measures of interest.
 </table>
 </div>
 
-Note: N = 728 refers to the total count of records (i.e. contestant
+*Note: N = 728 refers to the total count of records (i.e. contestant
 occurrences) in `survivor_data_final`; distinct persons may be listed in
-multiple records, across seasons and/or within seasons.
+multiple records, across seasons and/or within seasons.*
 
 ![](final_project_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-Note: Since contestants can re-appear across seasons at different ages,
+*Note: Since contestants can re-appear across seasons at different ages,
 we rely on discrete records from `survivor_data_final` (i.e. contestant
 occurrences) as the unit of analysis for this plot in order to ensure
-comprehensiveness of age data.
+comprehensiveness of age data.*
+
+We also included tables showing the mean days survived based on these
+demographic measures of interest.
 
 ### Personality Type
 
@@ -727,6 +739,82 @@ Male
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Region
+</th>
+<th style="text-align:right;">
+Distinct Persons
+</th>
+<th style="text-align:right;">
+Contestant Occurrences
+</th>
+<th style="text-align:right;">
+Mean Days Survived
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Midwest
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:right;">
+99
+</td>
+<td style="text-align:right;">
+24.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Northeast
+</td>
+<td style="text-align:right;">
+122
+</td>
+<td style="text-align:right;">
+153
+</td>
+<td style="text-align:right;">
+25.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+South
+</td>
+<td style="text-align:right;">
+178
+</td>
+<td style="text-align:right;">
+207
+</td>
+<td style="text-align:right;">
+22.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+West
+</td>
+<td style="text-align:right;">
+218
+</td>
+<td style="text-align:right;">
+269
+</td>
+<td style="text-align:right;">
+23.8
+</td>
+</tr>
+</tbody>
+</table>
 
 Next, to visualize the geographic origins of *Survivor* contestants, we
 created a map to chart the number of contestants coming from each state.
@@ -734,21 +822,20 @@ This map indicates that California was the most popular state of origin
 for contestants.
 
 ![](final_project_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
-
-Notes: i) Seasons 2, 41, 42, and 43 have been removed from the
-exploratory analysis due to inconsistent number of days. ii) Since
+*Notes:* *i) Seasons 2, 41, 42, and 43 have been removed from the
+exploratory analysis due to inconsistent number of days.* *ii) Since
 contestants can re-appear across seasons with different states of
 residence, we similarly rely on discrete records from
 `survivor_data_final` (i.e. contestant occurrences) as the unit of
 analysis for this plot in order to ensure comprehensiveness of location
-data.
+data.*
 
 Additionally, we used a line plot\* to visualize the change in diversity
 (looking at both POC status and gender) to view how the proportion of
 POC and women has changed over the show’s many seasons.
 ![](final_project_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
-Note: Distinct person counts by POC status.
+*Note: Distinct person counts by POC status.*
 
 According to the trends of the proportion of POC, the initial seasons
 had a very low proportion of POC contestants and the overall data shows
@@ -758,7 +845,7 @@ proportions of POC (over 0.5).
 
 ![](final_project_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
-Note: Distinct person counts by gender.
+*Note: Distinct person counts by gender.*
 
 The graph for the proportion of women per season shows a relatively
 steady trend around 0.5, indicating a generally even distribution of men
@@ -897,7 +984,7 @@ Region**
 |           South           |             0.26 (0.14)             |     1.29 (0.99, 1.69)      | 0.0582  |
 |           West            |             0.16 (0.13)             |     1.18 (0.91, 1.52)      | 0.2165  |
 
-**Notes: N = 721, number of events = 626**
+*Notes: N = 721, number of events = 626*
 
 As age increases in years, there is no difference in survival since the
 hazard ratio is 1. We are 95% confident that the HR falls between 0.99
