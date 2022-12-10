@@ -12,19 +12,19 @@ library(dplyr)
 library(survival)
 library(survminer)
 library(gtsummary)
-library(riskRegression)
+#library(riskRegression)
 library(tab)
 ```
 
 ## Statistical Analysis
 #### Methodology
-For our project, we are interested in using Survival Analysis. Suppose that there is a true survival time, T, as well as a true censoring time, C. The survival time represents the time at which the event of interest occurs: in this dataset, the time at which participant is voted out. The censoring time is the time at which the participants drop out of the game show or survived until the last day of the show.
+For our project, we interest using Survival Analysis. Suppose that there is a true survival time, T, as well as a true censoring time, C. The survival time represents the time at which the event of interest occurs: in this dataset, the time at which participant is voted out. The censoring time is the time at which the participant drop out of the game show or survived until the last day of the show.
 
 We observed the Survival Time T and Censoring Time C. Suppose there is a random variable Y
 
 $$Y = min(T,C)$$
 
-In other words, if the event occurs before the censoring such that T $<$ C, then we observed the true survival time T. If censoring occurs before the event such as T $>$ C, then we observe the censoring time. The status indicator is:
+In other words, if the event occurs before the censoring such that T $<$ C, then we observed the true survival time T. If censoring occurs before the event such as T $>$ C, then we observe the censoring time. The status indicator as, 
 
 $$\delta =  \left\{
 \begin{array}{ll} 
@@ -33,7 +33,7 @@ $$\delta =  \left\{
    \end{array}
    \right. $$
    
-Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe censoring.
+Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe the censoring.
 
 ## Survival Analysis
 
@@ -93,11 +93,11 @@ plot(surv_model_unadj, xlab = "Days",
 surv_model_full <- coxph(data = survivor_data_final,
                          Surv(time, status)~ age_during_show + gender + poc + personality_type_binary + region)
 
-selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + gender + region, data = survivor_data_final)
+#selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + gender + region, data = survivor_data_final)
 ```
 
 # Cox-proposional hazard model
-We use the Cox-propositional hazard model to evaluate the effect of several factors on survival time in Survivor Show. It allows us to examine how specified factors influence the rate of the event that we are interested in at a particular point in time. This rate is the hazard rate. Covariates are age, gender, poc, personality type, and region in this model. 
+We use the Cox-propositional hazard model to evaluate the effect of several factors on survival time in Survivor Show. It allows us to examine how specified factors influence the rate of the event that we interested at a particular point in time. This rate is the hazard rate. Covariates are age, gender, poc, personality type, and region in this model. 
 The Cox model is expressed by the hazard function denoted by h(t). Briefly, the hazard function can be interpreted as the risk of dying at time t. It can be estimated as follow:
 $$h(t) = h_0(t)\exp(x_1\beta_1 + x_2\beta_2 + x_3\beta_3 + x_4\beta_4 + x_4\beta_5)$$
 where, \ 
@@ -112,7 +112,7 @@ Age, Gender, POC, Personality Type, Region
 ## Cox-proposional hazard model 1
 ```{r}
 surv_model_cox1 <- coxph(data = survivor_data_final,
-  Surv(time, status) ~   age_during_show + gender + poc + personality_type_binary + region)
+  Surv(time, status) ~ age_during_show + gender + poc + personality_type_binary + region)
 
 summary(surv_model_cox1)
 
@@ -129,7 +129,13 @@ For the gender variable, the HR value of 0.96 would suggest that the survival ti
 
 For the POC variable, the HR value of 0.8881 would suggest that the survival time for White contestants compared to POC contestants (the reference category) is longer. We are 95% confident that the HR falls between 0.7456 and 1.058. However, the HR is not statistically significant since the p-value of 0.184 > 0.05.
 
-For personality type, the HR value of 1.0631 would suggest that the survival time for Introvert contestants compared to Extrovert contestants (the reference category) is shorter. We are 95% confident that the HR falls between 0.9076 and 1.245. However, the HR is not statistically significant since the p-value of 0.448 > 0.05. 
+For personality type, the HR value of 1.0631 would suggest that the survival time for Introvert contestants compared to Extrovert contestants (the reference category) is shorter. We are 95% confident that the HR falls between 0.9076 - 1.245. However, the HR is not statistically significant since the p-value of 0.448 > 0.05. 
+
+- For region, Midwest is the reference category. However, all of these hazard ratios are not statistically significant, p-value > 0.05.
+
+    * The HR value of 0.99 for Northeast suggests that the survival time for contestants from the NE is longer compared to contestants from the Midwest.  
+    * The HR value of 1.29 for the South suggests that the survival time for contestants from the South is shorter compared to contestants from the Midwest.  
+    * The HR value of 1.18 for the West suggests that the survival time for contestants from the West is shorter compared to contestants from the Midwest. 
 
 ## Cox-proposional hazard model 2
 ```{r}

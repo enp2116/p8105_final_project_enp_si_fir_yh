@@ -117,14 +117,22 @@ table\*, we decided to only count contestants once, regardless of if
 they appeared in multiple seasons (in contrast to the rest of our
 analysis).
 
+<<<<<<< HEAD
 **Table 1: Summary Statistics**
 
 <div id="ujramwumwz" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+=======
+<div id="zaavblqgia" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_table {
+=======
+#zaavblqgia .gt_table {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -149,7 +157,11 @@ analysis).
   border-left-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_heading {
+=======
+#zaavblqgia .gt_heading {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -161,7 +173,16 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_title {
+=======
+#zaavblqgia .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#zaavblqgia .gt_title {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -173,7 +194,11 @@ analysis).
   border-bottom-width: 0;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_subtitle {
+=======
+#zaavblqgia .gt_subtitle {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -185,13 +210,21 @@ analysis).
   border-top-width: 0;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_bottom_border {
+=======
+#zaavblqgia .gt_bottom_border {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_col_headings {
+=======
+#zaavblqgia .gt_col_headings {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -206,7 +239,11 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_col_heading {
+=======
+#zaavblqgia .gt_col_heading {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -226,7 +263,11 @@ analysis).
   overflow-x: hidden;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_column_spanner_outer {
+=======
+#zaavblqgia .gt_column_spanner_outer {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -238,6 +279,7 @@ analysis).
   padding-right: 4px;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
@@ -247,6 +289,17 @@ analysis).
 }
 
 #ujramwumwz .gt_column_spanner {
+=======
+#zaavblqgia .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#zaavblqgia .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#zaavblqgia .gt_column_spanner {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -258,7 +311,11 @@ analysis).
   width: 100%;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_group_heading {
+=======
+#zaavblqgia .gt_group_heading {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -281,9 +338,14 @@ analysis).
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_empty_group_heading {
+=======
+#zaavblqgia .gt_empty_group_heading {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -298,6 +360,7 @@ analysis).
   vertical-align: middle;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_from_md > :first-child {
   margin-top: 0;
 }
@@ -307,6 +370,17 @@ analysis).
 }
 
 #ujramwumwz .gt_row {
+=======
+#zaavblqgia .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#zaavblqgia .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#zaavblqgia .gt_row {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,7 +399,11 @@ analysis).
   overflow-x: hidden;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_stub {
+=======
+#zaavblqgia .gt_stub {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -338,7 +416,11 @@ analysis).
   padding-right: 5px;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_stub_row_group {
+=======
+#zaavblqgia .gt_stub_row_group {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -352,11 +434,19 @@ analysis).
   vertical-align: top;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
 #ujramwumwz .gt_summary_row {
+=======
+#zaavblqgia .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#zaavblqgia .gt_summary_row {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -366,16 +456,28 @@ analysis).
   padding-right: 5px;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_first_summary_row {
+=======
+#zaavblqgia .gt_first_summary_row {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
 #ujramwumwz .gt_last_summary_row {
+=======
+#zaavblqgia .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#zaavblqgia .gt_last_summary_row {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -385,7 +487,11 @@ analysis).
   border-bottom-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_grand_summary_row {
+=======
+#zaavblqgia .gt_grand_summary_row {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -395,7 +501,11 @@ analysis).
   padding-right: 5px;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_first_grand_summary_row {
+=======
+#zaavblqgia .gt_first_grand_summary_row {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -405,11 +515,19 @@ analysis).
   border-top-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
 #ujramwumwz .gt_table_body {
+=======
+#zaavblqgia .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#zaavblqgia .gt_table_body {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -418,7 +536,11 @@ analysis).
   border-bottom-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_footnotes {
+=======
+#zaavblqgia .gt_footnotes {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -432,7 +554,11 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_footnote {
+=======
+#zaavblqgia .gt_footnote {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -441,7 +567,11 @@ analysis).
   padding-right: 5px;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_sourcenotes {
+=======
+#zaavblqgia .gt_sourcenotes {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -455,7 +585,11 @@ analysis).
   border-right-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_sourcenote {
+=======
+#zaavblqgia .gt_sourcenote {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -463,6 +597,7 @@ analysis).
   padding-right: 5px;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_left {
   text-align: left;
 }
@@ -472,10 +607,22 @@ analysis).
 }
 
 #ujramwumwz .gt_right {
+=======
+#zaavblqgia .gt_left {
+  text-align: left;
+}
+
+#zaavblqgia .gt_center {
+  text-align: center;
+}
+
+#zaavblqgia .gt_right {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_font_normal {
   font-weight: normal;
 }
@@ -493,17 +640,41 @@ analysis).
 }
 
 #ujramwumwz .gt_footnote_marks {
+=======
+#zaavblqgia .gt_font_normal {
+  font-weight: normal;
+}
+
+#zaavblqgia .gt_font_bold {
+  font-weight: bold;
+}
+
+#zaavblqgia .gt_font_italic {
+  font-style: italic;
+}
+
+#zaavblqgia .gt_super {
+  font-size: 65%;
+}
+
+#zaavblqgia .gt_footnote_marks {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_asterisk {
+=======
+#zaavblqgia .gt_asterisk {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   font-size: 100%;
   vertical-align: 0;
 }
 
+<<<<<<< HEAD
 #ujramwumwz .gt_indent_1 {
   text-indent: 5px;
 }
@@ -521,6 +692,25 @@ analysis).
 }
 
 #ujramwumwz .gt_indent_5 {
+=======
+#zaavblqgia .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#zaavblqgia .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#zaavblqgia .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#zaavblqgia .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#zaavblqgia .gt_indent_5 {
+>>>>>>> 40de2cbf749dc99a425214bde3b18c134ea75aeb
   text-indent: 25px;
 }
 </style>
@@ -528,49 +718,49 @@ analysis).
   
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"><strong>Characteristic</strong></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col"><strong>N = 728</strong><sup class="gt_footnote_marks">1</sup></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Characteristic&lt;/strong&gt;"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;N = 728&lt;/strong&gt;&lt;sup class=&quot;gt_footnote_marks&quot;&gt;1&lt;/sup&gt;"><strong>N = 728</strong><sup class="gt_footnote_marks">1</sup></th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Gender</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Female</td>
-<td class="gt_row gt_center">356 (49%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Male</td>
-<td class="gt_row gt_center">368 (51%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
-<td class="gt_row gt_center">4</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Race Identifier</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">POC</td>
-<td class="gt_row gt_center">199 (27%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">White</td>
-<td class="gt_row gt_center">525 (73%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
-<td class="gt_row gt_center">4</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Personality Type</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Extrovert</td>
-<td class="gt_row gt_center">401 (56%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Introvert</td>
-<td class="gt_row gt_center">320 (44%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
-<td class="gt_row gt_center">7</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Age During Show (Years)</td>
-<td class="gt_row gt_center">33.4 (10.1)</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Survival Time on Show (Days)</td>
-<td class="gt_row gt_center">23.9 (12.1)</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Region</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Midwest</td>
-<td class="gt_row gt_center">99 (14%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Northeast</td>
-<td class="gt_row gt_center">153 (21%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">South</td>
-<td class="gt_row gt_center">207 (28%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">West</td>
-<td class="gt_row gt_center">269 (37%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Gender</td>
+<td headers="stat_0" class="gt_row gt_center"></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Female</td>
+<td headers="stat_0" class="gt_row gt_center">356 (49%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Male</td>
+<td headers="stat_0" class="gt_row gt_center">368 (51%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+<td headers="stat_0" class="gt_row gt_center">4</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Race Identifier</td>
+<td headers="stat_0" class="gt_row gt_center"></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    POC</td>
+<td headers="stat_0" class="gt_row gt_center">199 (27%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    White</td>
+<td headers="stat_0" class="gt_row gt_center">525 (73%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+<td headers="stat_0" class="gt_row gt_center">4</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Personality Type</td>
+<td headers="stat_0" class="gt_row gt_center"></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Extrovert</td>
+<td headers="stat_0" class="gt_row gt_center">401 (56%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Introvert</td>
+<td headers="stat_0" class="gt_row gt_center">320 (44%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+<td headers="stat_0" class="gt_row gt_center">7</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Age During Show (Years)</td>
+<td headers="stat_0" class="gt_row gt_center">33.4 (10.1)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Survival Time on Show (Days)</td>
+<td headers="stat_0" class="gt_row gt_center">23.9 (12.1)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Region</td>
+<td headers="stat_0" class="gt_row gt_center"></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Midwest</td>
+<td headers="stat_0" class="gt_row gt_center">99 (14%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Northeast</td>
+<td headers="stat_0" class="gt_row gt_center">153 (21%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    South</td>
+<td headers="stat_0" class="gt_row gt_center">207 (28%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    West</td>
+<td headers="stat_0" class="gt_row gt_center">269 (37%)</td></tr>
   </tbody>
   
   <tfoot class="gt_footnotes">
@@ -924,6 +1114,8 @@ effect in the hazards function that is constant over time. After fitting
 the Cox model, we tested the assumption and none of the covariates in
 our model are in violation.
 
+### Results:
+
 ## Kaplan-Meier Curves
 
 To investigate each of the covariates individually, we created
@@ -931,35 +1123,27 @@ Kaplan-Meier curves to look at survival time with respect to:
 
 -   **Personality Type** (Introvert vs Extrovert)
 
-``` r
-surv_model_per <- survfit(Surv(time, status)~ survivor_data_final$personality_type_binary)
-
-ggsurvplot(
-  surv_model_per,
-  data = survivor_data_final,
-  size = 1,                 # change line size
-  palette =
-    c("#E7B800", "#2E9FDF"),# custom color palettes
-  conf.int = FALSE,          # Add confidence interval
-  pval = TRUE,              # Add p-value
-  risk.table = TRUE,        # Add risk table
-  risk.table.col = "strata",# Risk table color by groups
-  legend.labs =
-    c("Extrovert", "Introvert"),    # Change legend labels
-  risk.table.height = 0.25, # Useful to change when you have multiple groups
-  ggtheme = theme_bw()      # Change ggplot2 theme
-)
-```
-
 ![](final_project_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
--   POC (White vs Non-White)
+-   **POC** (White vs Non-White)
 
--   Gender (Female vs Male)
+![](final_project_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
--   Region
+-   **Gender** (Female vs Male)
 
-### Results:
+![](final_project_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+
+-   **Region**
+
+![](final_project_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+
+![](final_project_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+
+![](final_project_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+
+![](final_project_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+
+![](final_project_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 The results of our Cox Proportional-Hazards model are displayed below.
 
@@ -968,21 +1152,21 @@ Region**
 
 |        Risk Factor        | Parameter Estimate (Standard Error) | Hazard Ratio (HR) (95% CI) | P-Value |
 |:-------------------------:|:-----------------------------------:|:--------------------------:|:-------:|
-|  Age during show (years)  |             0.00 (0.00)             |     1.00 (0.99, 1.01)      |  0.998  |
+|  Age during show (years)  |            -0.00 (0.00)             |     1.00 (0.99, 1.01)      | 0.9538  |
 |        **Gender**         |                                     |                            |         |
 |          Female           |                 Ref                 |                            |         |
-|           Male            |            -0.05 (0.08)             |     0.96 (0.82, 1.12)      | 0.5003  |
+|           Male            |            -0.05 (0.08)             |     0.95 (0.81, 1.11)      | 0.5003  |
 | **POC (person of color)** |                                     |                            |         |
 |            POC            |                 Ref                 |                            |         |
-|           White           |            -0.11 (0.09)             |     0.89 (0.75, 1.06)      | 0.1915  |
+|           White           |            -0.11 (0.09)             |     0.89 (0.75, 1.07)      | 0.2104  |
 |   **Personality Type**    |                                     |                            |         |
 |         Extrovert         |                 Ref                 |            Ref             |         |
-|         Introvert         |             0.06 (0.08)             |     1.07 (0.91, 1.25)      | 0.4468  |
+|         Introvert         |             0.06 (0.08)             |     1.07 (0.91, 1.25)      | 0.4242  |
 |        **Region**         |                                     |                            |         |
 |          Midwest          |                 Ref                 |                            |         |
-|         Northeast         |            -0.01 (0.15)             |     0.99 (0.75, 1.32)      | 0.9530  |
-|           South           |             0.26 (0.14)             |     1.29 (0.99, 1.69)      | 0.0582  |
-|           West            |             0.16 (0.13)             |     1.18 (0.91, 1.52)      | 0.2165  |
+|         Northeast         |            -0.00 (0.15)             |     1.00 (0.75, 1.33)      | 0.9880  |
+|           South           |             0.26 (0.14)             |     1.30 (1.00, 1.70)      | 0.0528  |
+|           West            |             0.17 (0.13)             |     1.18 (0.91, 1.53)      | 0.1989  |
 
 *Notes: N = 721, number of events = 626*
 

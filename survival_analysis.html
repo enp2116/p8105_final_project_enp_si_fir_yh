@@ -523,8 +523,8 @@ pre code {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -532,16 +532,9 @@ pre code {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -596,20 +589,19 @@ pre code {
 <h2>Statistical Analysis</h2>
 <div id="methodology" class="section level4">
 <h4>Methodology</h4>
-<p>For our project, we are interested in using Survival Analysis.
-Suppose that there is a true survival time, T, as well as a true
-censoring time, C. The survival time represents the time at which the
-event of interest occurs: in this dataset, the time at which participant
-is voted out. The censoring time is the time at which the participants
-drop out of the game show or survived until the last day of the
-show.</p>
+<p>For our project, we interest using Survival Analysis. Suppose that
+there is a true survival time, T, as well as a true censoring time, C.
+The survival time represents the time at which the event of interest
+occurs: in this dataset, the time at which participant is voted out. The
+censoring time is the time at which the participant drop out of the game
+show or survived until the last day of the show.</p>
 <p>We observed the Survival Time T and Censoring Time C. Suppose there
 is a random variable Y</p>
 <p><span class="math display">\[Y = min(T,C)\]</span></p>
 <p>In other words, if the event occurs before the censoring such that T
 <span class="math inline">\(&lt;\)</span> C, then we observed the true
 survival time T. If censoring occurs before the event such as T <span class="math inline">\(&gt;\)</span> C, then we observe the censoring
-time. The status indicator is:</p>
+time. The status indicator as,</p>
 <p><span class="math display">\[\delta =  \left\{
 \begin{array}{ll}
      1 &amp;  T\leq C \\
@@ -618,7 +610,7 @@ time. The status indicator is:</p>
    \right. \]</span></p>
 <p>Thus, <span class="math inline">\(\delta\)</span> = 1 if we observe
 the true survival time, and <span class="math inline">\(\delta\)</span>
-= 0 if we observe censoring.</p>
+= 0 if we observe the censoring.</p>
 </div>
 </div>
 <div id="survival-analysis" class="section level2">
@@ -676,31 +668,16 @@ plot(surv_model_unadj, xlab = &quot;Days&quot;,
 <pre class="r"><code>surv_model_full &lt;- coxph(data = survivor_data_final,
                          Surv(time, status)~ age_during_show + gender + poc + personality_type_binary + region)
 
-selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + gender + region, data = survivor_data_final)</code></pre>
-<pre><code>## $fit
-## 
-## Call: prodlim::prodlim(formula = newform, data = data)</code></pre>
-<pre><code>## Kaplan-Meier estimator for the event time survival function</code></pre>
-<pre><code>## No covariates</code></pre>
-<pre><code>## 
-## $In
-## character(0)
-## 
-## $call
-## selectCox(formula = Surv(time, status) ~ poc + age_during_show + 
-##     personality_type_binary + gender + region, data = survivor_data_final)
-## 
-## attr(,&quot;class&quot;)
-## [1] &quot;selectCox&quot;</code></pre>
+#selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + gender + region, data = survivor_data_final)</code></pre>
 </div>
 <div id="cox-proposional-hazard-model" class="section level1">
 <h1>Cox-proposional hazard model</h1>
 <p>We use the Cox-propositional hazard model to evaluate the effect of
 several factors on survival time in Survivor Show. It allows us to
 examine how specified factors influence the rate of the event that we
-are interested in at a particular point in time. This rate is the hazard
-rate. Covariates are age, gender, poc, personality type, and region in
-this model. The Cox model is expressed by the hazard function denoted by
+interested at a particular point in time. This rate is the hazard rate.
+Covariates are age, gender, poc, personality type, and region in this
+model. The Cox model is expressed by the hazard function denoted by
 h(t). Briefly, the hazard function can be interpreted as the risk of
 dying at time t. It can be estimated as follow: <span class="math display">\[h(t) = h_0(t)\exp(x_1\beta_1 + x_2\beta_2 +
 x_3\beta_3 + x_4\beta_4 + x_4\beta_5)\]</span> where,  </p>
@@ -719,7 +696,7 @@ to zero.</li>
 <p>Age, Gender, POC, Personality Type, Region ## Cox-proposional hazard
 model 1</p>
 <pre class="r"><code>surv_model_cox1 &lt;- coxph(data = survivor_data_final,
-  Surv(time, status) ~   age_during_show + gender + poc + personality_type_binary + region)
+  Surv(time, status) ~ age_during_show + gender + poc + personality_type_binary + region)
 
 summary(surv_model_cox1)</code></pre>
 <pre><code>## Call:
@@ -1001,8 +978,26 @@ significant since the p-value of 0.184 &gt; 0.05.</p>
 <p>For personality type, the HR value of 1.0631 would suggest that the
 survival time for Introvert contestants compared to Extrovert
 contestants (the reference category) is shorter. We are 95% confident
-that the HR falls between 0.9076 and 1.245. However, the HR is not
+that the HR falls between 0.9076 - 1.245. However, the HR is not
 statistically significant since the p-value of 0.448 &gt; 0.05.</p>
+<ul>
+<li><p>For region, Midwest is the reference category. However, all of
+these hazard ratios are not statistically significant, p-value &gt;
+0.05.</p>
+<ul>
+<li>The HR value of 0.99 for Northeast suggests that the survival time
+for contestants from the NE is longer compared to contestants from the
+Midwest.<br />
+</li>
+<li>The HR value of 1.29 for the South suggests that the survival time
+for contestants from the South is shorter compared to contestants from
+the Midwest.<br />
+</li>
+<li>The HR value of 1.18 for the West suggests that the survival time
+for contestants from the West is shorter compared to contestants from
+the Midwest.</li>
+</ul></li>
+</ul>
 <div id="cox-proposional-hazard-model-2" class="section level2">
 <h2>Cox-proposional hazard model 2</h2>
 <pre class="r"><code>surv_model_cox2 &lt;- coxph(data = survivor_data_final,
