@@ -118,12 +118,12 @@ they appeared in multiple seasons (in contrast to the rest of our
 analysis). We also included tables showing the mean days survived based
 on these demographic measures of interest.
 
-<div id="pmqfbwrmez" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="fceezinzpm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#pmqfbwrmez .gt_table {
+#fceezinzpm .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -148,7 +148,7 @@ on these demographic measures of interest.
   border-left-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_heading {
+#fceezinzpm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -160,12 +160,12 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_caption {
+#fceezinzpm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#pmqfbwrmez .gt_title {
+#fceezinzpm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -177,7 +177,7 @@ on these demographic measures of interest.
   border-bottom-width: 0;
 }
 
-#pmqfbwrmez .gt_subtitle {
+#fceezinzpm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -189,13 +189,13 @@ on these demographic measures of interest.
   border-top-width: 0;
 }
 
-#pmqfbwrmez .gt_bottom_border {
+#fceezinzpm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_col_headings {
+#fceezinzpm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -210,7 +210,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_col_heading {
+#fceezinzpm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -230,7 +230,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#pmqfbwrmez .gt_column_spanner_outer {
+#fceezinzpm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -242,15 +242,15 @@ on these demographic measures of interest.
   padding-right: 4px;
 }
 
-#pmqfbwrmez .gt_column_spanner_outer:first-child {
+#fceezinzpm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pmqfbwrmez .gt_column_spanner_outer:last-child {
+#fceezinzpm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pmqfbwrmez .gt_column_spanner {
+#fceezinzpm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -262,7 +262,7 @@ on these demographic measures of interest.
   width: 100%;
 }
 
-#pmqfbwrmez .gt_group_heading {
+#fceezinzpm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -288,7 +288,7 @@ on these demographic measures of interest.
   text-align: left;
 }
 
-#pmqfbwrmez .gt_empty_group_heading {
+#fceezinzpm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -303,15 +303,15 @@ on these demographic measures of interest.
   vertical-align: middle;
 }
 
-#pmqfbwrmez .gt_from_md > :first-child {
+#fceezinzpm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pmqfbwrmez .gt_from_md > :last-child {
+#fceezinzpm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pmqfbwrmez .gt_row {
+#fceezinzpm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -330,7 +330,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#pmqfbwrmez .gt_stub {
+#fceezinzpm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -343,7 +343,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#pmqfbwrmez .gt_stub_row_group {
+#fceezinzpm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -357,11 +357,11 @@ on these demographic measures of interest.
   vertical-align: top;
 }
 
-#pmqfbwrmez .gt_row_group_first td {
+#fceezinzpm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#pmqfbwrmez .gt_summary_row {
+#fceezinzpm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -371,16 +371,16 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#pmqfbwrmez .gt_first_summary_row {
+#fceezinzpm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_first_summary_row.thick {
+#fceezinzpm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#pmqfbwrmez .gt_last_summary_row {
+#fceezinzpm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -390,7 +390,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_grand_summary_row {
+#fceezinzpm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -400,7 +400,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#pmqfbwrmez .gt_first_grand_summary_row {
+#fceezinzpm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -410,11 +410,11 @@ on these demographic measures of interest.
   border-top-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_striped {
+#fceezinzpm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pmqfbwrmez .gt_table_body {
+#fceezinzpm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -423,7 +423,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_footnotes {
+#fceezinzpm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -437,7 +437,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_footnote {
+#fceezinzpm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -446,7 +446,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#pmqfbwrmez .gt_sourcenotes {
+#fceezinzpm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -460,7 +460,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#pmqfbwrmez .gt_sourcenote {
+#fceezinzpm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -468,64 +468,64 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#pmqfbwrmez .gt_left {
+#fceezinzpm .gt_left {
   text-align: left;
 }
 
-#pmqfbwrmez .gt_center {
+#fceezinzpm .gt_center {
   text-align: center;
 }
 
-#pmqfbwrmez .gt_right {
+#fceezinzpm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pmqfbwrmez .gt_font_normal {
+#fceezinzpm .gt_font_normal {
   font-weight: normal;
 }
 
-#pmqfbwrmez .gt_font_bold {
+#fceezinzpm .gt_font_bold {
   font-weight: bold;
 }
 
-#pmqfbwrmez .gt_font_italic {
+#fceezinzpm .gt_font_italic {
   font-style: italic;
 }
 
-#pmqfbwrmez .gt_super {
+#fceezinzpm .gt_super {
   font-size: 65%;
 }
 
-#pmqfbwrmez .gt_footnote_marks {
+#fceezinzpm .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#pmqfbwrmez .gt_asterisk {
+#fceezinzpm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#pmqfbwrmez .gt_indent_1 {
+#fceezinzpm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#pmqfbwrmez .gt_indent_2 {
+#fceezinzpm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#pmqfbwrmez .gt_indent_3 {
+#fceezinzpm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#pmqfbwrmez .gt_indent_4 {
+#fceezinzpm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#pmqfbwrmez .gt_indent_5 {
+#fceezinzpm .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -587,8 +587,6 @@ we rely on discrete records from `survivor_data_final` (i.e. contestant
 occurrences) as the unit of analysis for this plot in order to ensure
 comprehensiveness of age data.
 
-# EDA {.tabset} (need to fix this, not working in github doc)
-
 ### Personality Type
 
 <table>
@@ -639,9 +637,6 @@ Introvert
 </tr>
 </tbody>
 </table>
-
-### POC
-
 <table>
 <thead>
 <tr>
@@ -690,9 +685,6 @@ White
 </tr>
 </tbody>
 </table>
-
-### Gender
-
 <table>
 <thead>
 <tr>
@@ -744,24 +736,25 @@ Male
 
 Next, to visualize the geographic origins of *Survivor* contestants, we
 created a map to chart the number of contestants coming from each state.
+This map indicates that California was the most popular state of origin
+for contestants.
 
-![](final_project_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](final_project_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-Notes: (i) Seasons 2, 41, 42, and 43 have been removed from the
-exploratory analysis due to inconsistent number of days. (ii) Since
+Notes: i) Seasons 2, 41, 42, and 43 have been removed from the
+exploratory analysis due to inconsistent number of days. ii) Since
 contestants can re-appear across seasons with different states of
 residence, we similarly rely on discrete records from
 `survivor_data_final` (i.e. contestant occurrences) as the unit of
 analysis for this plot in order to ensure comprehensiveness of location
 data.
 
-This map indicates that California was the most popular state of origin
-for contestants. Additionally, we used a line plot\* to visualize the
-change in diversity (looking at both POC status and gender) to view how
-the proportion of POC and women has changed over the show’s many
-seasons.
-![](final_project_files/figure-gfm/unnamed-chunk-8-1.png)<!-- --> Note:
-Distinct person counts by POC status.
+Additionally, we used a line plot\* to visualize the change in diversity
+(looking at both POC status and gender) to view how the proportion of
+POC and women has changed over the show’s many seasons.
+![](final_project_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+Note: Distinct person counts by POC status.
 
 According to the trends of the proportion of POC, the initial seasons
 had a very low proportion of POC contestants and the overall data shows
@@ -769,8 +762,9 @@ an increasing trend in the proportion of POC. It was interesting to note
 that some “early” seasons such as seasons 13 and 14 had very high
 proportions of POC (over 0.5).
 
-![](final_project_files/figure-gfm/unnamed-chunk-9-1.png)<!-- --> Note:
-Distinct person counts by gender.
+![](final_project_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+Note: Distinct person counts by gender.
 
 The graph for the proportion of women per season shows a relatively
 steady trend around 0.5, indicating a generally even distribution of men
@@ -858,27 +852,27 @@ Kaplan-Meier curves to look at survival time with respect to:
 
 -   **Personality Type** (Introvert vs Extrovert)
 
-![](final_project_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](final_project_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 -   **POC** (White vs Non-White)
 
-![](final_project_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](final_project_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 -   **Gender** (Female vs Male)
 
-![](final_project_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](final_project_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 -   **Region**
+
+![](final_project_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+
+![](final_project_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ![](final_project_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ![](final_project_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ![](final_project_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
-
-![](final_project_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
-
-![](final_project_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 The results of our Cox Proportional-Hazards model are displayed below.
 
@@ -938,8 +932,6 @@ contestants), POC (White contestants surviving longer than POC),
 personality type (extrovert surviving longer than introverts) follow our
 general expectations. However, since none of the hazard ratios are
 statistically significant, we cannot make any conclusions.
-
-Shiny app conclusions, conclusions from EDA? maybe
 
 [^1]: <https://www.cbs.com/shows/survivor/about/>
 

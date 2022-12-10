@@ -114,7 +114,6 @@ ggplot(survivor_data_final, aes(x = age_during_show)) +
 
 Note: Since contestants can re-appear across seasons at different ages, we rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of age data.
 
-# EDA {.tabset} (need to fix this, not working in github doc)
 ### Personality Type 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
 ## Personality type
@@ -125,9 +124,7 @@ survivor_data_final %>%
             mean_days_survived = mean(days_survived)) %>% 
     na.omit()  %>%
   knitr::kable(digits = 1, col.names = c("Personality Type", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
-```
-### POC 
-```{r, warning = FALSE, message = FALSE, echo = FALSE}
+
 ## POC Status
 survivor_data_final %>% 
   group_by(poc) %>% 
@@ -136,9 +133,7 @@ survivor_data_final %>%
             mean_days_survived = mean(days_survived, na.rm = TRUE)) %>% 
     na.omit()  %>%
   knitr::kable(digits = 1, col.names = c("POC Status", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
-```
-### Gender
-```{r, warning = FALSE, message = FALSE, echo = FALSE}
+
 ## Gender
 survivor_data_final %>% 
   group_by(gender) %>% 
@@ -149,7 +144,7 @@ survivor_data_final %>%
   knitr::kable(digits = 1, col.names = c("Gender", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
 ```
  
- Next, to visualize the geographic origins of *Survivor* contestants, we created a map to chart the number of contestants coming from each state.
+Next, to visualize the geographic origins of *Survivor* contestants, we created a map to chart the number of contestants coming from each state. This map indicates that California was the most popular state of origin for contestants.
 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
 survivor_state = survivor_data_final %>%
@@ -166,10 +161,10 @@ plot_usmap(
 ```
 
 Notes: 
-(i) Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days.
-(ii) Since contestants can re-appear across seasons with different states of residence, we similarly rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of location data.
+i) Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days.
+ii) Since contestants can re-appear across seasons with different states of residence, we similarly rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of location data.
  
- This map indicates that California was the most popular state of origin for contestants. Additionally, we used a line plot* to visualize the change in diversity (looking at both POC status and gender) to view how the proportion of POC and women has changed over the show’s many seasons. 
+Additionally, we used a line plot* to visualize the change in diversity (looking at both POC status and gender) to view how the proportion of POC and women has changed over the show’s many seasons. 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
 fill_color = brewer.pal(9,"Reds")[4]
 survivor_poc_over_time = survivor_data_final %>% 
@@ -188,6 +183,7 @@ ggplot(data = survivor_poc_over_time, aes(x = season, y = freq, group = 1)) +
   ggtitle("Change in Proportion of POC Over Time ") +
   xlab("Season") + ylab("Proportion of POC")
 ```
+
 Note: Distinct person counts by POC status.
 
 According to the trends of the proportion of POC, the initial seasons had a very low proportion of POC contestants and the overall data shows an increasing trend in the proportion of POC. It was interesting to note that some “early” seasons such as seasons 13 and 14 had very high proportions of POC (over 0.5). 
@@ -210,6 +206,7 @@ ggplot(data = survivor_gender_over_time, aes(x = season, y = freq, group = 1)) +
   ggtitle("Change in Proportion of Women Over Time") +
   xlab("Season") + ylab("Proportion of Women")
 ```
+
 Note: Distinct person counts by gender.
 
 The graph for the proportion of women per season shows a relatively steady trend around 0.5, indicating a generally even distribution of men and women in the data. There are some seasons with a proportion less than 0.5 and greater than 0.5, but a majority of seasons had an exact proportion of 0.5.  
@@ -443,6 +440,5 @@ As age increases in years, there is no difference in survival since the hazard r
 ## Discussion:
 From conducting survival analyses, we did not observe any statistically significant covariates. This stands in contrast with our initial hypotheses that race, gender, and personality type would impact days survived. The HR values for gender (males surviving longer than female contestants), POC (White contestants surviving longer than POC), personality type (extrovert surviving longer than introverts) follow our general expectations. However, since none of the hazard ratios are statistically significant, we cannot make any conclusions.  
 
-Shiny app conclusions, conclusions from EDA?
-maybe 
+
 
