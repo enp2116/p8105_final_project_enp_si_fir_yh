@@ -57,20 +57,16 @@ colnames(survivor_data_final)[26] <- "time"
 
 ## Introduction
 ### Motivation:
- In this report, we utilize survival analysis to explore the implications of self-identified race, gender, and personality type to game show survival. In particular, we focus on the American classic TV series *Survivor*, which is currently on its 43rd season. In this show, each season 16 to 18 contestants are divided into tribes and navigate challenges within these social alliances in order to promote their own survival.$^{1}$ Throughout each season, contestants are progressively eliminated by vote of their peers until there is a sole survivor. Given that aspects of identity heavily influence how people are perceived in a social context, we hypothesize that contestant outcomes may differ on the measures related to retention or screen time.
+ In this report, we utilize survival analysis to explore the implications of self-identified race, gender, and personality type to game show survival. In particular, we focus on the American classic TV series *Survivor*, which is currently on its 43rd season. In this show, each season 16 to 18 contestants are divided into tribes and navigate challenges within these social alliances in order to promote their own survival.^[https://www.cbs.com/shows/survivor/about/] Throughout each season, contestants are progressively eliminated by vote of their peers until there is a sole survivor. Given that aspects of identity heavily influence how people are perceived in a social context, we hypothesize that contestant outcomes may differ on the measures related to retention or screen time.
 
 ### Related Work:
- While survival analysis is a statistical methodology typically used in health fields to understand the time to an event of interest (such as death, myocardial infarction, or cancer recurrence)$^{2}$, we are able to utilize the number of days survived on *Survivor* as our main outcome of interest. Our inspiration for this project came from a small scale paper studying the effects of demographics in *Masterchef Junior* contestant survival rates.$^{3}$ This research looked at race and gender to determine the outcome of percent of season survived, with the additional analysis to look at the impact of a female judge on these survival rates. While the TV series *Survivor* and *Masterchef Junior* differ in their elimination processes, both our studies explore the intricacies of societal bias and how that plays into game show success.
+ While survival analysis is a statistical methodology typically used in health fields to understand the time to an event of interest (such as death, myocardial infarction, or cancer recurrence)^[https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_survival/BS704_Survival_print.html], we are able to utilize the number of days survived on *Survivor* as our main outcome of interest. Our inspiration for this project came from a small scale paper studying the effects of demographics in *Masterchef Junior* contestant survival rates.^[https://www.katiejolly.io/pdf/survival_analysis_paper.pdf] This research looked at race and gender to determine the outcome of percent of season survived, with the additional analysis to look at the impact of a female judge on these survival rates. While the TV series *Survivor* and *Masterchef Junior* differ in their elimination processes, both our studies explore the intricacies of societal bias and how that plays into game show success.
  
 ### Initial Questions:
   Our initial goal was to investigate the extent to which gender, race, and personality have led to differences in days survived on *Survivor*. Based on cultural norms in the U.S., we hypothesized that contestants who are white, male, or extroverts would have the longest survival time. In determining a lack of results on these measures, we decided to integrate geographic comparisons as well for survival time. More additional questions arose throughout the course of our research. We determined that another component of entertainment culture was not only how long the contestants stayed on the show, but how much individualized screen time they received while there. Thus, we decided to explore the frequency of confessionals as supplementary analyses.  Finally, in more recent years (in alignment with the Black Lives Matter movement in the U.S.), *Survivor* has made the effort to encourage more diversity within their casts. To this end, we also wanted to visually see if contestants had representation that evolved over the 42 seasons.  In this paper, we consider all these aspects as part of a comprehensive investigation of demographics on game show survival.
   
 ## Data Sources & Cleaning:
- In order to analyze the show *Survivor*, we used data sources from the `castaway_details` and `castaways` datasets$^{4}$, as well as others, from the `survivoR` package.$^{5}$ This fan-made package contains data from all seasons of the U.S. TV show *Survivor*. According to the authors of the package, “the data was sourced from Wikipedia and the Survivor Wiki. Other data, such as the tribe colours, was manually recorded and entered by myself and contributors.” As each dataset contained distinct information on the contestants for each season, it was necessary to use joins to combine datasets to produce a final dataset to be analyzed. This was performed using a full join on the contestants’ full names. It should be noted that a few contestants appear in multiple seasons, however we treated them as separate throughout most of our analysis for the purposes of getting an accurate picture of each season. Additionally, in order to standardize our results for the survival analysis and exploratory data analysis, we removed seasons 2, 41, 42, and 43 as the seasons contained data for a different number of days from the standard 39 days. As the original data contains information from several versions around the globe, it was integral to filter and only analyze data from the U.S. edition. In order to best model our covariates of interest, we then created a new personality type variable (extracting whether a person is an introvert or extrovert) and a POC indicator variable instead of individual races. We also used contestants' home states to code contestants into a region based on census regions and divisions of the United States.$^{6}$ Furthermore, we determined that missing data was not an issue, as it occurred in low frequency and was not patterned in nature. The final dataset used in the analysis contains unique information for each castaway for each season, including the following key variables:
-
- In order to analyze the show *Survivor*, we used data sources from the `castaway_details` and `castaways` datasets$^{4}$, as well as others, from the `survivoR` package.$^{5}$ This fan-made package contains data from all seasons of the U.S. TV show *Survivor*. According to the authors of the package, “the data was sourced from Wikipedia and the Survivor Wiki. Other data, such as the tribe colours, was manually recorded and entered by myself and contributors.” As each dataset contained distinct information on the contestants for each season, it was necessary to use joins to combine datasets to produce a final dataset to be analyzed. This was performed using a full join on the contestants’ full names. It should be noted that a few contestants appear in multiple seasons, however we treated them as separate throughout most of our analysis for the purposes of getting an accurate picture of each season. Additionally, in order to standardize our results for the survival analysis and exploratory data analysis, we removed seasons 2, 41, 42, and 43 as the seasons contained data for a different number of days from the standard 39 days. As the original data contains information from several versions around the globe, it was integral to filter and only analyze data from the U.S. edition. In order to best model our covariates of interest, we then created a new personality type variable (extracting whether a person is an introvert or extrovert) and a POC indicator variable instead of individual races. We also used contestants' home states to code contestants into a region based on census regions and divisions of the United States. Furthermore, we determined that missing data was not an issue, as it occurred in low frequency and was not patterned in nature. The final dataset used in the analysis contains unique information for each castaway for each season, including the following key variables: season, gender, age, POC status, days survived, personality type and region. 
-
- In order to analyze the show *Survivor*, we used data sources from the `castaway_details` and `castaways` datasets$^{4}$, as well as others, from the `survivoR` package.$^{5}$ This fan-made package contains data from all seasons of the U.S. TV show *Survivor*. According to the authors of the package, “the data was sourced from Wikipedia and the Survivor Wiki. Other data, such as the tribe colours, was manually recorded and entered by myself and contributors.” As each dataset contained distinct information on the contestants for each season, it was necessary to use joins to combine datasets to produce a final dataset to be analyzed. This was performed using a full join on the contestants’ full names. It should be noted that a few contestants appear in multiple seasons, however we treated them as separate throughout most of our analysis for the purposes of getting an accurate picture of each season. Additionally, in order to standardize our results for the survival analysis and exploratory data analysis, we removed seasons 2, 41, 42, and 43 as the seasons contained data for a different number of days from the standard 39 days. As the original data contains information from several versions around the globe, it was integral to filter and only analyze data from the U.S. edition. In order to best model our covariates of interest, we then created a new personality type variable (extracting whether a person is an introvert or extrovert) and a POC indicator variable instead of individual races. We also used contestants' home states to code contestants into a region based on census regions and divisions of the United States.$^{6}$ Furthermore, we determined that missing data was not an issue, as it occurred in low frequency and was not patterned in nature. The final dataset used in the analysis contains unique information for each castaway for each season, including the following key variables: season, gender, age, POC status, days survived, and personality type. 
+ In order to analyze the show *Survivor*, we used data sources from the `castaway_details` and `castaways` datasets^[ https://github.com/doehm/survivoR], as well as others, from the `survivoR` package.^[https://cran.r-project.org/web//packages/survivoR/survivoR.pdf] This fan-made package contains data from all seasons of the U.S. TV show *Survivor*. According to the authors of the package, “the data was sourced from Wikipedia and the Survivor Wiki. Other data, such as the tribe colours, was manually recorded and entered by myself and contributors.” As each dataset contained distinct information on the contestants for each season, it was necessary to use joins to combine datasets to produce a final dataset to be analyzed. This was performed using a full join on the contestants’ full names. It should be noted that a few contestants appear in multiple seasons, however we treated them as separate throughout most of our analysis for the purposes of getting an accurate picture of each season. Additionally, in order to standardize our results for the survival analysis and exploratory data analysis, we removed seasons 2, 41, 42, and 43 as the seasons contained data for a different number of days from the standard 39 days. As the original data contains information from several versions around the globe, it was integral to filter and only analyze data from the U.S. edition. In order to best model our covariates of interest, we then created a new personality type variable (extracting whether a person is an introvert or extrovert) and a POC indicator variable instead of individual races. We also used contestants' home states to code contestants into a region based on census regions and divisions of the United States.^[https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf] Furthermore, we determined that missing data was not an issue, as it occurred in low frequency and was not patterned in nature. The final dataset used in the analysis contains unique information for each castaway for each season, including the following key variables:
 
 - `version_season`: version and season number
 - `full_name`: contestant full name
@@ -82,14 +78,142 @@ colnames(survivor_data_final)[26] <- "time"
 - `region`: region in the U.S. where the contestant is from. We created this variable based on the `state` variable available in the dataset. 4 levels: West, Midwest, Northeast, South. Indicator variables for each of the 4 regions have also been created for analyses. 
 
 
-\indent As a supplemental analysis, we also used the `confessionals` data from the same  `survivoR` package to visualize the number of confessionals each contestant received. This data looked at all seasons as it was unrelated to the survival analysis and consistency in the datasets was not necessary. Nevertheless, this data also only looked at the U.S. edition of the show.
-
- As a supplemental analysis, we also used the `confessionals` data from the same  `survivoR` package to visualize the number of confessionals each contestant received. This data looked at all seasons as it was unrelated to the survival analysis and consistency in the datasets was not necessary. Nevertheless, this data also only looked at the U.S. edition of the show.
+As a supplemental analysis, we also used the `confessionals` data from the same  `survivoR` package to visualize the number of confessionals each contestant received. This data looked at all seasons as it was unrelated to the survival analysis and consistency in the datasets was not necessary. Nevertheless, this data also only looked at the U.S. edition of the show.
 
 ## Exploratory Analysis:
  We performed exploratory data analysis to visualize the distributions of our variables of interest, including POC, gender, personality type, age, and geographic location. In order to best depict the true nature of our data, we used a combination of tables and plots, depending on which method we believed to be most effective. In our summary demographic table*, we decided to only count contestants once, regardless of if they appeared in multiple seasons (in contrast to the rest of our analysis). We also included tables showing the mean days survived based on these demographic measures of interest. 
- Next, to visualize the geographic origins of *Survivor* contestants, we created a map to chart the number of contestants coming from each state. This map indicates that California was the most popular state of origin for contestants. Additionally, we used a line plot* to visualize the change in diversity (looking at both POC status and gender) to view how the proportion of POC and women has changed over the show’s many seasons. According to the trends of the proportion of POC, the initial seasons had a very low proportion of POC contestants and the overall data shows an increasing trend in the proportion of POC. It was interesting to note that some “early” seasons such as seasons 13 and 14 had very high proportions of POC (over 0.5). The graph for the proportion of women per season shows a relatively steady trend around 0.5, indicating a generally even distribution of men and women in the data. There are some seasons with a proportion less than 0.5 and greater than 0.5, but a majority of seasons had an exact proportion of 0.5.
- In addition to the aforementioned exploratory data analysis, we were curious to see which contestants were receiving the most confessionals. As a result, we created a Shiny app that allows users to select which season they would like to view. Users can then examine the number of confessionals each contestant received, as well as the total number of confessionals they received over the season, and the mean number of confessionals per episode they received while on the show.  
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+survivor_data_final %>% 
+  select(gender, poc, personality_type_binary, age_during_show, days_survived) %>% 
+  tbl_summary(type = list(gender ~ "categorical", 
+                          poc ~ "categorical", 
+                          personality_type_binary ~ "categorical", 
+                          age_during_show ~ "continuous", 
+                          days_survived ~ "continuous"), 
+              statistic = list(all_continuous() ~ "{mean} ({sd})"), 
+              digits = all_continuous() ~ 1,
+              label = list(c(gender) ~ "Gender",
+                           c(poc) ~ "Race Identifier",
+                           c(personality_type_binary) ~ "Personality Type",
+                           c(age_during_show) ~ "Age During Show (Years)",
+                           c(days_survived) ~ "Survival Time on Show (Days)")) %>% 
+  bold_labels() 
+``` 
+
+Note: N = 728 refers to the total count of records (i.e. contestant occurrences) in `survivor_data_final`; distinct persons may be listed in multiple records, across seasons and/or within seasons.
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+fill_color = brewer.pal(9,"PuBuGn")[5]
+ggplot(survivor_data_final, aes(x = age_during_show)) + 
+  geom_histogram(aes(y = after_stat(count/sum(count))), bins = 15, fill = fill_color, col = "white") +
+  scale_y_continuous(labels = scales::percent) + 
+  ggtitle("Distribution of Ages Across Contestant Occurrences") +
+  xlab("Age (During Show)") + ylab("Count")
+```
+
+Note: Since contestants can re-appear across seasons at different ages, we rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of age data.
+
+# EDA {.tabset} (need to fix this, not working in github doc)
+### Personality Type 
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+## Personality type
+survivor_data_final %>% 
+  group_by(personality_type_binary) %>% 
+  summarize(n_personality_dist = n_distinct(full_name),
+            n_personality_occ = n(),
+            mean_days_survived = mean(days_survived)) %>% 
+    na.omit()  %>%
+  knitr::kable(digits = 1, col.names = c("Personality Type", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
+```
+### POC 
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+## POC Status
+survivor_data_final %>% 
+  group_by(poc) %>% 
+  summarize(n_poc_dist = n_distinct(full_name),
+            n_poc_occ = n(),
+            mean_days_survived = mean(days_survived, na.rm = TRUE)) %>% 
+    na.omit()  %>%
+  knitr::kable(digits = 1, col.names = c("POC Status", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
+```
+### Gender
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+## Gender
+survivor_data_final %>% 
+  group_by(gender) %>% 
+  summarize(n_gender_dist = n_distinct(full_name),
+            n_gender_occ = n(),
+            mean_days_survived = mean(days_survived, na.rm = TRUE)) %>%
+    na.omit()  %>%
+  knitr::kable(digits = 1, col.names = c("Gender", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
+```
+ 
+ Next, to visualize the geographic origins of *Survivor* contestants, we created a map to chart the number of contestants coming from each state.
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+survivor_state = survivor_data_final %>%
+  group_by(state) %>%
+  summarize(n = n())
+
+plot_usmap(
+  data = survivor_state, values = "n", lines = "blue"
+) + 
+  scale_fill_continuous(type = "viridis", name = "Contestant Count", label = scales::comma
+  ) + 
+  labs(title = "US States", subtitle = "Geographic Distribution of Contestants") +
+  theme(legend.position = "right")
+```
+
+Notes: 
+(i) Seasons 2, 41, 42, and 43 have been removed from the exploratory analysis due to inconsistent number of days.
+(ii) Since contestants can re-appear across seasons with different states of residence, we similarly rely on discrete records from `survivor_data_final` (i.e. contestant occurrences) as the unit of analysis for this plot in order to ensure comprehensiveness of location data.
+ 
+ This map indicates that California was the most popular state of origin for contestants. Additionally, we used a line plot* to visualize the change in diversity (looking at both POC status and gender) to view how the proportion of POC and women has changed over the show’s many seasons. 
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+fill_color = brewer.pal(9,"Reds")[4]
+survivor_poc_over_time = survivor_data_final %>% 
+  group_by(version_season, poc) %>%
+  summarize(count = n_distinct(full_name)) %>%
+  mutate(freq = count / sum(count)) %>%
+  filter(poc == "POC") %>%
+  separate(col = version_season, into = c('NA', 'season'), sep = 2) %>%
+  dplyr::select(-"NA") %>%
+  mutate(season = as.numeric(season))
+
+ggplot(data = survivor_poc_over_time, aes(x = season, y = freq, group = 1)) +
+  geom_line(color = fill_color) +
+  geom_point(color = fill_color) +
+  geom_smooth(se = FALSE, color = "seashell") + 
+  ggtitle("Change in Proportion of POC Over Time ") +
+  xlab("Season") + ylab("Proportion of POC")
+```
+Note: Distinct person counts by POC status.
+
+According to the trends of the proportion of POC, the initial seasons had a very low proportion of POC contestants and the overall data shows an increasing trend in the proportion of POC. It was interesting to note that some “early” seasons such as seasons 13 and 14 had very high proportions of POC (over 0.5). 
+
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
+fill_color = brewer.pal(9,"Purples")[5]
+survivor_gender_over_time = survivor_data_final %>% 
+  group_by(version_season, gender) %>%
+  summarize(count = n_distinct(full_name)) %>%
+  mutate(freq = count / sum(count)) %>%
+  filter(gender == "Female") %>%
+  separate(col = version_season, into = c('NA', 'season'), sep = 2) %>%
+  dplyr::select(-"NA") %>%
+  mutate(season = as.numeric(season))
+
+ggplot(data = survivor_gender_over_time, aes(x = season, y = freq, group = 1)) +
+  geom_line(color = fill_color) +
+  geom_point(color = fill_color) +
+  geom_smooth(se = FALSE, color = "purple") + 
+  ggtitle("Change in Proportion of Women Over Time") +
+  xlab("Season") + ylab("Proportion of Women")
+```
+Note: Distinct person counts by gender.
+
+The graph for the proportion of women per season shows a relatively steady trend around 0.5, indicating a generally even distribution of men and women in the data. There are some seasons with a proportion less than 0.5 and greater than 0.5, but a majority of seasons had an exact proportion of 0.5.  
+In addition to the aforementioned exploratory data analysis, we were curious to see which contestants were receiving the most confessionals. As a result, we created a Shiny app that allows users to select which season they would like to view. Users can then examine the number of confessionals each contestant received, as well as the total number of confessionals they received over the season, and the mean number of confessionals per episode they received while on the show.  
   
 ## Survival Analysis:
 ### Methodology:
@@ -179,21 +303,15 @@ As age increases in years, there is no difference in survival since the hazard r
 - For gender, the HR value of 0.96 suggests that the survival time for male contestants is longer compared to female contestants (the reference category). We are 95% confident that the HR falls between 0.82 and 1.12. However, the HR is not statistically significant.  
 - For POC, the HR value of 0.89 would suggest that the survival time for White contestants is longer compared to POC contestants (the reference category). We are 95% confident that the HR falls between 0.75 and 1.06. However, the HR is not statistically significant.  
 - For personality type, the HR value of 1.07 would suggest that the survival time for introvert contestants is shorter compared to extrovert contestants (the reference category). We are 95% confident that the HR falls between 0.91 - 1.25. However, the HR is not statistically significant.  
-- For region, Midwest is the reference category. However, all of these hazard ratios are not statistically significant, p-value > 0.05.  
-+ The HR value of 0.99 for Northeast suggests that the survival time for contestants from the NE is longer compared to contestants from the Midwest.  
-+ The HR value of 1.29 for the South suggests that the survival time for contestants from the South is shorter compared to contestants from the Midwest.  
-+ The HR value of 1.18 for the West suggests that the survival time for contestants from the West is shorter compared to contestants from the Midwest. 
+- For region, Midwest is the reference category. However, all of these hazard ratios are not statistically significant, p-value > 0.05.
+
+    * The HR value of 0.99 for Northeast suggests that the survival time for contestants from the NE is longer compared to contestants from the Midwest.  
+    * The HR value of 1.29 for the South suggests that the survival time for contestants from the South is shorter compared to contestants from the Midwest.  
+    * The HR value of 1.18 for the West suggests that the survival time for contestants from the West is shorter compared to contestants from the Midwest. 
 
 ## Discussion:
 From conducting survival analyses, we did not observe any statistically significant covariates. This stands in contrast with our initial hypotheses that race, gender, and personality type would impact days survived. The HR values for gender (males surviving longer than female contestants), POC (White contestants surviving longer than POC), personality type (extrovert surviving longer than introverts) follow our general expectations. However, since none of the hazard ratios are statistically significant, we cannot make any conclusions.  
 
-
-## References:
-
-[1] https://www.cbs.com/shows/survivor/about/  
-[2] https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_survival/BS704_Survival_print.html  
-[3] https://www.katiejolly.io/pdf/survival_analysis_paper.pdf  
-[4] https://github.com/doehm/survivoR  
-[5] https://cran.r-project.org/web//packages/survivoR/survivoR.pdf
-[6] https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf
+Shiny app conclusions, conclusions from EDA?
+maybe 
 
