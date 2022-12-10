@@ -118,467 +118,11 @@ appeared in multiple seasons (in contrast to the rest of our analysis).
 
 **Table 1: Summary Statistics**
 
-<div id="aaafpbness" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
+<center>
 
-#aaafpbness .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
+<img src="table_1.png" width="400" />
 
-#aaafpbness .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#aaafpbness .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#aaafpbness .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#aaafpbness .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#aaafpbness .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#aaafpbness .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#aaafpbness .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#aaafpbness .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#aaafpbness .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#aaafpbness .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#aaafpbness .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#aaafpbness .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#aaafpbness .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#aaafpbness .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#aaafpbness .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#aaafpbness .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#aaafpbness .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#aaafpbness .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#aaafpbness .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#aaafpbness .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#aaafpbness .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#aaafpbness .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#aaafpbness .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#aaafpbness .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#aaafpbness .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#aaafpbness .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#aaafpbness .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#aaafpbness .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#aaafpbness .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#aaafpbness .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#aaafpbness .gt_left {
-  text-align: left;
-}
-
-#aaafpbness .gt_center {
-  text-align: center;
-}
-
-#aaafpbness .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#aaafpbness .gt_font_normal {
-  font-weight: normal;
-}
-
-#aaafpbness .gt_font_bold {
-  font-weight: bold;
-}
-
-#aaafpbness .gt_font_italic {
-  font-style: italic;
-}
-
-#aaafpbness .gt_super {
-  font-size: 65%;
-}
-
-#aaafpbness .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 75%;
-  vertical-align: 0.4em;
-}
-
-#aaafpbness .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#aaafpbness .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#aaafpbness .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#aaafpbness .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#aaafpbness .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#aaafpbness .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"><strong>Characteristic</strong></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col"><strong>N = 728</strong><sup class="gt_footnote_marks">1</sup></th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Gender</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Female</td>
-<td class="gt_row gt_center">356 (49%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Male</td>
-<td class="gt_row gt_center">368 (51%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
-<td class="gt_row gt_center">4</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Race Identifier</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">POC</td>
-<td class="gt_row gt_center">199 (27%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">White</td>
-<td class="gt_row gt_center">525 (73%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
-<td class="gt_row gt_center">4</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Personality Type</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Extrovert</td>
-<td class="gt_row gt_center">401 (56%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Introvert</td>
-<td class="gt_row gt_center">320 (44%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
-<td class="gt_row gt_center">7</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Age During Show (Years)</td>
-<td class="gt_row gt_center">33.4 (10.1)</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Survival Time on Show (Days)</td>
-<td class="gt_row gt_center">23.9 (12.1)</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Region</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Midwest</td>
-<td class="gt_row gt_center">99 (14%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Northeast</td>
-<td class="gt_row gt_center">153 (21%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">South</td>
-<td class="gt_row gt_center">207 (28%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">West</td>
-<td class="gt_row gt_center">269 (37%)</td></tr>
-  </tbody>
-  
-  <tfoot class="gt_footnotes">
-    <tr>
-      <td class="gt_footnote" colspan="2"><sup class="gt_footnote_marks">1</sup> n (%); Mean (SD)</td>
-    </tr>
-  </tfoot>
-</table>
-</div>
+</center>
 
 *Note: N = 728 refers to the total count of records (i.e. contestant
 occurrences) in `survivor_data_final`; distinct persons may be listed in
@@ -1008,13 +552,49 @@ hazard ratios are not statistically significant, p-value \> 0.05.
 ## Discussion:
 
 From conducting survival analyses, we did not observe any statistically
-significant covariates. This stands in contrast with our initial
-hypotheses that race, gender, and personality type would impact days
-survived. The HR values for gender (males surviving longer than female
-contestants), POC (White contestants surviving longer than POC),
-personality type (extrovert surviving longer than introverts) follow our
-general expectations. However, since none of the hazard ratios are
-statistically significant, we cannot make any conclusions.
+significant covariates in the Cox-Proportional-Hazards model. This
+stands in contrast with our initial hypotheses that race, gender, and
+personality type would impact days survived. The hazard ratio values for
+gender (males surviving longer than female contestants), POC (White
+contestants surviving longer than POC), personality type (extrovert
+surviving longer than introverts) follow our general expectations. We
+also included region as a covariate in our final model without expecting
+that it would impact survival time. The indicator for South was nearly
+statistically significant (at alpha = 0.05), which could warrant further
+investigation. However, since none of the hazard ratios are
+statistically significant based on the current data, we cannot make any
+conclusions. Upon conducting analysis on the Kaplan-Meier curves to
+investigate each covariate individually, we discovered a marginally
+statistically significant (at alpha = 0.05) curve comparing contestants
+from the Northeast to those not from the Northeast. This indicates that
+it can be estimated that contestants from the Northeast tend to have
+overall better survival trajectories on the show than contestants not
+from the Northeast.
+
+It is integral to note that these results do not necessarily reflect
+societal biases and difficulties individuals face on the show, as there
+are several limitations to the data. For example, individuals were only
+categorized as “POC” if there were known references to their racial
+backgrounds and categorized as “White” otherwise. This could potentially
+cause a bias towards the null as some individuals who are actually POC
+might have erroneously been categorized. Additionally, each season was
+relatively limited in the number of contestants with many seasons having
+around 20 contestants. In order to conduct the analysis, we removed some
+of the seasons from the show, which means that this analysis does not
+necessarily represent the show’s full cast. Finally, there are several
+“behind the scenes” factors that could affect how long contestants stay
+on the show, such as producer influence, that potentially influence the
+narratives on the show. Nevertheless, the show has taken several
+necessary steps to promote diversity on the show, such as including a
+higher proportion of POC in recent seasons compared to the original
+seasons as visualized in the exploratory data analysis. As of 2020, CBS
+(the show’s network) announced that reality TV shows must have 50%
+non-White casts and increased writing room diversity.[^7] Several years
+in the future, it would be interesting to expand this project to analyze
+survival times of POC before and after this change was implemented to
+see if survival times have improved. Another potential future analysis
+could involve determining if the number of confessionals (and length of
+screen time on the show) varies by race, gender, and age.
 
 [^1]: <https://www.cbs.com/shows/survivor/about/>
 
@@ -1027,3 +607,5 @@ statistically significant, we cannot make any conclusions.
 [^5]: <https://cran.r-project.org/web//packages/survivoR/survivoR.pdf>
 
 [^6]: <https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf>
+
+[^7]: <https://www.cnbc.com/2020/11/09/cbs-reality-shows-must-now-have-50percent-non-white-casts-network-says.html>
