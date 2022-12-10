@@ -84,6 +84,35 @@ occurred in low frequency and was not patterned in nature. The final
 dataset used in the analysis contains unique information for each
 castaway for each season, including the following key variables:
 
+In order to analyze the show *Survivor*, we used data sources from the
+`castaway_details` and `castaways` datasets[^7], as well as others, from
+the `survivoR` package.[^8] This fan-made package contains data from all
+seasons of *Survivor*. According to the authors of the package, “the
+data was sourced from Wikipedia and the Survivor Wiki. Other data, such
+as the tribe colours, was manually recorded and entered by myself and
+contributors.” As each dataset contained distinct information on the
+contestants for each season, it was necessary to use joins to combine
+datasets to produce a final dataset to be analyzed. This was performed
+using a full join on the contestants’ full names. It should be noted
+that a few contestants appear in multiple seasons, however we treated
+them as separate throughout most of our analysis for the purposes of
+getting an accurate picture of each season. Additionally, in order to
+standardize our results for the survival analysis and exploratory data
+analysis, we removed seasons 2, 41, 42, and 43 as the seasons contained
+data for a different number of days from the standard 39 days. As the
+original data contains information from several versions around the
+globe, it was integral to filter and only analyze data from the U.S.
+edition. In order to best model our covariates of interest, we then
+created a new personality type variable (extracting whether a person is
+an introvert or extrovert) and a POC indicator variable (provided by the
+package) instead of individual races. We also used contestants’ home
+states to code contestants into a region based on census regions and
+divisions of the United States.[^9] Furthermore, we determined that
+missing data was not an issue, as it occurred in low frequency and was
+not patterned in nature. The final dataset used in the analysis contains
+unique information for each castaway for each season, including the
+following key variables:
+
 -   `version_season`: version and season number
 -   `full_name`: contestant full name
 -   `age_during_show` : age, in years
@@ -589,7 +618,7 @@ necessary steps to promote diversity on the show, such as including a
 higher proportion of POC in recent seasons compared to the original
 seasons as visualized in the exploratory data analysis. As of 2020, CBS
 (the show’s network) announced that reality TV shows must have 50%
-non-White casts and increased writing room diversity.[^7] Several years
+non-White casts and increased writing room diversity.[^10] Several years
 in the future, it would be interesting to expand this project to analyze
 survival times of POC before and after this change was implemented to
 see if survival times have improved. Another potential future analysis
@@ -608,4 +637,10 @@ screen time on the show) varies by race, gender, and age.
 
 [^6]: <https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf>
 
-[^7]: <https://www.cnbc.com/2020/11/09/cbs-reality-shows-must-now-have-50percent-non-white-casts-network-says.html>
+[^7]:  <https://github.com/doehm/survivoR>
+
+[^8]: <https://cran.r-project.org/web//packages/survivoR/survivoR.pdf>
+
+[^9]: <https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf>
+
+[^10]: <https://www.cnbc.com/2020/11/09/cbs-reality-shows-must-now-have-50percent-non-white-casts-network-says.html>
