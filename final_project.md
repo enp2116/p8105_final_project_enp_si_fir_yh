@@ -7,16 +7,16 @@ Survival
 ### Motivation:
 
 In this report, we utilize survival analysis to explore the implications
-of self-identified race, gender, and personality type to game show
-survival. In particular, we focus on the American classic TV series
-*Survivor*, which is currently on its 43rd season. In this show, each
-season 16 to 18 contestants are divided into tribes and navigate
-challenges within these social alliances in order to promote their own
-survival.[^1] Throughout each season, contestants are progressively
-eliminated by vote of their peers until there is a sole survivor. Given
-that aspects of identity heavily influence how people are perceived in a
-social context, we hypothesize that contestant outcomes may differ on
-the measures related to retention or screen time.
+of known race, gender, and personality type to game show survival. In
+particular, we focus on the American classic TV series *Survivor*, which
+is currently on its 43rd season. In this show, each season 16 to 18
+contestants are divided into tribes and navigate challenges within these
+social alliances in order to promote their own survival.[^1] Throughout
+each season, contestants are progressively eliminated by vote of their
+peers until there is a sole survivor. Given that aspects of identity
+heavily influence how people are perceived in a social context, we
+hypothesize that contestant outcomes may differ on the measures related
+to retention or screen time.
 
 ### Related Work:
 
