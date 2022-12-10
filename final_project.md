@@ -75,14 +75,14 @@ the standard 39 days. As the original data contains information from
 several versions around the globe, it was integral to filter and only
 analyze data from the U.S. edition. In order to best model our
 covariates of interest, we then created a new personality type variable
-(extracting whether a person is an introvert or extrovert) and a POC
-indicator variable instead of individual races. We also used
-contestants’ home states to code contestants into a region based on
-census regions and divisions of the United States.[^6] Furthermore, we
-determined that missing data was not an issue, as it occurred in low
-frequency and was not patterned in nature. The final dataset used in the
-analysis contains unique information for each castaway for each season,
-including the following key variables:
+(extracting whether a person is an introvert or extrovert) and used a
+POC indicator variable (provided by the package) instead of individual
+races. We also used contestants’ home states to code contestants into a
+region based on census regions and divisions of the United States.[^6]
+Furthermore, we determined that missing data was not an issue, as it
+occurred in low frequency and was not patterned in nature. The final
+dataset used in the analysis contains unique information for each
+castaway for each season, including the following key variables:
 
 -   `version_season`: version and season number
 -   `full_name`: contestant full name
