@@ -472,13 +472,13 @@ Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ =
 0 if we observe the censoring.
 
 We use the Cox-propositional hazard model to evaluate the effect of
-several factors on survival time in Survivor Show. It allows us to
-examine how specified factors influence the rate of the event that we
-interested at a particular point in time. This rate is the hazard rate.
-Covariates are age, gender, personality type, and region in this model.
-The Cox model is expressed by the hazard function denoted by h(t).
-Briefly, the hazard function can be interpreted as the risk of voted out
-at time t. It can be estimated as follow:
+several factors on survival time in Survivor. It allows us to examine
+how specified factors influence the rate of the event that we are
+interested in at a particular point in time. This rate is the hazard
+rate. Covariates are age, gender, personality type, and region in this
+model. The Cox model is expressed by the hazard function denoted by
+h(t). Briefly, the hazard function can be interpreted as the risk of
+voted out at time t. It can be estimated as follow:
 $$h(t) = h_0(t)\exp(x_1\beta_1 + x_2\beta_2 + x_3\beta_3 + x_4\beta_4 + x_4\beta_5)$$
 where,  
 
