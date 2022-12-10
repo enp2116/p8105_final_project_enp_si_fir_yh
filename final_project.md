@@ -118,12 +118,12 @@ they appeared in multiple seasons (in contrast to the rest of our
 analysis). We also included tables showing the mean days survived based
 on these demographic measures of interest.
 
-<div id="wikqvdinjg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="rsssmoxtht" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wikqvdinjg .gt_table {
+#rsssmoxtht .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -148,7 +148,7 @@ on these demographic measures of interest.
   border-left-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_heading {
+#rsssmoxtht .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -160,7 +160,12 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_title {
+#rsssmoxtht .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#rsssmoxtht .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -172,7 +177,7 @@ on these demographic measures of interest.
   border-bottom-width: 0;
 }
 
-#wikqvdinjg .gt_subtitle {
+#rsssmoxtht .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -184,13 +189,13 @@ on these demographic measures of interest.
   border-top-width: 0;
 }
 
-#wikqvdinjg .gt_bottom_border {
+#rsssmoxtht .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_col_headings {
+#rsssmoxtht .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -205,7 +210,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_col_heading {
+#rsssmoxtht .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -225,7 +230,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#wikqvdinjg .gt_column_spanner_outer {
+#rsssmoxtht .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -237,15 +242,15 @@ on these demographic measures of interest.
   padding-right: 4px;
 }
 
-#wikqvdinjg .gt_column_spanner_outer:first-child {
+#rsssmoxtht .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wikqvdinjg .gt_column_spanner_outer:last-child {
+#rsssmoxtht .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wikqvdinjg .gt_column_spanner {
+#rsssmoxtht .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -257,7 +262,7 @@ on these demographic measures of interest.
   width: 100%;
 }
 
-#wikqvdinjg .gt_group_heading {
+#rsssmoxtht .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -280,9 +285,10 @@ on these demographic measures of interest.
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
-#wikqvdinjg .gt_empty_group_heading {
+#rsssmoxtht .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -297,15 +303,15 @@ on these demographic measures of interest.
   vertical-align: middle;
 }
 
-#wikqvdinjg .gt_from_md > :first-child {
+#rsssmoxtht .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wikqvdinjg .gt_from_md > :last-child {
+#rsssmoxtht .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wikqvdinjg .gt_row {
+#rsssmoxtht .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -324,7 +330,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#wikqvdinjg .gt_stub {
+#rsssmoxtht .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -337,7 +343,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_stub_row_group {
+#rsssmoxtht .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -351,11 +357,11 @@ on these demographic measures of interest.
   vertical-align: top;
 }
 
-#wikqvdinjg .gt_row_group_first td {
+#rsssmoxtht .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wikqvdinjg .gt_summary_row {
+#rsssmoxtht .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -365,16 +371,16 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_first_summary_row {
+#rsssmoxtht .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_first_summary_row.thick {
+#rsssmoxtht .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wikqvdinjg .gt_last_summary_row {
+#rsssmoxtht .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -384,7 +390,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_grand_summary_row {
+#rsssmoxtht .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -394,7 +400,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_first_grand_summary_row {
+#rsssmoxtht .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -404,11 +410,11 @@ on these demographic measures of interest.
   border-top-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_striped {
+#rsssmoxtht .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wikqvdinjg .gt_table_body {
+#rsssmoxtht .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -417,7 +423,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_footnotes {
+#rsssmoxtht .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -431,7 +437,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_footnote {
+#rsssmoxtht .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -440,7 +446,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_sourcenotes {
+#rsssmoxtht .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -454,7 +460,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#wikqvdinjg .gt_sourcenote {
+#rsssmoxtht .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -462,64 +468,64 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#wikqvdinjg .gt_left {
+#rsssmoxtht .gt_left {
   text-align: left;
 }
 
-#wikqvdinjg .gt_center {
+#rsssmoxtht .gt_center {
   text-align: center;
 }
 
-#wikqvdinjg .gt_right {
+#rsssmoxtht .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wikqvdinjg .gt_font_normal {
+#rsssmoxtht .gt_font_normal {
   font-weight: normal;
 }
 
-#wikqvdinjg .gt_font_bold {
+#rsssmoxtht .gt_font_bold {
   font-weight: bold;
 }
 
-#wikqvdinjg .gt_font_italic {
+#rsssmoxtht .gt_font_italic {
   font-style: italic;
 }
 
-#wikqvdinjg .gt_super {
+#rsssmoxtht .gt_super {
   font-size: 65%;
 }
 
-#wikqvdinjg .gt_footnote_marks {
+#rsssmoxtht .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#wikqvdinjg .gt_asterisk {
+#rsssmoxtht .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wikqvdinjg .gt_indent_1 {
+#rsssmoxtht .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wikqvdinjg .gt_indent_2 {
+#rsssmoxtht .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wikqvdinjg .gt_indent_3 {
+#rsssmoxtht .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wikqvdinjg .gt_indent_4 {
+#rsssmoxtht .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wikqvdinjg .gt_indent_5 {
+#rsssmoxtht .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -527,39 +533,49 @@ on these demographic measures of interest.
   
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"><strong>Characteristic</strong></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col"><strong>N = 728</strong><sup class="gt_footnote_marks">1</sup></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Characteristic&lt;/strong&gt;"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;N = 728&lt;/strong&gt;&lt;sup class=&quot;gt_footnote_marks&quot;&gt;1&lt;/sup&gt;"><strong>N = 728</strong><sup class="gt_footnote_marks">1</sup></th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Gender</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Female</td>
-<td class="gt_row gt_center">356 (49%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Male</td>
-<td class="gt_row gt_center">368 (51%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
-<td class="gt_row gt_center">4</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Race Identifier</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">POC</td>
-<td class="gt_row gt_center">199 (27%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">White</td>
-<td class="gt_row gt_center">525 (73%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
-<td class="gt_row gt_center">4</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Personality Type</td>
-<td class="gt_row gt_center"></td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Extrovert</td>
-<td class="gt_row gt_center">401 (56%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Introvert</td>
-<td class="gt_row gt_center">320 (44%)</td></tr>
-    <tr><td class="gt_row gt_left" style="text-align: left; text-indent: 10px;">Unknown</td>
-<td class="gt_row gt_center">7</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Age During Show (Years)</td>
-<td class="gt_row gt_center">33.4 (10.1)</td></tr>
-    <tr><td class="gt_row gt_left" style="font-weight: bold;">Survival Time on Show (Days)</td>
-<td class="gt_row gt_center">23.9 (12.1)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Gender</td>
+<td headers="stat_0" class="gt_row gt_center"></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Female</td>
+<td headers="stat_0" class="gt_row gt_center">356 (49%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Male</td>
+<td headers="stat_0" class="gt_row gt_center">368 (51%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+<td headers="stat_0" class="gt_row gt_center">4</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Race Identifier</td>
+<td headers="stat_0" class="gt_row gt_center"></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    POC</td>
+<td headers="stat_0" class="gt_row gt_center">199 (27%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    White</td>
+<td headers="stat_0" class="gt_row gt_center">525 (73%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+<td headers="stat_0" class="gt_row gt_center">4</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Personality Type</td>
+<td headers="stat_0" class="gt_row gt_center"></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Extrovert</td>
+<td headers="stat_0" class="gt_row gt_center">401 (56%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Introvert</td>
+<td headers="stat_0" class="gt_row gt_center">320 (44%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+<td headers="stat_0" class="gt_row gt_center">7</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Age During Show (Years)</td>
+<td headers="stat_0" class="gt_row gt_center">33.4 (10.1)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Survival Time on Show (Days)</td>
+<td headers="stat_0" class="gt_row gt_center">23.9 (12.1)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="font-weight: bold;">Region</td>
+<td headers="stat_0" class="gt_row gt_center"></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Midwest</td>
+<td headers="stat_0" class="gt_row gt_center">99 (14%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    Northeast</td>
+<td headers="stat_0" class="gt_row gt_center">153 (21%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    South</td>
+<td headers="stat_0" class="gt_row gt_center">207 (28%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">    West</td>
+<td headers="stat_0" class="gt_row gt_center">269 (37%)</td></tr>
   </tbody>
   
   <tfoot class="gt_footnotes">
@@ -723,6 +739,82 @@ Male
 </td>
 <td style="text-align:right;">
 24.5
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Region
+</th>
+<th style="text-align:right;">
+Distinct Persons
+</th>
+<th style="text-align:right;">
+Contestant Occurrences
+</th>
+<th style="text-align:right;">
+Mean Days Survived
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Midwest
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:right;">
+99
+</td>
+<td style="text-align:right;">
+24.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Northeast
+</td>
+<td style="text-align:right;">
+122
+</td>
+<td style="text-align:right;">
+153
+</td>
+<td style="text-align:right;">
+25.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+South
+</td>
+<td style="text-align:right;">
+178
+</td>
+<td style="text-align:right;">
+207
+</td>
+<td style="text-align:right;">
+22.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+West
+</td>
+<td style="text-align:right;">
+218
+</td>
+<td style="text-align:right;">
+269
+</td>
+<td style="text-align:right;">
+23.8
 </td>
 </tr>
 </tbody>

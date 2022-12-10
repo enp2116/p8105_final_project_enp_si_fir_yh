@@ -85,10 +85,11 @@ As a supplemental analysis, we also used the `confessionals` data from the same 
 
 ```{r, warning = FALSE, message = FALSE, echo = FALSE}
 survivor_data_final %>% 
-  select(gender, poc, personality_type_binary, age_during_show, days_survived) %>% 
+  select(gender, poc, personality_type_binary, age_during_show, days_survived, region) %>% 
   tbl_summary(type = list(gender ~ "categorical", 
                           poc ~ "categorical", 
                           personality_type_binary ~ "categorical", 
+                          region ~ "categorical",
                           age_during_show ~ "continuous", 
                           days_survived ~ "continuous"), 
               statistic = list(all_continuous() ~ "{mean} ({sd})"), 
@@ -96,6 +97,7 @@ survivor_data_final %>%
               label = list(c(gender) ~ "Gender",
                            c(poc) ~ "Race Identifier",
                            c(personality_type_binary) ~ "Personality Type",
+                           c(region) ~ "Region",
                            c(age_during_show) ~ "Age During Show (Years)",
                            c(days_survived) ~ "Survival Time on Show (Days)")) %>% 
   bold_labels() 
@@ -142,6 +144,15 @@ survivor_data_final %>%
             mean_days_survived = mean(days_survived, na.rm = TRUE)) %>%
     na.omit()  %>%
   knitr::kable(digits = 1, col.names = c("Gender", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
+
+## Region
+survivor_data_final %>% 
+  group_by(region) %>% 
+  summarize(n_gender_dist = n_distinct(full_name),
+            n_gender_occ = n(),
+            mean_days_survived = mean(days_survived, na.rm = TRUE)) %>%
+    na.omit()  %>%
+  knitr::kable(digits = 1, col.names = c("Region", "Distinct Persons", "Contestant Occurrences", "Mean Days Survived"))
 ```
  
 Next, to visualize the geographic origins of *Survivor* contestants, we created a map to chart the number of contestants coming from each state. This map indicates that California was the most popular state of origin for contestants.
