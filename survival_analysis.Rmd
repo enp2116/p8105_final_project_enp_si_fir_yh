@@ -16,8 +16,8 @@ library(riskRegression)
 library(tab)
 ```
 
-Statistical Analysis
-Methodology
+## Statistical Analysis
+#### Methodology
 For our project, we interest using Survival Analysis. Suppose that there is a true survival time, T, as well as a true censoring time, C. The survival time represents the time at which the event of interest occurs: in this dataset, the time at which participant is voted out. The censoring time is the time at which the participant drop out of the game show or survived until the last day of the show.
 
 We observed the Survival Time T and Censoring Time C. Suppose there is a random variable Y
@@ -26,11 +26,13 @@ $$Y = min(T,C)$$
 
 In other words, if the event occurs before the censoring such that T $<$ C, then we observed the true survival time T. If censoring occurs before the event such as T $>$ C, then we observe the censoring time. The status indicator as, 
 
-$$\delta = \begin{cases} 
-      & 1 &  T\leq C \\
-      & 0 & T > C
-   \end{cases}$$
-
+$$\delta =  \left\{
+\begin{array}{ll} 
+     1 &  T\leq C \\
+     0 & T > C \\
+   \end{array}
+   \right. $$
+   
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ = 0 if we observe the censoring.
 
 ## Survival Analysis
@@ -86,25 +88,38 @@ plot(surv_model_unadj, xlab = "Days",
      ylab = "Estimated Probability of Survival")
 ```
 
-## Cox-proposional hazard model slection using `selectCox`
+## Cox-proposional hazard model selection using `selectCox`
 ```{r}
 surv_model_full <- coxph(data = survivor_data_final,
                          Surv(time, status)~ poc + age_during_show + 
-                           personality_type_binary)
+                           personality_type_binary + gender + region)
 
-selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + Midwest, data = survivor_data_final)
+selectCox(Surv(time, status)~ poc + age_during_show + personality_type_binary + gender + region, data = survivor_data_final)
 ```
+
+# Cox-proposional hazard model
+We use the Cox-propositional hazard model to evaluate the effect of several factors on survival time in Survivor Show. It allows us to examine how specified factors influence the rate of the event that we interested at a particular point in time. This rate is the hazard rate. Covariates are age, gender, personality type, and region in this model. 
+The Cox model is expressed by the hazard function denoted by h(t). Briefly, the hazard function can be interpreted as the risk of dying at time t. It can be estimated as follow:
+$$h(t) = h_0(t)\exp(x_1\beta_1 + x_2\beta_2 + x_3\beta_3 + x_4\beta_4 + x_4\beta_5)$$
+where, \ 
+
+* $t$ represents the survival time 
+* $h(t)$ is the hazard function determined by a set of participants' covariates $(x_1, x_2, x_3, x_4)$: $x_1$ is POC, $x_2$ is age during the show, $x_3$ is personality type, $x_4$ is gender, and $x_5$ is region 
+* the coefficients (\beta1, \beta2, \beta3, \beta4, \beta5) measures the impact of covariates
+* $h_0(t)\geq 0$ is the baseline hazard function. It is the hazard function for an individual if all $(x_1, x_2, x_3, x_4, x_5)$ are equal to zero.
+
+
 
 ## Cox-proposional hazard model 1
 ```{r}
 surv_model_cox1 <- coxph(data = survivor_data_final,
-  Surv(time, status) ~  poc + age_during_show + personality_type_binary)
+  Surv(time, status) ~  poc + age_during_show + personality_type_binary + gender + region)
 
 summary(surv_model_cox1)
 
 #Clean table for Cox PH
 tabcoxph(surv_model_cox1, 
-         var.labels = list(poc = "POC", age_during_show = "Age", personality_type_binary = "Personality Type", gender = "Gender"), 
+         var.labels = list(poc = "POC", age_during_show = "Age", personality_type_binary = "Personality Type", gender = "Gender", region = "Region"), 
          decimals = 2)
 ```
 **HR interpretations:**
