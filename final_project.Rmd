@@ -22,6 +22,7 @@ library(tab)
 library(gridExtra)
 library(RColorBrewer)
 library(usmap)
+library(webshot2)
 ```
 
 ```{r, include = FALSE}
@@ -90,7 +91,7 @@ As a supplemental analysis, we also used the `confessionals` data from the same 
 
 **Table 1: Summary Statistics** 
 ```{r, echo = FALSE, eval = FALSE}
- survivor_data_final %>% 
+survivor_data_final %>% 
   select(gender, poc, personality_type_binary, age_during_show, days_survived, region) %>% 
   tbl_summary(type = list(gender ~ "categorical", 
                           poc ~ "categorical", 
@@ -106,11 +107,15 @@ As a supplemental analysis, we also used the `confessionals` data from the same 
                            c(region) ~ "Region",
                            c(age_during_show) ~ "Age During Show (Years)",
                            c(days_survived) ~ "Survival Time on Show (Days)")) %>% 
-  bold_labels() 
+  bold_labels()  %>%
+  as_gt() %>%             # convert to gt table
+  gt::gtsave(             # save table as image
+    filename = "table_1_new.png"
+  )
 ```
 <center>
 
-![](table_1.png){width=400px}
+![](table_1_new.png){width=400px}
 
 </center>
 

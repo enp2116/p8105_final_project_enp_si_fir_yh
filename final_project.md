@@ -120,7 +120,7 @@ appeared in multiple seasons (in contrast to the rest of our analysis).
 
 <center>
 
-<img src="table_1.png" width="400" />
+<img src="table_1_new.png" width="400" />
 
 </center>
 
