@@ -92,10 +92,10 @@ as the tribe colours, was manually recorded and entered by myself and
 contributors.” As each dataset contained distinct information on the
 contestants for each season, it was necessary to use joins to combine
 datasets to produce a final dataset to be analyzed. This was performed
-using a full join on the contestants’ full names. It should be noted
-that a few contestants appear in multiple seasons; however we treated
-them as separate throughout most of our analysis for the purposes of
-getting an accurate picture of each season. Additionally, in order to
+using a full join on the contestants’ full names. We primarily rely on
+contestant occurrences as the unit of analysis in our report, though it
+should be noted that distinct individuals can appear in multiple seasons
+and/or in multiple episodes per season. Additionally, in order to
 standardize our results for the survival analysis and exploratory data
 analysis, we removed seasons 2, 41, 42, and 43 as the seasons contained
 data for a different number of days from the standard 39 days. As the
