@@ -116,12 +116,12 @@ they appeared in multiple seasons (in contrast to the rest of our
 analysis). We also included tables showing the mean days survived based
 on these demographic measures of interest.
 
-<div id="xscxuqtanr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ovoytwrrla" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#xscxuqtanr .gt_table {
+#ovoytwrrla .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -146,7 +146,7 @@ on these demographic measures of interest.
   border-left-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_heading {
+#ovoytwrrla .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -158,7 +158,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_title {
+#ovoytwrrla .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -170,7 +170,7 @@ on these demographic measures of interest.
   border-bottom-width: 0;
 }
 
-#xscxuqtanr .gt_subtitle {
+#ovoytwrrla .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -182,13 +182,13 @@ on these demographic measures of interest.
   border-top-width: 0;
 }
 
-#xscxuqtanr .gt_bottom_border {
+#ovoytwrrla .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_col_headings {
+#ovoytwrrla .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -203,7 +203,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_col_heading {
+#ovoytwrrla .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -223,7 +223,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#xscxuqtanr .gt_column_spanner_outer {
+#ovoytwrrla .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -235,15 +235,15 @@ on these demographic measures of interest.
   padding-right: 4px;
 }
 
-#xscxuqtanr .gt_column_spanner_outer:first-child {
+#ovoytwrrla .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xscxuqtanr .gt_column_spanner_outer:last-child {
+#ovoytwrrla .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xscxuqtanr .gt_column_spanner {
+#ovoytwrrla .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -255,7 +255,7 @@ on these demographic measures of interest.
   width: 100%;
 }
 
-#xscxuqtanr .gt_group_heading {
+#ovoytwrrla .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -280,7 +280,7 @@ on these demographic measures of interest.
   vertical-align: middle;
 }
 
-#xscxuqtanr .gt_empty_group_heading {
+#ovoytwrrla .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -295,15 +295,15 @@ on these demographic measures of interest.
   vertical-align: middle;
 }
 
-#xscxuqtanr .gt_from_md > :first-child {
+#ovoytwrrla .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xscxuqtanr .gt_from_md > :last-child {
+#ovoytwrrla .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xscxuqtanr .gt_row {
+#ovoytwrrla .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -322,7 +322,7 @@ on these demographic measures of interest.
   overflow-x: hidden;
 }
 
-#xscxuqtanr .gt_stub {
+#ovoytwrrla .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -335,7 +335,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#xscxuqtanr .gt_stub_row_group {
+#ovoytwrrla .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -349,11 +349,11 @@ on these demographic measures of interest.
   vertical-align: top;
 }
 
-#xscxuqtanr .gt_row_group_first td {
+#ovoytwrrla .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xscxuqtanr .gt_summary_row {
+#ovoytwrrla .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -363,16 +363,16 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#xscxuqtanr .gt_first_summary_row {
+#ovoytwrrla .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_first_summary_row.thick {
+#ovoytwrrla .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xscxuqtanr .gt_last_summary_row {
+#ovoytwrrla .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -382,7 +382,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_grand_summary_row {
+#ovoytwrrla .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -392,7 +392,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#xscxuqtanr .gt_first_grand_summary_row {
+#ovoytwrrla .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -402,11 +402,11 @@ on these demographic measures of interest.
   border-top-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_striped {
+#ovoytwrrla .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xscxuqtanr .gt_table_body {
+#ovoytwrrla .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -415,7 +415,7 @@ on these demographic measures of interest.
   border-bottom-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_footnotes {
+#ovoytwrrla .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -429,7 +429,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_footnote {
+#ovoytwrrla .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -438,7 +438,7 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#xscxuqtanr .gt_sourcenotes {
+#ovoytwrrla .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -452,7 +452,7 @@ on these demographic measures of interest.
   border-right-color: #D3D3D3;
 }
 
-#xscxuqtanr .gt_sourcenote {
+#ovoytwrrla .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -460,64 +460,64 @@ on these demographic measures of interest.
   padding-right: 5px;
 }
 
-#xscxuqtanr .gt_left {
+#ovoytwrrla .gt_left {
   text-align: left;
 }
 
-#xscxuqtanr .gt_center {
+#ovoytwrrla .gt_center {
   text-align: center;
 }
 
-#xscxuqtanr .gt_right {
+#ovoytwrrla .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xscxuqtanr .gt_font_normal {
+#ovoytwrrla .gt_font_normal {
   font-weight: normal;
 }
 
-#xscxuqtanr .gt_font_bold {
+#ovoytwrrla .gt_font_bold {
   font-weight: bold;
 }
 
-#xscxuqtanr .gt_font_italic {
+#ovoytwrrla .gt_font_italic {
   font-style: italic;
 }
 
-#xscxuqtanr .gt_super {
+#ovoytwrrla .gt_super {
   font-size: 65%;
 }
 
-#xscxuqtanr .gt_footnote_marks {
+#ovoytwrrla .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#xscxuqtanr .gt_asterisk {
+#ovoytwrrla .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xscxuqtanr .gt_indent_1 {
+#ovoytwrrla .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xscxuqtanr .gt_indent_2 {
+#ovoytwrrla .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xscxuqtanr .gt_indent_3 {
+#ovoytwrrla .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xscxuqtanr .gt_indent_4 {
+#ovoytwrrla .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xscxuqtanr .gt_indent_5 {
+#ovoytwrrla .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -799,8 +799,8 @@ If censoring occurs before the event such as T $>$ C, then we observe
 the censoring time. The status indicator as,
 
 $$\delta = \begin{cases} 
-      & 1 &  T\leq C \\
-      & 0 & T > C
+       1 &  T\leq C \\
+       0 & T > C
    \end{cases}$$
 
 Thus, $\delta$ = 1 if we observe the true survival time, and $\delta$ =
@@ -819,9 +819,9 @@ where,  
 
 - $t$ represents the survival time
 - $h(t)$ is the hazard function determined by a set of participants’
-  covariates $(x_1, x_2, x_3, x_4, x_5)$: $x_1$ is POC, $x_2$ is age
-  during the show, $x_3$ is personality type, $x_4$ is gender, and $x_5$
-  is region
+  covariates $(x_1, x_2, x_3, x_4, x_5)$: $x_1$ is gender, $x_2$ is POC,
+  $x_3$ is age during the show, $x_4$ is personality type, and $x_5$ is
+  region
 - the coefficients $(\beta1, \beta2, \beta3, \beta4, \beta5)$ measures
   the impact of covariates
 - $h_0(t)\geq 0$ is the baseline hazard function. It is the hazard
