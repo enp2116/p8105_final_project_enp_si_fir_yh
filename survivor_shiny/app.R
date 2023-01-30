@@ -38,9 +38,9 @@ plots = list()
 for(i in 1:43)
 {
   plots[[i]] = ggplotly(ggplot(data = seasons[[i]], aes(x = Episode, y = confessional_count, color = Castaway)) +
-    geom_line() +
-    geom_point() +
-    ggtitle(paste0("Confessionals per Episode in Season ", i))) %>%
+                          geom_line() +
+                          geom_point() +
+                          ggtitle(paste0("Confessionals per Episode in Season ", i))) %>%
     layout(xaxis = list(title = 'Episode'), yaxis = list(title = 'Number of Confessionals'))
 }
 
@@ -62,7 +62,7 @@ for(i in 1:43)
                             geom_col() + 
                             ggtitle(paste0("Number of Confessionals per Contestant in Season ", i)) +
                             xlab("Castaway") + ylab("Number of Confessionals") + 
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))) %>%
+                            theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))) %>%
     layout(xaxis = list(title = 'Castaway'), yaxis = list(title = 'Number of Confessionals'))
 }
 
@@ -90,8 +90,9 @@ for(i in 1:43)
 
 ui <- fluidPage(
   theme = shinytheme("united"),
-  tags$div(class = "jumbotron text-center", style = "margin-bottom:0px;margin-top:0px",
-           tags$h2(class = 'jumbotron-heading', style = 'margin-bottom:0px;margin-top:0px', 'Survivor Confessional Data (43 Seasons)'),
+  tags$style('body { background-color: white;'),
+  tags$div(class = "jumbotron text-center bg-primary", style = "margin-bottom: 30px;margin-top:0px;background-color: #b1dab1;",
+           tags$h2(class = 'jumbotron-heading', style = 'margin-bottom:0px;margin-top:0px', 'Survivor Confessional Data Dashboard (43 Seasons)'),
            p('View Information from Your Favorite Castaways')
   ),
   fluidRow(
