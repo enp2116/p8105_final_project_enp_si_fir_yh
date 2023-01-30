@@ -98,7 +98,9 @@ ui <- fluidPage(
   fluidRow(
     column(
       3,
-      selectInput("plot", "Choose Season:", choices = 1:43)
+      selectInput("plot", "Choose Season:", choices = 1:43),
+      tags$h1("This dashboard allows users to select a season of interest and view the number of confessionals
+              each contestant received during each episode as well as the total (and average) numbers of confessionals for each contestant across the season.", style = "font-size:15px;")
     ),
     column(
       9, 
