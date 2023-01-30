@@ -11,6 +11,9 @@ library(shiny)
 library(survivoR)
 library(tidyverse)
 library(plotly)
+library(shinythemes)
+
+
 
 
 confessionals_df = confessionals %>% 
@@ -86,10 +89,27 @@ for(i in 1:43)
 } 
 
 ui <- fluidPage(
-  selectInput("plot", "Choose Season:", choices = 1:43),
-            hr(),
-            mainPanel(plotlyOutput("myplot"),plotlyOutput("myplot2"),plotlyOutput("myplot3")
-                      ))
+  theme = shinytheme("united"),
+  tags$div(class = "jumbotron text-center", style = "margin-bottom:0px;margin-top:0px",
+           tags$h2(class = 'jumbotron-heading', style = 'margin-bottom:0px;margin-top:0px', 'Survivor Confessional Data (43 Seasons)'),
+           p('View Information from Your Favorite Castaways')
+  ),
+  fluidRow(
+    column(
+      3,
+      selectInput("plot", "Choose Season:", choices = 1:43)
+    ),
+    column(
+      9, 
+      mainPanel(
+        width = 12,
+        plotlyOutput("myplot"),
+        plotlyOutput("myplot2"),
+        plotlyOutput("myplot3")
+      )
+    )
+  )
+)
 
 
 server = function(input, output){
